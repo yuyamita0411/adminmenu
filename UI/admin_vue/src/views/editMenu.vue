@@ -169,20 +169,16 @@ export default class editMenu extends Vue {
         //初期のデータを定義
         this.readData();
         //編集中のタグ情報の状態を初期化
-        this.resetObj(store.state.jsondata, 'updateStore', 'EditingTargetIndex');
+        this.resetObj(store.state.jsondata, 'updateStoreObj', 'EditingTargetIndex');
         this.inputValues = store.state.jsondata;
-        console.log(this.inputValues);
-        console.log(store.state.jsondata);
     }
     private clickTagButton (e: Event) {//今クリックしたタグの情報を更新する。状態管理はupdateTargetTagInfoが実行されtargetTagInfoが更新される。
         const target = e.target as HTMLElement
-
         //編集中のタグ情報の状態を更新
-        this.resetObj(store.state.jsondata, 'updateStore', 'EditingTargetIndex');
-        store.commit('updateEditingTargetIndex', { key: Number(target.getAttribute('index')), value: true });
+        this.resetObj(store.state.jsondata, 'updateStoreObj', 'EditingTargetIndex');
+        store.commit('updateStoreObj', { target: 'EditingTargetIndex', key: Number(target.getAttribute('index')), value: true });
         store.dispatch('TargetIndexProperty');
         this.inputValues = store.state.jsondata;
-
         //テキストエリアの高さを合わせる
         this.setTagHeight(target);
     }
@@ -190,7 +186,6 @@ export default class editMenu extends Vue {
         const target = e.target as HTMLTextAreaElement;
         target.style.height = 'auto';
         target.style.height = `${target.scrollHeight}px`;
-
         store.state.jsondata[key] = target.value;
         store.commit('setJsonData', store.state.jsondata);
     }
@@ -204,7 +199,6 @@ export default class editMenu extends Vue {
         this.description = target.value;
         store.commit('changeJsonData', { key: "description", value: target.value });
     }
-
     private updatedInput(e: Event) {
         const target = e.target as HTMLTextAreaElement;
         this.updated_at = target.value;
@@ -230,33 +224,28 @@ export default class editMenu extends Vue {
         this.categoryID = target.value;
         store.commit('changeJsonData', { key: "categoryID", value: target.value });
     }
-
-
     private addBlockFunc (e: MouseEvent) {
         const target = e.target as HTMLElement
-        store.commit('updateStore', { target: 'modalStatus', key: 'modalClassName', value: 'modal-show' });
-        store.commit('updateStore', { target: 'modalStatus', key: 'modalWrapperClassName', value: 'modal-wrapper-show' });
-        store.commit('updateStore', { target: 'modalStatus', key: 'bottom', value: `calc(100vh - 5rem - ${e.clientY}px)` });
-
-        store.commit('updateState', { key: 'nexttagNum', value: target.dataset.plusnum });
+        store.commit('updateStoreObj', { target: 'modalStatus', key: 'modalClassName', value: 'modal-show' });
+        store.commit('updateStoreObj', { target: 'modalStatus', key: 'modalWrapperClassName', value: 'modal-wrapper-show' });
+        store.commit('updateStoreObj', { target: 'modalStatus', key: 'bottom', value: `calc(100vh - 5rem - ${e.clientY}px)` });
+        store.commit('updateVariableState', { key: 'nexttagNum', value: target.dataset.plusnum });
     }
     private mouseOverButton (e: Event) {
         const target = e.target as HTMLTextAreaElement;
-        this.resetObj(store.state.HoverTargetIndex, 'updateStore', 'HoverTargetIndex');
-        store.commit('updateStore', { target: 'HoverTargetIndex', key: Number(target.getAttribute('index')), value: true });
+        this.resetObj(store.state.HoverTargetIndex, 'updateStoreObj', 'HoverTargetIndex');
+        store.commit('updateStoreObj', { target: 'HoverTargetIndex', key: Number(target.getAttribute('index')), value: true });
         store.dispatch('TargetIndexProperty');
     }
     private mouseOutButton () {
-        this.resetObj(store.state.HoverTargetIndex, 'updateStore', 'HoverTargetIndex');
+        this.resetObj(store.state.HoverTargetIndex, 'updateStoreObj', 'HoverTargetIndex');
         store.dispatch('TargetIndexProperty');
     }
-
     private resetObj (jsondata:GenericObject, commit: string, target: string) {
         Object.keys(jsondata).forEach((obj: string, i: number) => {
             store.commit(commit, { target: target, key: i, value: false });
         });
     }
-
     private TargetIndexProperty() {
       return store.state.EditingTargetIndex
     }
@@ -286,7 +275,6 @@ export default class editMenu extends Vue {
         .then((response: GenericObject) => {
             this.pagetitle = response.data["pagetitle"];
             this.description = response.data["description"];
-
             this.categoryID = response.data["categoryID"];
             this.thumbnail = response.data["thumbnail"];
             this.ogImg = response.data["ogImg"];

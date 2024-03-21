@@ -1,5 +1,5 @@
 import { createStore } from 'vuex';
-import { StoreState, UpdateStatePayload, GenericObject } from '../module/type';
+import { StoreState, updateVariableStatePayload, GenericObject } from '../module/type';
 
 export const store = createStore<StoreState>({
     state: {
@@ -20,19 +20,16 @@ export const store = createStore<StoreState>({
         jsondata: {}
     },
     mutations: {
-        updateEditingTargetIndex(state, payload: { key: number; value: boolean }) {
-            state.EditingTargetIndex[payload.key] = payload.value;
-        },
         updatePagedirList(state, payload: { key: string; value: string }) {
             state.pagedirList[payload.key] = payload.value;
         },
-        updateState(state, payload: UpdateStatePayload) {
+        updateVariableState(state, payload: updateVariableStatePayload) {
             const { key, value } = payload;
             if (key in state) {
                 state[key] = value;
             }
         },
-        updateStore(state, payload: GenericObject) {
+        updateStoreObj(state, payload: GenericObject) {
             const { key, value, target } = payload;
             if (target === 'pagedirList' && Array.isArray(state[target])) {
                 state[target][key] = value;

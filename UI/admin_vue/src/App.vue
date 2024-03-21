@@ -133,7 +133,7 @@ export default class App extends Vue {
   pagelisticon = this.prop.pagelisticon;
 
   created(){
-    store.commit('updateStore', { target: 'pageinfo', key: 'base_url', value: process.env.VUE_APP_API_Base_URL });
+    store.commit('updateStoreObj', { target: 'pageinfo', key: 'base_url', value: process.env.VUE_APP_API_Base_URL });
   }
 
   openButton () {

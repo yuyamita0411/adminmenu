@@ -40,11 +40,11 @@ interface State {
   additemkey: string;
   jsondata: any;
 }
-interface UpdateStatePayload {
+interface updateVariableStatePayload {
   key: keyof State;
   value: State[keyof State];
 }
 interface GenericObject {
   [key: string]: any;
 }
-export { StoreState, TargetTagInfo, State, UpdateStatePayload, GenericObject }
+export { StoreState, TargetTagInfo, State, updateVariableStatePayload, GenericObject }
