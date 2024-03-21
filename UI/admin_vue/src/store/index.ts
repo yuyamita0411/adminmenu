@@ -23,9 +23,6 @@ export const store = createStore<StoreState>({
         setPageInfo(state, payload: { key: number; value: string }) {
             state.pageinfo[payload.key] = payload.value;
         },
-        toggleModal(state, display: boolean) {
-            state.modaldisplaystatus = display ? 'modal-show' : 'modal-hide';
-        },
         changeModalStatus(state, payload: { key: number; value: string }) {
             state.modalStatus[payload.key] = payload.value;
         },
@@ -42,6 +39,16 @@ export const store = createStore<StoreState>({
             const { key, value } = payload;
             if (key in state) {
                 state[key] = value;
+            }
+        },
+        updateStore(state, payload: GenericObject) {
+            const { key, value, target } = payload;
+            if (target === 'pagedirList' && Array.isArray(state[target])) {
+                state[target][key] = value;
+            } else if (typeof state[target] === 'object') {
+                state[target][key] = value;
+            } else {
+                console.warn(`Target ${target} is not a valid state property`);
             }
         },
         setJsonData(state, data: GenericObject) {

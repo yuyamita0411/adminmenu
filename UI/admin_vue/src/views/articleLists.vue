@@ -23,6 +23,7 @@
 import { Vue } from "vue-class-component";
 import axios from 'axios';
 import {store} from '../store/index';
+import { GenericObject } from '../module/type';
 
 export default class articleLists extends Vue {
     pagelist: string[] = [];
@@ -37,14 +38,14 @@ export default class articleLists extends Vue {
             filePath: process.env.VUE_APP_articleDirPath
         }
         )
-        .then((response: any) => {
+        .then((response: GenericObject) => {
             response.data.forEach((obj: string) => {
                 this.pagelist.push(`${obj}/language/jp`);
                 console.log(obj);
                 this.getTitleFromPageId();
             });
         })
-        .catch((error: any) => {
+        .catch((error: GenericObject) => {
             console.error(error);
         });
     }
@@ -54,12 +55,12 @@ export default class articleLists extends Vue {
             filePath: this.pagelist
         }
         )
-        .then((response: any) => {
+        .then((response: GenericObject) => {
             this.pageandtitle = response.data
             console.log(response);
             console.log(this.pageandtitle);
         })
-        .catch((error: any) => {
+        .catch((error: GenericObject) => {
             console.error(error);
         });
     }
