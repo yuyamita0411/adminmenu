@@ -252,3 +252,5 @@
 2024/03/20 21:45:14 [error] 22#22: *7 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /page/list HTTP/1.1", host: "localhost:8098"
 2024/03/21 10:31:14 [error] 22#22: *14 open() "/var/www/apple-touch-icon-precomposed.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /apple-touch-icon-precomposed.png HTTP/1.1", host: "localhost:8098"
 2024/03/21 10:31:14 [error] 22#22: *14 open() "/var/www/apple-touch-icon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /apple-touch-icon.png HTTP/1.1", host: "localhost:8098"
+2024/03/21 17:42:59 [error] 22#22: *63 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /1/language/jp HTTP/1.1", host: "localhost:8098"
+2024/03/21 17:43:01 [error] 22#22: *64 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /1/language/jp HTTP/1.1", host: "localhost:8098"

@@ -1,41 +1,16 @@
-import { GenericObject } from './type';
+import { GenericObject, APIFunc } from './type';
+import axios from 'axios';
 
 export class FUNCTION {
-/*
-    matchesPattern(str: string, prefix: string) {
-        const pattern = new RegExp(`^${prefix}\\d+$`);
-        return pattern.test(str);
+    postAPI (endpoint: string, params: GenericObject, func: APIFunc) {
+        axios.post(endpoint,params)
+        .then((response) => {
+            func(response);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
     }
-
-    replaceValuesWithFalse(obj: GenericObject) {
-        if (typeof obj !== 'object' || obj === null) {
-          return false;
-        }
-      
-        for (const key in obj) {
-          if (Object.prototype.hasOwnProperty.call(obj, key)) {
-            obj[key] = this.replaceValuesWithFalse(obj[key]);
-          }
-        }
-        return obj;
-    }
-
-    checkRegArr (key: string, prop: GenericObject) {
-      const itemkeyPattern = key.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
-      let matchedValue = null;
-      for (const key in prop) {
-          if (Object.prototype.hasOwnProperty.call(prop, key)) {
-              const value = prop[key];
-              const regex = new RegExp(`.*${key}.*`);
-              if (regex.test(itemkeyPattern)) {
-                  matchedValue = value;
-                  break;
-              }
-          }
-      }
-      return matchedValue;
-    }
-*/
     addNewObjectVal (jsondata: GenericObject, nexttagNum: number, itemkey: string) {
       const keys = Object.keys(jsondata);
       if (!itemkey) {

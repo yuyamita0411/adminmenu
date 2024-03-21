@@ -48,3 +48,9 @@ interface GenericObject {
   [key: string]: any;
 }
 export { StoreState, TargetTagInfo, State, updateVariableStatePayload, GenericObject }
+
+interface APIFunc {
+  (obj: GenericObject): void;
+}
+
+export { APIFunc }

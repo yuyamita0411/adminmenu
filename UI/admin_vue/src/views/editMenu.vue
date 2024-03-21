@@ -51,60 +51,16 @@
                 <button :class="`trashbutton ${displayTrash}`"><img :src="trashicon"></button>
             </div>
         </div>
-
         <div class="meta-setting-area">
-            <div class="meta-label">タイトル</div>
-            <textarea
-                class="for-pagetitle"
-                @input="titleInput($event)"
-                :value="pagetitle"
-            >
-            </textarea>
-            <div class="meta-label">ディスクリプション</div>
-            <textarea
-                class="for-description"
-                @input="descriptionInput($event)"
-                :value="description"
-            >
-            </textarea>
-
-            <div class="meta-label">categoryID</div>
-            <textarea
-                class="for-categoryID"
-                @input="categoryIDInput($event)"
-                :value="categoryID"
-            >
-            </textarea>
-            <div class="meta-label">thumbnail</div>
-            <textarea
-                class="for-thumbnail"
-                @input="thumbnailInput($event)"
-                :value="thumbnail"
-            >
-            </textarea>
-            <div class="meta-label">ogImg</div>
-            <textarea
-                class="for-ogImg"
-                @input="ogImgInput($event)"
-                :value="ogImg"
-            >
-            </textarea>
-            <div class="meta-label">投稿日</div>
-            <textarea
-                class="for-created_at"
-                @input="createdInput($event)"
-                :value="created_at"
-            >
-            </textarea>
-            <div class="meta-label">更新日</div>
-            <textarea
-                class="for-updated_at"
-                @input="updatedInput($event)"
-                :value="updated_at"
-            >
-            </textarea>
+            <div v-for="field in fields" :key="field.id" class="meta-label">
+                <div class="meta-label">{{ field.label }}</div>
+                <textarea
+                :class="`for-${field.id}`"
+                @input="genericInput($event, field.id)"
+                :value="jsondata[field.id]"
+                ></textarea>
+            </div>
         </div>
-
         <div class="submitButtonWrapper">
             <div class="submitButtonInner">
                 <button
@@ -148,21 +104,19 @@ export default class editMenu extends Vue {
     func = new FUNCTION();
 
     textareaStyle!: string;
-
     inputValues: {
         [key: string]: GenericObject;
     } = {};
-
-    pagetitle!: string
-    description!: string
-    categoryID!: string
-    thumbnail!: string            
-    ogImg!: string
-    created_at!: string
-    updated_at!: string
-
+    fields = [
+        { id: 'pagetitle', label: 'タイトル' },
+        { id: 'description', label: 'ディスクリプション' },
+        { id: 'categoryID', label: 'categoryID' },
+        { id: 'thumbnail', label: 'thumbnail' },
+        { id: 'ogImg', label: 'ogImg' },
+        { id: 'created_at', label: '投稿日' },
+        { id: 'updated_at', label: '更新日' },
+    ];
     displayTrash = 'hide-trash';
-
     addcontenticon = this.prop.addcontenticon;
 
     created () {
@@ -189,40 +143,9 @@ export default class editMenu extends Vue {
         store.state.jsondata[key] = target.value;
         store.commit('setJsonData', store.state.jsondata);
     }
-    private titleInput(e: Event) {
+    genericInput(e: Event, key: string) {
         const target = e.target as HTMLTextAreaElement;
-        this.pagetitle = target.value;
-        store.commit('changeJsonData', { key: "pagetitle", value: target.value });
-    }
-    private descriptionInput(e: Event) {
-        const target = e.target as HTMLTextAreaElement;
-        this.description = target.value;
-        store.commit('changeJsonData', { key: "description", value: target.value });
-    }
-    private updatedInput(e: Event) {
-        const target = e.target as HTMLTextAreaElement;
-        this.updated_at = target.value;
-        store.commit('changeJsonData', { key: "updated_at", value: target.value });
-    }
-    private createdInput(e: Event) {
-        const target = e.target as HTMLTextAreaElement;
-        this.created_at = target.value;
-        store.commit('changeJsonData', { key: "created_at", value: target.value });
-    }
-    private ogImgInput(e: Event) {
-        const target = e.target as HTMLTextAreaElement;
-        this.ogImg = target.value;
-        store.commit('changeJsonData', { key: "ogImg", value: target.value });
-    }
-    private thumbnailInput(e: Event) {
-        const target = e.target as HTMLTextAreaElement;
-        this.thumbnail = target.value;
-        store.commit('changeJsonData', { key: "thumbnail", value: target.value });
-    }
-    private categoryIDInput(e: Event) {
-        const target = e.target as HTMLTextAreaElement;
-        this.categoryID = target.value;
-        store.commit('changeJsonData', { key: "categoryID", value: target.value });
+        store.commit('changeJsonData', { key, value: target.value });
     }
     private addBlockFunc (e: MouseEvent) {
         const target = e.target as HTMLElement
@@ -252,7 +175,6 @@ export default class editMenu extends Vue {
     private HoverIndexProperty() {
       return store.state.HoverTargetIndex
     }
-
     private setTagHeight (target: HTMLElement) {
         this.textareaStyle = `height: ${target.offsetHeight}px; margin-bottom: 0;`;
     }
@@ -262,59 +184,41 @@ export default class editMenu extends Vue {
         }
         return 'opacity:0; transition: all .5s;';
     }
-
     deleteElement(target: GenericObject, key: string) {
         delete target[key];
     }
-    readData () {
-        axios.post(`${store.state.pageinfo.base_url}${process.env.VUE_APP_fileReadEndpoint}`,
-        {
-            filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
-        }
-        )
-        .then((response: GenericObject) => {
-            this.pagetitle = response.data["pagetitle"];
-            this.description = response.data["description"];
-            this.categoryID = response.data["categoryID"];
-            this.thumbnail = response.data["thumbnail"];
-            this.ogImg = response.data["ogImg"];
-            this.created_at = response.data["created_at"];
-            this.updated_at = response.data["updated_at"];
-            store.commit('setJsonData', response.data);
-        })
-        .catch((error: GenericObject) => {
-            console.error(error);
-        });
+    readData() {
+        this.func.postAPI (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileReadEndpoint}`,
+            {filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`},
+            (response: GenericObject) => {
+                store.commit('setJsonData', response.data);
+            }
+        );
     }
     updateJsonData () {
-        //ここでAPIを叩いてjsonファイルを生成する
-        axios.post(`${store.state.pageinfo.base_url}${process.env.VUE_APP_fileEndpoint}`,
-        {
-            fileData: store.state.jsondata,
-            filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
-        }
-        )
-        .then((response: GenericObject) => {
-            console.log(response.data);
-        })
-        .catch((error: GenericObject) => {
-            console.error(error);
-        });
+        this.func.postAPI (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileEndpoint}`,
+            {
+                fileData: store.state.jsondata,
+                filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
+            },
+            (response: GenericObject) => {
+                console.log(response.data);
+            }
+        );
     }
     translateJsonData () {
-        axios.post(`${store.state.pageinfo.base_url}${process.env.VUE_APP_fileTranslateEndpoint}`,
-        {
-            fileData: store.state.jsondata,
-            filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
-            //./translation_tool/language/detail/1/language/jp/index.json
-        }
-        )
-        .then((response: GenericObject) => {
-            console.log(response.data);
-        })
-        .catch((error: GenericObject) => {
-            console.error(error);
-        });
+        this.func.postAPI (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileTranslateEndpoint}`,
+            {
+                fileData: store.state.jsondata,
+                filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
+            },
+            (response: GenericObject) => {
+                console.log(response.data);
+            }
+        );
     }
 }
 </script>
