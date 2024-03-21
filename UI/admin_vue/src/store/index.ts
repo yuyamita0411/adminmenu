@@ -20,12 +20,6 @@ export const store = createStore<StoreState>({
         jsondata: {}
     },
     mutations: {
-        setPageInfo(state, payload: { key: number; value: string }) {
-            state.pageinfo[payload.key] = payload.value;
-        },
-        changeModalStatus(state, payload: { key: number; value: string }) {
-            state.modalStatus[payload.key] = payload.value;
-        },
         updateEditingTargetIndex(state, payload: { key: number; value: boolean }) {
             state.EditingTargetIndex[payload.key] = payload.value;
         },
@@ -57,27 +51,8 @@ export const store = createStore<StoreState>({
         changeJsonData(state, payload: { key: string; value: string }) {
             state.jsondata[payload.key] = payload.value;
         },
-/*
-        setTargetTagNow(state, tag: string) {
-            state.targetTagNow = tag;
-        },
-        setTargetTagDetail(state, tag: string) {
-            state.targetTagDetail = tag;
-        },
-*/
         setTag(state, tag: string) {
             state.whichtag = tag;
-        },
-/*
-        setItemKey(state, itemkey: string) {
-            state.additemkey = itemkey;
-        },
-        addValJsonData (state, newVal: string): void {
-            state.jsondata = {
-                ...state.jsondata,
-                [newVal]: ''
-            };
         }
-*/
     }
 });

@@ -42,9 +42,9 @@ export default class Modal extends Vue {
         this.chooseWhichTag(e);
     }
     modalClose () {
-        store.commit('changeModalStatus', { key: 'modalClassName', value: 'modal-hide' });
-        store.commit('changeModalStatus', { key: 'modalWrapperClassName', value: 'modal-wrapper-hide' });
-        store.commit('changeModalStatus', { key: 'bottom', value: '-4rem' });
+        store.commit('updateStore', { target: 'modalStatus', key: 'modalClassName', value: 'modal-hide' });
+        store.commit('updateStore', { target: 'modalStatus', key: 'modalWrapperClassName', value: 'modal-wrapper-hide' });
+        store.commit('updateStore', { target: 'modalStatus', key: 'bottom', value: '-4rem' });
     }
     chooseWhichTag(e: Event) {
         const target = e.target as HTMLElement;
