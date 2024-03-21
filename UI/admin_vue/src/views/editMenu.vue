@@ -79,7 +79,6 @@
 <script lang="ts">
 import { Vue, Options } from "vue-class-component";
 import { mapState } from 'vuex';
-import axios from 'axios';
 
 import {store} from '../store/index';
 import { PROP } from '../module/prop';
@@ -197,23 +196,23 @@ export default class editMenu extends Vue {
         );
     }
     updateJsonData () {
-        this.func.postAPI (
+        this.ModifyJsonFile (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileEndpoint}`,
-            {
-                fileData: store.state.jsondata,
-                filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
-            },
-            (response: GenericObject) => {
-                console.log(response.data);
-            }
+            `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
         );
     }
     translateJsonData () {
-        this.func.postAPI (
+        this.ModifyJsonFile (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileTranslateEndpoint}`,
+            `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
+        );
+    }
+    private ModifyJsonFile (endpoint: string, filepath: string) {
+        this.func.postAPI (
+            endpoint,
             {
                 fileData: store.state.jsondata,
-                filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
+                filePath: filepath
             },
             (response: GenericObject) => {
                 console.log(response.data);
