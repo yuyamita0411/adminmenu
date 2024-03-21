@@ -1,0 +1,66 @@
+version: "3"
+services:
+
+    admin_flask:
+        build: ./API/app
+        volumes:
+            - ./API/app:/app
+            - ./.env:/app/translation_tool/.env
+        environment:
+            - FLASK_ENV=development
+        expose:
+            - "3243"
+
+    nginx:
+        image: nginx:latest
+        ports:
+            - "9244:1314"
+        volumes:
+            - ./API/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+        depends_on:
+            - admin_flask
+#サーバー
+    admin_vue:
+        restart: always
+        container_name: admin_vue
+        build: ./UI
+        volumes:
+            - "./UI:/templates"
+            - ./.env:/templates/admin_vue/.env
+        tty: true
+        environment:
+            TZ: "Asia/Tokyo"
+        ports:
+            - "3000:3000"
+        networks:
+            nt_admin_vue:
+                ipv4_address: 182.33.0.8
+
+    admin_frontend:
+        restart: always
+        container_name: admin_frontend
+        build: ./UI/server/nginx
+        volumes:
+            - ./UI/server/nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./UI/logs/nginx:/var/log/nginx
+            - ./UI/admin_vue/dist:/var/www
+            - ./.env:/templates/admin_vue/.env
+        ports:
+            - "8098:5057"
+        environment:
+            TZ: "Asia/Tokyo"
+        networks:
+            nt_admin_vue:
+                ipv4_address: 182.33.0.9
+
+networks:
+    nt_admin_vue:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 182.33.0.0/24
+
+volumes:
+    db-data:
+    ssl_certs:

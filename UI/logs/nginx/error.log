@@ -1,0 +1,254 @@
+2023/10/07 12:54:23 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 12:54:23 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 12:54:24 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 12:54:24 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 12:54:26 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 12:54:28 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 12:54:31 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 12:54:38 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 12:57:35 [error] 20#20: *3 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 182.33.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8098"
+2023/10/07 12:57:35 [error] 20#20: *4 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 182.33.0.1, server: localhost, request: "GET /apple-touch-icon-precomposed.png HTTP/1.1", host: "localhost:8098"
+2023/10/07 12:57:35 [error] 20#20: *5 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 182.33.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/"
+2023/10/07 12:57:35 [error] 20#20: *6 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 182.33.0.1, server: localhost, request: "GET /apple-touch-icon.png HTTP/1.1", host: "localhost:8098"
+2023/10/07 13:08:39 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:08:39 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:08:40 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:08:41 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:08:42 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:31:58 [error] 20#20: *1 directory index of "/var/www/" is forbidden, client: 182.33.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8098"
+2023/10/07 13:46:32 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:46:32 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:46:33 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:46:33 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:46:34 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:46:36 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:46:40 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:46:47 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:47:00 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:47:26 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:48:18 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:49:13 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:49:13 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:49:14 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:49:15 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:49:16 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:49:18 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:49:21 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:49:28 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:49:41 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:50:18 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:50:19 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:50:19 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:50:20 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:50:21 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:50:23 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:50:27 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:50:33 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:51:02 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:51:03 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:51:03 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:51:04 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:51:05 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:51:07 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:51:10 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:51:17 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:51:31 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:51:57 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:52:48 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:13
+2023/10/07 13:53:24 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:12
+2023/10/07 13:53:25 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:12
+2023/10/07 13:53:25 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:12
+2023/10/07 13:53:26 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:12
+2023/10/07 13:53:27 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:12
+2023/10/07 13:53:29 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:12
+2023/10/07 13:53:33 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:12
+2023/10/07 13:53:39 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:12
+2023/10/07 13:53:53 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:12
+2023/10/07 13:54:19 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:12
+2023/10/07 13:55:24 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:55:24 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:55:25 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:55:25 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:55:27 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:55:29 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:55:32 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:55:39 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:55:52 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:56:18 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:57:10 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:58:10 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/nginx.conf:1
+2023/10/07 13:58:40 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 13:58:41 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 13:58:41 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 13:58:42 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 13:58:43 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 13:58:45 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 13:58:49 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 13:58:55 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 13:59:09 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 13:59:35 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:00:26 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:01:27 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:02:27 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:05:31 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:05:32 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:05:32 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:05:33 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:05:34 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:05:36 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:05:39 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:05:46 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:06:00 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:06:26 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:07:17 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:08:18 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:09:18 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:10:19 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:11:19 [emerg] 1#1: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /etc/nginx/nginx.conf:2
+2023/10/07 14:12:04 [notice] 1#1: using the "epoll" event method
+2023/10/07 14:12:04 [notice] 1#1: nginx/1.23.4
+2023/10/07 14:12:04 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2023/10/07 14:12:04 [notice] 1#1: OS: Linux 5.15.49-linuxkit
+2023/10/07 14:12:04 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/10/07 14:12:04 [notice] 1#1: start worker processes
+2023/10/07 14:12:04 [notice] 1#1: start worker process 28
+2023/10/07 14:12:04 [notice] 1#1: start worker process 29
+2023/10/07 14:12:04 [notice] 1#1: start worker process 30
+2023/10/07 14:12:04 [notice] 1#1: start worker process 31
+2023/10/07 14:12:50 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/10/07 14:12:50 [notice] 28#28: gracefully shutting down
+2023/10/07 14:12:50 [notice] 30#30: gracefully shutting down
+2023/10/07 14:12:50 [notice] 31#31: gracefully shutting down
+2023/10/07 14:12:50 [notice] 31#31: exiting
+2023/10/07 14:12:50 [notice] 29#29: gracefully shutting down
+2023/10/07 14:12:50 [notice] 28#28: exiting
+2023/10/07 14:12:50 [notice] 30#30: exiting
+2023/10/07 14:12:50 [notice] 31#31: exit
+2023/10/07 14:12:50 [notice] 29#29: exiting
+2023/10/07 14:12:50 [notice] 28#28: exit
+2023/10/07 14:12:50 [notice] 30#30: exit
+2023/10/07 14:12:50 [notice] 29#29: exit
+2023/10/07 14:12:50 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2023/10/07 14:12:50 [notice] 1#1: worker process 31 exited with code 0
+2023/10/07 14:12:50 [notice] 1#1: signal 29 (SIGIO) received
+2023/10/07 14:12:50 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2023/10/07 14:12:50 [notice] 1#1: worker process 28 exited with code 0
+2023/10/07 14:12:50 [notice] 1#1: worker process 30 exited with code 0
+2023/10/07 14:12:50 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2023/10/07 14:12:50 [notice] 1#1: worker process 29 exited with code 0
+2023/10/07 14:12:50 [notice] 1#1: exit
+2023/10/08 10:29:49 [error] 22#22: *2 open() "/var/www/apple-touch-icon-precomposed.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /apple-touch-icon-precomposed.png HTTP/1.1", host: "localhost:8098"
+2023/10/08 10:29:49 [error] 22#22: *2 open() "/var/www/apple-touch-icon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /apple-touch-icon.png HTTP/1.1", host: "localhost:8098"
+2023/11/10 16:56:38 [error] 22#22: *8 open() "/var/www/apple-touch-icon-precomposed.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /apple-touch-icon-precomposed.png HTTP/1.1", host: "localhost:8098"
+2023/11/10 16:56:38 [error] 22#22: *8 open() "/var/www/apple-touch-icon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /apple-touch-icon.png HTTP/1.1", host: "localhost:8098"
+2023/11/10 16:56:43 [error] 22#22: *1 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/3"
+2023/11/10 16:56:43 [error] 22#22: *4 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/3"
+2023/11/10 16:56:43 [error] 22#22: *2 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/3"
+2023/11/10 16:56:46 [error] 22#22: *1 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/2"
+2023/11/10 16:56:46 [error] 22#22: *2 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/2"
+2023/11/10 16:56:46 [error] 22#22: *4 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/2"
+2023/11/10 16:57:38 [error] 22#22: *4 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2023/11/10 16:57:38 [error] 22#22: *2 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2023/11/10 16:57:38 [error] 22#22: *1 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2023/11/10 16:57:43 [error] 22#22: *2 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2023/11/10 16:57:43 [error] 22#22: *1 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2023/11/10 16:57:43 [error] 22#22: *4 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2023/11/10 16:57:59 [error] 22#22: *1 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 182.33.0.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/08 16:18:56 [error] 29#29: *1 directory index of "/var/www/" is forbidden, client: 192.168.65.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8098"
+2024/03/08 16:18:56 [error] 29#29: *1 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/"
+2024/03/08 16:31:02 [error] 28#28: *1 directory index of "/var/www/" is forbidden, client: 192.168.65.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8098"
+2024/03/08 16:48:41 [error] 29#29: *1 directory index of "/var/www/" is forbidden, client: 192.168.65.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8098"
+2024/03/08 17:19:51 [error] 29#29: *1 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/08 17:19:51 [error] 29#29: *2 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/08 17:19:51 [error] 29#29: *3 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/08 17:20:13 [error] 29#29: *1 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 11:57:41 [error] 22#22: *1 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 11:57:41 [error] 22#22: *5 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 11:57:41 [error] 22#22: *4 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 11:58:33 [error] 22#22: *7 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 11:58:33 [error] 22#22: *8 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 11:58:33 [error] 22#22: *9 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:00:33 [error] 22#22: *10 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:00:33 [error] 22#22: *11 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:00:33 [error] 22#22: *12 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:03:03 [error] 22#22: *13 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:03:03 [error] 22#22: *14 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:03:03 [error] 22#22: *15 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:04:05 [error] 22#22: *16 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:04:05 [error] 22#22: *17 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:04:05 [error] 22#22: *18 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:08:12 [error] 22#22: *19 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:08:12 [error] 22#22: *20 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:08:12 [error] 22#22: *21 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:20:02 [error] 22#22: *22 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:20:02 [error] 22#22: *23 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:20:02 [error] 22#22: *24 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:22:23 [error] 22#22: *25 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:22:23 [error] 22#22: *26 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:22:23 [error] 22#22: *27 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:25:37 [error] 22#22: *28 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:25:37 [error] 22#22: *29 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:25:37 [error] 22#22: *30 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:25:46 [error] 22#22: *28 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:25:46 [error] 22#22: *29 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:25:46 [error] 22#22: *30 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:25:54 [error] 22#22: *28 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:25:54 [error] 22#22: *30 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:25:54 [error] 22#22: *29 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:26:54 [error] 22#22: *31 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:26:54 [error] 22#22: *32 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:26:54 [error] 22#22: *33 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:31:39 [error] 22#22: *34 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:31:39 [error] 22#22: *35 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 12:31:39 [error] 22#22: *36 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 13:16:04 [error] 22#22: *38 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 13:16:04 [error] 22#22: *37 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 13:16:04 [error] 22#22: *39 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 13:27:54 [error] 22#22: *41 open() "/var/www/static/img/breadcrumbicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/breadcrumbicon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 13:27:54 [error] 22#22: *42 open() "/var/www/static/img/humburgericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/humburgericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 13:27:54 [error] 22#22: *43 open() "/var/www/static/img/headericon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /static/img/headericon.png HTTP/1.1", host: "localhost:8098", referrer: "http://localhost:8098/edit/1"
+2024/03/09 14:02:25 [error] 22#22: *61 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/09 14:02:27 [error] 22#22: *62 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/09 14:22:39 [error] 22#22: *71 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/09 15:21:11 [error] 22#22: *81 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/09 15:21:12 [error] 22#22: *82 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/09 15:21:13 [error] 22#22: *83 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/12 21:59:44 [error] 22#22: *154 open() "/var/www/apple-touch-icon-precomposed.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /apple-touch-icon-precomposed.png HTTP/1.1", host: "localhost:8098"
+2024/03/12 21:59:44 [error] 22#22: *154 open() "/var/www/apple-touch-icon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /apple-touch-icon.png HTTP/1.1", host: "localhost:8098"
+2024/03/12 23:18:02 [error] 22#22: *190 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/12 23:18:04 [error] 22#22: *191 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/12 23:18:05 [error] 22#22: *192 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/14 09:06:45 [error] 22#22: *221 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/14 09:06:47 [error] 22#22: *222 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/14 09:07:20 [error] 22#22: *223 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/14 22:17:35 [error] 22#22: *224 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/15 10:33:09 [error] 22#22: *226 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/15 10:33:12 [error] 22#22: *227 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/15 10:38:08 [error] 22#22: *228 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/15 12:11:43 [error] 22#22: *303 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/15 12:11:47 [error] 22#22: *304 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/15 12:11:48 [error] 22#22: *305 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/15 12:11:49 [error] 22#22: *306 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/15 12:11:50 [error] 22#22: *307 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/15 23:11:43 [error] 22#22: *387 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/15 23:11:44 [error] 22#22: *388 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/16 01:12:09 [error] 22#22: *444 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/16 01:12:11 [error] 22#22: *445 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/16 01:12:12 [error] 22#22: *446 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/16 01:12:13 [error] 22#22: *447 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/16 01:14:58 [error] 22#22: *452 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/16 01:15:03 [error] 22#22: *453 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/16 01:20:39 [error] 22#22: *458 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/16 01:20:42 [error] 22#22: *459 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /edit/1 HTTP/1.1", host: "localhost:8098"
+2024/03/17 08:59:41 [error] 22#22: *7 open() "/var/www/apple-touch-icon-precomposed.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /apple-touch-icon-precomposed.png HTTP/1.1", host: "localhost:8098"
+2024/03/17 08:59:41 [error] 22#22: *7 open() "/var/www/apple-touch-icon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /apple-touch-icon.png HTTP/1.1", host: "localhost:8098"
+2024/03/20 11:25:16 [error] 22#22: *2 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /3/language/jp HTTP/1.1", host: "localhost:8098"
+2024/03/20 11:25:17 [error] 22#22: *3 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /3/language/jp HTTP/1.1", host: "localhost:8098"
+2024/03/20 11:25:18 [error] 22#22: *4 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /3/language/jp HTTP/1.1", host: "localhost:8098"
+2024/03/20 11:25:19 [error] 22#22: *5 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /3/language/jp HTTP/1.1", host: "localhost:8098"
+2024/03/20 17:16:47 [error] 22#22: *24 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /1/language/jp HTTP/1.1", host: "localhost:8098"
+2024/03/20 19:24:02 [error] 22#22: *89 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /1/language/jp HTTP/1.1", host: "localhost:8098"
+2024/03/20 19:56:17 [error] 22#22: *111 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /1/language/jp HTTP/1.1", host: "localhost:8098"
+2024/03/20 21:45:14 [error] 22#22: *7 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 192.168.65.1, server: localhost, request: "GET /page/list HTTP/1.1", host: "localhost:8098"
+2024/03/21 10:31:14 [error] 22#22: *14 open() "/var/www/apple-touch-icon-precomposed.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /apple-touch-icon-precomposed.png HTTP/1.1", host: "localhost:8098"
+2024/03/21 10:31:14 [error] 22#22: *14 open() "/var/www/apple-touch-icon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /apple-touch-icon.png HTTP/1.1", host: "localhost:8098"

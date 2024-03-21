@@ -1,0 +1,4 @@
+.env
+API/app/translation_tool/.env
+API/app/translation_tool/translation-key.json
+UI/admin_vue/.env

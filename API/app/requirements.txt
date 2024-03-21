@@ -1,0 +1,6 @@
+flask
+uwsgi
+flask_cors
+python-dotenv
+selenium
+google-cloud-translate

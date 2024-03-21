@@ -1,0 +1,41 @@
+{
+    "$comment": [
+      "日本"
+    ],
+    "vals":{
+      "CustomizeMainColumnCategoryArticle": {
+        "ArNum": {
+          "arr":"5個",
+          "i":"個"
+        }
+      },
+      "UserList": {
+        "custom_uploader": {
+          "title": "画像を選択してください",
+          "button": "画像の選択"
+        }
+      },
+      "Admin": {
+        "Editor": {
+          "blockmenu": {
+            "speechBalloon": {
+              "index": {
+                "title": "吹き出し",
+                "title1": "吹き出しのタイプ"
+              },
+              "parts": {
+                "balloonNameColor": {},
+                "whichBalloonType": {
+                  "title1": "画像をアップロード",
+                  "title2": "ここに吹き出しテキストを入力"
+                }
+              }
+            }
+          }
+        }
+      },
+      "header":"ヘッダー",
+      "footer":"フッター",
+      "side":"サイド"
+    }
+  }
