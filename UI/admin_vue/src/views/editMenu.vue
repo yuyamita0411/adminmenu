@@ -169,7 +169,7 @@ export default class editMenu extends Vue {
         //初期のデータを定義
         this.readData();
         //編集中のタグ情報の状態を初期化
-        this.resetObj(store.state.jsondata, 'updateEditingTargetIndex');
+        this.resetObj(store.state.jsondata, 'updateStore', 'EditingTargetIndex');
         this.inputValues = store.state.jsondata;
         console.log(this.inputValues);
         console.log(store.state.jsondata);
@@ -178,7 +178,7 @@ export default class editMenu extends Vue {
         const target = e.target as HTMLElement
 
         //編集中のタグ情報の状態を更新
-        this.resetObj(store.state.jsondata, 'updateEditingTargetIndex');
+        this.resetObj(store.state.jsondata, 'updateStore', 'EditingTargetIndex');
         store.commit('updateEditingTargetIndex', { key: Number(target.getAttribute('index')), value: true });
         store.dispatch('TargetIndexProperty');
         this.inputValues = store.state.jsondata;
@@ -242,18 +242,18 @@ export default class editMenu extends Vue {
     }
     private mouseOverButton (e: Event) {
         const target = e.target as HTMLTextAreaElement;
-        this.resetObj(store.state.HoverTargetIndex, 'updateHoverTargetIndex');
-        store.commit('updateHoverTargetIndex', { key: Number(target.getAttribute('index')), value: true });
+        this.resetObj(store.state.HoverTargetIndex, 'updateStore', 'HoverTargetIndex');
+        store.commit('updateStore', { target: 'HoverTargetIndex', key: Number(target.getAttribute('index')), value: true });
         store.dispatch('TargetIndexProperty');
     }
     private mouseOutButton () {
-        this.resetObj(store.state.HoverTargetIndex, 'updateHoverTargetIndex');
+        this.resetObj(store.state.HoverTargetIndex, 'updateStore', 'HoverTargetIndex');
         store.dispatch('TargetIndexProperty');
     }
 
-    private resetObj (jsondata:GenericObject, commit: string) {
+    private resetObj (jsondata:GenericObject, commit: string, target: string) {
         Object.keys(jsondata).forEach((obj: string, i: number) => {
-            store.commit(commit, { key: i, value: false });
+            store.commit(commit, { target: target, key: i, value: false });
         });
     }
 

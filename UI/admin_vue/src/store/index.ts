@@ -23,9 +23,6 @@ export const store = createStore<StoreState>({
         updateEditingTargetIndex(state, payload: { key: number; value: boolean }) {
             state.EditingTargetIndex[payload.key] = payload.value;
         },
-        updateHoverTargetIndex(state, payload: { key: number; value: boolean }) {
-            state.HoverTargetIndex[payload.key] = payload.value;
-        },
         updatePagedirList(state, payload: { key: string; value: string }) {
             state.pagedirList[payload.key] = payload.value;
         },
