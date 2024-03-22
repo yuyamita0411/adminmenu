@@ -48,12 +48,19 @@
                     :data-plusnum="index+1"></button>
                     <span class="addcontent-border bottom-border"></span>
                 </div>
-                <button :class="`trashbutton ${displayTrash}`"><img :src="trashicon"></button>
+                <button
+                v-if="key != 'pagetitle'"
+                :class="`trashbutton`">
+                    <img
+                    :src="trashicon"
+                    @click="deleteElement(key)"
+                    >
+                </button>
             </div>
         </div>
         <div class="meta-setting-area">
-            <div v-for="field in fields" :key="field.id" class="meta-label">
-                <div class="meta-label">{{ field.label }}</div>
+            <div v-for="field in fields" :key="field.id" class="meta-label-wrapper">
+                <div class="font-weight-bold">{{ field.label }}</div>
                 <textarea
                 :class="`for-${field.id}`"
                 @input="genericInput($event, field.id)"
@@ -117,6 +124,7 @@ export default class editMenu extends Vue {
     ];
     displayTrash = 'hide-trash';
     addcontenticon = this.prop.addcontenticon;
+    trashicon = this.prop.trashicon;
 
     created () {
         //初期のデータを定義
@@ -142,7 +150,7 @@ export default class editMenu extends Vue {
         store.state.jsondata[key] = target.value;
         store.commit('setJsonData', store.state.jsondata);
     }
-    genericInput(e: Event, key: string) {
+    private genericInput(e: Event, key: string) {
         const target = e.target as HTMLTextAreaElement;
         store.commit('changeJsonData', { key, value: target.value });
     }
@@ -183,8 +191,10 @@ export default class editMenu extends Vue {
         }
         return 'opacity:0; transition: all .5s;';
     }
-    deleteElement(target: GenericObject, key: string) {
-        delete target[key];
+    private deleteElement(key: string) {
+        delete store.state.jsondata[key];
+        console.log(store.state.jsondata);
+        store.commit('setJsonData', store.state.jsondata);
     }
     readData() {
         this.func.postAPI (
@@ -251,12 +261,20 @@ export default class editMenu extends Vue {
         cursor: pointer;
     }
 }
-
+.meta-label-wrapper {
+    textarea {
+        font-size: 1rem;
+        padding: .5rem 0 0 .5rem;
+    }
+}
 .meta-setting-area {
     margin: 1rem auto;
     padding: 0 .5rem;
+    .meta-label-wrapper {
+        margin-bottom: 1rem;
+    }
 }
-.meta-setting-area .meta-label,
+.meta-setting-area .meta-label-wrapper,
 .meta-setting-area {
     display: inline-block;
     width: 100%;
@@ -322,6 +340,16 @@ p,
     width: 50%;
     margin: 0 auto;
 }
+.submitButton {
+    border-bottom: 7px solid #0686b2;
+    background: #27acd9;
+    color: #fff;
+}
+.translationButton {
+    border-bottom: 7px solid #C50B4F;
+    background: #f54785;
+    color: #fff;
+}
 .submitButton,
 .translationButton {
     display: block;
@@ -334,16 +362,18 @@ p,
     font-weight: bold;
     border-radius: 0.3rem;
     border: none;
-    border-bottom: 7px solid #0686b2;
-    background: #27acd9;
-    color: #fff;
     transition: all .3s;
 }
 .submitButton:hover,
 .translationButton:hover {
-	margin-top: 6px;
-	border-bottom: 1px solid #0686b2;
+    margin-top: 6px;
 	color: #fff;
     transition: all .3s;
+}
+.submitButton:hover{
+    border-bottom: 1px solid #0686b2;
+}
+.translationButton:hover {
+	border-bottom: 1px solid #C50B4F;
 }
 </style>

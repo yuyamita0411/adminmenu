@@ -1,6 +1,9 @@
 body {
     margin: 0;
 }
+.font-weight-bold {
+    font-weight: bold;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -33,8 +36,8 @@ body {
     }
 }
 .trashbutton {
-    bottom: .5rem;
-    right: 5rem;
+    bottom: 0;
+    right: 2rem;
 
     img {
         width: 100%;
@@ -102,6 +105,78 @@ p,
 .for-box-description {
     font-size: 1rem;
     margin: 0 0 .5rem 0;
+}
+.for-title {
+    font-size: 2rem;
+}
+
+.for-title::before {
+    font-size: 2rem;
+    background: #c50b4f;
+    min-width: 1.2rem;
+}
+
+.for-title::before,
+.for-p::before,
+.for-h1::before,
+.for-h2::before,
+.for-h3::before,
+.for-h4::before,
+.for-h5::before,
+.for-h6::before {
+    color:#ffff;
+    font-weight: bold;
+    margin-right: .5rem;
+    border-radius: .5rem;
+    padding: .3rem;
+    display: inline-block;
+    text-align: center;
+}
+.for-p::before,
+.for-h1::before,
+.for-h2::before,
+.for-h3::before,
+.for-h4::before,
+.for-h5::before,
+.for-h6::before {
+    font-size: 1rem;
+    min-width: 2rem;
+}
+.for-h1::before,
+.for-h2::before,
+.for-h3::before,
+.for-h4::before,
+.for-h5::before,
+.for-h6::before {
+    background: #0686b2;
+}
+.for-p::before {
+    background: rgb(0, 0, 0, .5);
+}
+
+.for-title::before {
+    content: "Title";
+}
+.for-p::before {
+    content: "p";
+}
+.for-h1::before {
+    content: "h1";
+}
+.for-h2::before {
+    content: "h2";
+}
+.for-h3::before {
+    content: "h3";
+}
+.for-h4::before {
+    content: "h4";
+}
+.for-h5::before {
+    content: "h5";
+}
+.for-h6::before {
+    content: "h6";
 }
 
 .for-box-image {}

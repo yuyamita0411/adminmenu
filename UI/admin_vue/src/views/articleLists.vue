@@ -1,10 +1,25 @@
 <template>
   記事リスト
   <ul>
-      <li v-for="(value, key) in pagelist" :key="key">
-          <router-link :to="`/${value}`">{{pageandtitle[value]}}</router-link>
-          <span class="bottom-border"></span>
-      </li>
+        <li v-for="(value, key, index) in pagelist" :key="key">
+            <router-link :to="`/${value}`">{{key+1}}. {{pageandtitle[value]}}</router-link>
+            <div class="addcontent-wrapper">
+                <button
+                @click="addBlockFunc(key)"
+                :class="`addcontentbutton`"
+                ><img
+                :index="index"
+                :src="addcontenticon"></button>
+                <span class="bottom-border addcontent-border"></span>
+            </div>
+            <button
+            :class="`trashbutton`">
+                <img
+                :src="trashicon"
+                @click="deleteElement(key)"
+                >
+            </button>
+        </li>
   </ul>
 </template>
 
@@ -21,48 +36,67 @@
 
 <script lang="ts">
 import { Vue } from "vue-class-component";
-import axios from 'axios';
 import {store} from '../store/index';
 import { GenericObject } from '../module/type';
+import { PROP } from '../module/prop';
+import { FUNCTION } from '../module/function';
 
 export default class articleLists extends Vue {
     pagelist: string[] = [];
     pageandtitle = {}
+    func = new FUNCTION();
+    prop = new PROP();
+
+    addcontenticon = this.prop.addcontenticon;
+    trashicon = this.prop.trashicon;
 
     created () {
         this.getFileDirectory();
     }
+    addBlockFunc (key: number) {
+        console.log(this.pagelist);
+        this.pagelist[key+1] = `${this.getMaxNumber(this.pagelist)+1}/language/jp`;
+        //{0: "1/language/jp"}
+        console.log(this.getMaxNumber(this.pagelist));
+        console.log(key);
+    }
+
+    private getMaxNumber = (arr: string[]): number => {
+        return arr
+            .map(item => {
+                const match = item.match(/^\d+/);
+                return match ? parseInt(match[0], 10) : 0;
+            })
+            .reduce((max, curr) => curr > max ? curr : max, 0);
+    };
+
+    deleteElement(key: number) {
+        console.log(this.pagelist);
+        delete this.pagelist[key];
+        console.log(key);
+    }
     getFileDirectory () {
-        axios.post(`${store.state.pageinfo.base_url}${process.env.VUE_APP_fileDirectory}`,
-        {
-            filePath: process.env.VUE_APP_articleDirPath
-        }
-        )
-        .then((response: GenericObject) => {
-            response.data.forEach((obj: string) => {
-                this.pagelist.push(`${obj}/language/jp`);
-                console.log(obj);
-                this.getTitleFromPageId();
-            });
-        })
-        .catch((error: GenericObject) => {
-            console.error(error);
-        });
+        this.func.postAPI (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileDirectory}`,
+            {filePath: process.env.VUE_APP_articleDirPath},
+            (response: GenericObject) => {
+                this.pagelist = response.data.map((obj: string) => {
+                    return `${obj}/language/jp`;
+                });
+                this.pagelist.forEach(() => {
+                    this.getTitleFromPageId();
+                });
+            }
+        );
     }
     getTitleFromPageId () {
-        axios.post(`${store.state.pageinfo.base_url}${process.env.VUE_APP_filetitle}`,
-        {
-            filePath: this.pagelist
-        }
-        )
-        .then((response: GenericObject) => {
-            this.pageandtitle = response.data
-            console.log(response);
-            console.log(this.pageandtitle);
-        })
-        .catch((error: GenericObject) => {
-            console.error(error);
-        });
+        this.func.postAPI (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_filetitle}`,
+            {filePath: this.pagelist},
+            (response: GenericObject) => {
+                this.pageandtitle = response.data;
+            }
+        );
     }
 }
 </script>
