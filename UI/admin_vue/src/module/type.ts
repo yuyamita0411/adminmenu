@@ -12,22 +12,9 @@ type MyNestedObject = NestedObject<JsonObject, 4>;
 
 export { JsonValue, JsonArray, JsonObject, NestedObject, MyNestedObject};
 interface StoreState {
-  [key: string]: any; // 任意のキーと値を持つことができる
+  [key: string]: any;
 }
-/*
-interface StoreState {
-  modaldisplaystatus: string;
-  targetTagInfo: TargetTagInfo;//今ターゲットになってるタグの詳細情報を更新する
-  EditingTargetIndex: { [key: number]: any };//今ターゲットになってるタグは何番目なのかを記録する
-  targetTagNow: string;
-  targetTagDetail: string;
-  addtag: string;
-  nexttagNum: number;
 
-  whichtag: string;
-  additemkey: string;
-  jsondata: any;
-}*/
 interface TargetTagInfo {
   order: number,
   setTargetTagNow: string,

@@ -16,6 +16,38 @@
   <Modal />
 </template>
 
+<script lang="ts">
+import { Vue, Options } from "vue-class-component";
+import { PROP } from './module/prop';
+import Modal from '@/components/Modal.vue';
+import {store} from './store/common/index';
+
+@Options({
+    components: {
+        Modal
+    }
+})
+
+export default class App extends Vue {
+
+  prop = new PROP();
+
+  navstatus = 'nav-open'
+  buttonsrc = this.prop.buttonsrc;
+  homeicon = this.prop.homeicon;
+  pagelisticon = this.prop.pagelisticon;
+
+  created(){
+    store.commit('updateStoreObj', { target: 'pageinfo', key: 'base_url', value: process.env.VUE_APP_API_Base_URL });
+  }
+
+  openButton () {
+    this.navstatus = this.navstatus === 'nav-open' ? 'nav-close' : 'nav-open';
+    this.buttonsrc = this.navstatus === 'nav-open' ? this.prop.openicon : this.prop.closeicon;
+  }
+}
+</script>
+
 <style lang="scss">
 @import "./views/style.scss";
 nav {
@@ -110,35 +142,3 @@ nav {
     }
 }
 </style>
-
-<script lang="ts">
-import { Vue, Options } from "vue-class-component";
-import { PROP } from './module/prop';
-import Modal from '@/components/Modal.vue';
-import {store} from './store/common/index';
-
-@Options({
-    components: {
-        Modal
-    }
-})
-
-export default class App extends Vue {
-
-  prop = new PROP();
-
-  navstatus = 'nav-open'
-  buttonsrc = this.prop.buttonsrc;
-  homeicon = this.prop.homeicon;
-  pagelisticon = this.prop.pagelisticon;
-
-  created(){
-    store.commit('updateStoreObj', { target: 'pageinfo', key: 'base_url', value: process.env.VUE_APP_API_Base_URL });
-  }
-
-  openButton () {
-    this.navstatus = this.navstatus === 'nav-open' ? 'nav-close' : 'nav-open';
-    this.buttonsrc = this.navstatus === 'nav-open' ? this.prop.openicon : this.prop.closeicon;
-  }
-}
-</script>
