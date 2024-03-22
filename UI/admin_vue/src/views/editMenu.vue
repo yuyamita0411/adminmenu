@@ -87,14 +87,15 @@
 import { Vue, Options } from "vue-class-component";
 import { mapState } from 'vuex';
 
-import {store} from '../store/index';
+import {store} from '../store/common/index';
+import {editMenuStore} from '../store/editMenu/index';
 import { PROP } from '../module/prop';
 import { FUNCTION } from '../module/function';
 import { GenericObject } from '../module/type';
 
 @Options({
     computed: {
-        ...mapState(['modaldisplaystatus', 'modalStatus', 'whichtag', 'jsondata']),
+        ...mapState(['modalStatus', 'jsondata', 'HoverTargetIndex', 'EditingTargetIndex']),
         EditingTargetIndex() {
             // Vuex ストアの state から EditingTargetIndex を取得してコンポーネントにマッピング
             return store.state.EditingTargetIndex;

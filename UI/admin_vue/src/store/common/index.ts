@@ -1,34 +1,17 @@
 import { createStore } from 'vuex';
-import { StoreState, updateVariableStatePayload, GenericObject } from '../module/type';
+import { StoreState, GenericObject, updateVariableStatePayload } from '../../module/type';
 
 export const store = createStore<StoreState>({
     state: {
+        jsondata: {},
         pageinfo: {},
-        modaldisplaystatus: 'modal-hide',
-        targetTagInfo: {order: 0, setTargetTagNow: '', setTargetTagDetail: ''},
-        modalStatus: {},
         EditingTargetIndex: {},
+        modalStatus: {},
         HoverTargetIndex: {},
-        targetTagNow: "",
-        targetTagDetail: "",
-        addtag: "",
         nexttagNum: 0,
-        pagedirList:[],
- 
-        whichtag: "",
-        additemkey: "",
-        jsondata: {}
+        targetTagInfo: {order: 0, setTargetTagNow: '', setTargetTagDetail: ''},
     },
     mutations: {
-        updatePagedirList(state, payload: { key: string; value: string }) {
-            state.pagedirList[payload.key] = payload.value;
-        },
-        updateVariableState(state, payload: updateVariableStatePayload) {
-            const { key, value } = payload;
-            if (key in state) {
-                state[key] = value;
-            }
-        },
         updateStoreObj(state, payload: GenericObject) {
             const { key, value, target } = payload;
             if (target === 'pagedirList' && Array.isArray(state[target])) {
@@ -39,14 +22,17 @@ export const store = createStore<StoreState>({
                 console.warn(`Target ${target} is not a valid state property`);
             }
         },
+        updateVariableState(state, payload: updateVariableStatePayload) {
+            const { key, value } = payload;
+            if (key in state) {
+                state[key] = value;
+            }
+        },
         setJsonData(state, data: GenericObject) {
             state.jsondata = data;
         },
         changeJsonData(state, payload: { key: string; value: string }) {
             state.jsondata[payload.key] = payload.value;
-        },
-        setTag(state, tag: string) {
-            state.whichtag = tag;
         }
     }
 });

@@ -17,7 +17,7 @@
 import { Vue } from 'vue-class-component';
 import { Options } from 'vue-class-component';
 
-import {store} from '../store/index';
+import {store} from '../store/common/index';
 import { mapState } from 'vuex';
 
 import { PROP } from '../module/prop';
@@ -25,7 +25,7 @@ import { FUNCTION } from '../module/function';
 
 @Options({
     computed: {
-        ...mapState(['modaldisplaystatus', 'modalStatus', 'whichtag', 'additemkey', 'jsondata'])
+        ...mapState(['modalStatus', 'jsondata'])
     }
 })
 
@@ -51,6 +51,8 @@ export default class Modal extends Vue {
         if (!target.dataset.itemkey) {
             return;
         }
+        console.log(store.state.jsondata);
+        console.log(store.state.nexttagNum);
         store.commit(
             'setJsonData',
             this.func.addNewObjectVal (

@@ -115,7 +115,7 @@ nav {
 import { Vue, Options } from "vue-class-component";
 import { PROP } from './module/prop';
 import Modal from '@/components/Modal.vue';
-import {store} from './store/index';
+import {store} from './store/common/index';
 
 @Options({
     components: {

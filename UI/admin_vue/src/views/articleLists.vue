@@ -36,7 +36,8 @@
 
 <script lang="ts">
 import { Vue } from "vue-class-component";
-import {store} from '../store/index';
+import {store} from '../store/common/index';
+import {articleListStore} from '../store/articleList/index';
 import { GenericObject } from '../module/type';
 import { PROP } from '../module/prop';
 import { FUNCTION } from '../module/function';
