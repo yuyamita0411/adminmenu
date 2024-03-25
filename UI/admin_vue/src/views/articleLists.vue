@@ -1,11 +1,17 @@
 <template>
   記事リスト
   <ul>
-        <li v-for="(value, key, index) in pagelist" :key="key">
-            <router-link :to="`/${value}`">{{key+1}}. {{pageandtitle[value]}}</router-link>
-            <div class="addcontent-wrapper">
+    <li v-for="(value, key, index) in pagelist" :key="key">
+        <div
+        v-if="pagelist[key]"
+        >
+            <router-link :to="`/${value}/language/jp`">{{value}}. {{pageandtitle[value]}}</router-link>
+            <div
+            class="addcontent-wrapper"
+            v-if="value == maxPageNum"
+            >
                 <button
-                @click="addBlockFunc(key)"
+                @click="addBlockFunc(value)"
                 :class="`addcontentbutton`"
                 ><img
                 :index="index"
@@ -16,10 +22,11 @@
             :class="`trashbutton`">
                 <img
                 :src="trashicon"
-                @click="deleteElement(key)"
+                @click="deleteElement(value)"
                 >
             </button>
-        </li>
+        </div>
+    </li>
   </ul>
 </template>
 
@@ -27,7 +34,9 @@
   ul li {
     position: relative;
     list-style: none;
-    padding: .5rem 0;
+    div {
+        padding: .5rem 0;
+    }
   }
   .bottom-border {
     bottom: 0;
@@ -45,6 +54,7 @@ import { FUNCTION } from '../module/function';
 export default class articleLists extends Vue {
     pagelist: string[] = [];
     pageandtitle = {}
+    maxPageNum=1;
     func = new FUNCTION();
     prop = new PROP();
 
@@ -55,11 +65,9 @@ export default class articleLists extends Vue {
         this.getFileDirectory();
     }
     addBlockFunc (key: number) {
-        console.log(this.pagelist);
-        this.pagelist[key+1] = `${this.getMaxNumber(this.pagelist)+1}/language/jp`;
-        //{0: "1/language/jp"}
-        console.log(this.getMaxNumber(this.pagelist));
-        console.log(key);
+        this.maxPageNum = this.getMaxNumber(this.pagelist)+1;
+        this.pagelist[Number(key)+1] = `${this.maxPageNum}`;
+        this.rebaseDirectory();
     }
 
     private getMaxNumber = (arr: string[]): number => {
@@ -71,22 +79,33 @@ export default class articleLists extends Vue {
             .reduce((max, curr) => curr > max ? curr : max, 0);
     };
 
-    deleteElement(key: number) {
-        console.log(this.pagelist);
-        delete this.pagelist[key];
-        console.log(key);
+    deleteElement(value: number) {
+        delete this.pagelist[value];
+        if (value === this.maxPageNum) {
+            this.maxPageNum = value;
+        }
+        this.maxPageNum = this.getMaxNumber(this.pagelist);
+        //ここでディレクトリ更新
+        this.rebaseDirectory();
+    }
+    rebaseDirectory () {
+        this.func.postAPI (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_rebaseDirEndpoint}`,
+            {filePath: this.pagelist},
+            (response: GenericObject) => {
+                console.log(response);
+            }
+        );
     }
     getFileDirectory () {
         this.func.postAPI (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileDirectory}`,
             {filePath: process.env.VUE_APP_articleDirPath},
             (response: GenericObject) => {
-                this.pagelist = response.data.map((obj: string) => {
-                    return `${obj}/language/jp`;
+                response.data.forEach((obj: string) => {
+                    this.pagelist[Number(obj)] = obj;
                 });
-                this.pagelist.forEach(() => {
-                    this.getTitleFromPageId();
-                });
+                this.getTitleFromPageId();
             }
         );
     }
@@ -96,6 +115,7 @@ export default class articleLists extends Vue {
             {filePath: this.pagelist},
             (response: GenericObject) => {
                 this.pageandtitle = response.data;
+                this.maxPageNum = this.getMaxNumber(this.pagelist);
             }
         );
     }

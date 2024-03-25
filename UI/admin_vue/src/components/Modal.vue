@@ -97,9 +97,11 @@ export default class Modal extends Vue {
     width: 50rem;
     left: calc((100% - 50rem) / 2);
     position: fixed;
-    background: #ffff;
+    background: rgb(0, 0, 0, .5);
+    padding: .5rem;
     .modalmenu {
         cursor: pointer;
+        background: #ffff;
         font-size: 24px;
         padding:1rem 0 1rem 0;
         flex: 1;
