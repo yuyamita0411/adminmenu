@@ -3,13 +3,13 @@
         <button :class="`modal-close-button`" @click="modalClose"><img :src="closeButtonsrc"></button>
     </div>
     <div :class="`modal ${modalStatus['modalClassName']}`" :style="{bottom: modalStatus['bottom']}">
-        <p :class="`modalmenu`" :data-itemkey="prop.tProp.h2.matchpattern" @click="clickTagButton">h2</p>
-        <p :class="`modalmenu`" :data-itemkey="prop.tProp.h3.matchpattern" @click="clickTagButton">h3</p>
-        <p :class="`modalmenu`" :data-itemkey="prop.tProp.h4.matchpattern" @click="clickTagButton">h4</p>
-        <p :class="`modalmenu`" :data-itemkey="prop.tProp.h5.matchpattern" @click="clickTagButton">h5</p>
-        <p :class="`modalmenu`" :data-itemkey="prop.tProp.h6.matchpattern" @click="clickTagButton">h6</p>
-        <p :class="`modalmenu`" :data-itemkey="prop.tProp.p.matchpattern" @click="clickTagButton">p</p>
-        <!--p :class="`modalmenu`" :data-itemkey="prop.tProp.boxmenu.matchpattern" @click="clickTagButton">box menu</p-->
+        <p class="modalmenu" :data-itemkey="tag.tProp.h2.matchpattern" @click="clickTagButton">h2</p>
+        <p class="modalmenu" :data-itemkey="tag.tProp.h3.matchpattern" @click="clickTagButton">h3</p>
+        <p class="modalmenu" :data-itemkey="tag.tProp.h4.matchpattern" @click="clickTagButton">h4</p>
+        <p class="modalmenu" :data-itemkey="tag.tProp.h5.matchpattern" @click="clickTagButton">h5</p>
+        <p class="modalmenu" :data-itemkey="tag.tProp.h6.matchpattern" @click="clickTagButton">h6</p>
+        <p class="modalmenu" :data-itemkey="tag.tProp.p.matchpattern" @click="clickTagButton">p</p>
+        <!--p :class="`modalmenu`" :data-itemkey="tag.tProp.boxmenu.matchpattern" @click="clickTagButton">box menu</p-->
     </div>
 </template>
 
@@ -20,8 +20,8 @@ import { Options } from 'vue-class-component';
 import {store} from '../store/common/index';
 import { mapState } from 'vuex';
 
-import { PROP } from '../module/prop';
-import { FUNCTION } from '../module/function';
+import { PATH, TAG } from '../module/prop';
+import { JSON } from '../module/function';
 
 @Options({
     computed: {
@@ -30,9 +30,9 @@ import { FUNCTION } from '../module/function';
 })
 
 export default class Modal extends Vue {
-    prop: PROP = new PROP();
-    func: FUNCTION = new FUNCTION();
-    closeButtonsrc = this.prop.closebutton;
+    tag: TAG = new TAG();
+    path: PATH = new PATH();
+    closeButtonsrc = this.path.closebutton;
 
     created () {
         this.modalClose();
@@ -51,11 +51,9 @@ export default class Modal extends Vue {
         if (!target.dataset.itemkey) {
             return;
         }
-        console.log(store.state.jsondata);
-        console.log(store.state.nexttagNum);
         store.commit(
             'setJsonData',
-            this.func.addNewObjectVal (
+            JSON.addNewObjectVal (
                 store.state.jsondata,
                 store.state.nexttagNum,
                 target.dataset.itemkey

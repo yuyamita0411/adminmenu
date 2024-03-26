@@ -5,21 +5,21 @@
         <div
         v-if="pagelist[key]"
         >
-            <router-link :to="`/${value}/language/jp`">{{value}}. {{pageandtitle[value]}}</router-link>
+            <router-link :to="path.detailDirFormat(value)">{{value}}. {{pageandtitle[value]}}</router-link>
             <div
             class="addcontent-wrapper"
             v-if="value == maxPageNum"
             >
                 <button
                 @click="addBlockFunc(value)"
-                :class="`addcontentbutton`"
+                class="addcontentbutton"
                 ><img
                 :index="index"
                 :src="addcontenticon"></button>
                 <span class="bottom-border addcontent-border"></span>
             </div>
             <button
-            :class="`trashbutton`">
+            class="trashbutton">
                 <img
                 :src="trashicon"
                 @click="deleteElement(value)"
@@ -46,20 +46,19 @@
 <script lang="ts">
 import { Vue } from "vue-class-component";
 import {store} from '../store/common/index';
-import {articleListStore} from '../store/articleList/index';
 import { GenericObject } from '../module/type';
-import { PROP } from '../module/prop';
-import { FUNCTION } from '../module/function';
+import { PATH, TAG } from '../module/prop';
+import { API } from '../module/function';
 
 export default class articleLists extends Vue {
     pagelist: string[] = [];
     pageandtitle = {}
     maxPageNum=1;
-    func = new FUNCTION();
-    prop = new PROP();
+    path: PATH = new PATH();
+    tag: TAG = new TAG();
 
-    addcontenticon = this.prop.addcontenticon;
-    trashicon = this.prop.trashicon;
+    addcontenticon = this.path.addcontenticon;
+    trashicon = this.path.trashicon;
 
     created () {
         this.getFileDirectory();
@@ -90,7 +89,7 @@ export default class articleLists extends Vue {
         this.rebaseDirectory();
     }
     rebaseDirectory () {
-        this.func.postAPI (
+        API.post (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_rebaseDirEndpoint}`,
             {filePath: this.pagelist},
             (response: GenericObject) => {
@@ -99,7 +98,7 @@ export default class articleLists extends Vue {
         );
     }
     getFileDirectory () {
-        this.func.postAPI (
+        API.post (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileDirectory}`,
             {filePath: process.env.VUE_APP_articleDirPath},
             (response: GenericObject) => {
@@ -111,7 +110,7 @@ export default class articleLists extends Vue {
         );
     }
     getTitleFromPageId () {
-        this.func.postAPI (
+        API.post (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_filetitle}`,
             {filePath: this.pagelist},
             (response: GenericObject) => {

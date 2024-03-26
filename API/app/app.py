@@ -71,12 +71,18 @@ def make_dir_from_json():
         if dir not in data["filePath"]:
             File.remove_directory_with_contents(f'{os.getenv("VUE_APP_articleDirPath")}/{dir}')
     for filePath in data["filePath"]:
-        if filePath:
-            dirPath = f'{os.getenv("VUE_APP_articleDirPath")}/{filePath}'
-            File.make_directory(dirPath)
-            File.make_directory(f'{dirPath}/language')
-            File.make_directory(f'{dirPath}/language/jp')
-            Json.save_json_data(f'{dirPath}/language/jp/index.json', {"pagetitle": "タイトルなし"})
+        if filePath is None:
+            continue
+        
+        dirPath = f'{os.getenv("VUE_APP_articleDirPath")}/{filePath}'
+        if os.path.exists(dirPath):
+            continue
+
+        File.make_directory(dirPath)
+        File.make_directory(f'{dirPath}/language')
+        File.make_directory(f'{dirPath}/language/jp')
+        Json.save_json_data(f'{dirPath}/language/jp/index.json', {"pagetitle": "タイトルなし"})
+
     return jsonify({}), 200
 
 @app.route(os.getenv("VUE_APP_fileTranslateEndpoint"), methods=['POST'])

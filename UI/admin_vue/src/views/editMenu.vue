@@ -5,14 +5,14 @@
         :key="key"
         >
             <div
-            v-if="prop.getElementTag(key)"
+            v-if="tag.getElementTag(key)"
             class="editelem">
                 <div
                 >
                     <span
                         :index="index"
                         :data-itemkey="key"
-                        :class="`for-${prop.getElementTag(key)}`"
+                        :class="tag.getElementTagLabel(key)"
                         v-if="!EditingTargetIndex[index]"
                         @click="clickTagButton"
                         style="min-height:1.5rem;"
@@ -21,7 +21,7 @@
                     </span>
                     <textarea
                         v-else
-                        :class="`for-${prop.getElementTag(key)}`"
+                        :class="tag.getElementTagLabel(key)"
                         :value="inputValues[key]"
                         :style="textareaStyle"
                         @input="handleInput($event, key)"
@@ -33,11 +33,11 @@
                     @mousemove="mouseOverButton"
                     @mouseout="mouseOutButton"
                     :index="index"
-                    :class="`addcontent-wrapper`"
+                    class="addcontent-wrapper"
                 >
                     <button
                     @click="addBlockFunc"
-                    :class="`addcontentbutton`"
+                    class="addcontentbutton"
                     ><img
                     :index="index"
                     @mouseover="mouseOverButton"
@@ -50,7 +50,7 @@
                 </div>
                 <button
                 v-if="key != 'pagetitle'"
-                :class="`trashbutton`">
+                class="trashbutton">
                     <img
                     :src="trashicon"
                     @click="deleteElement(key)"
@@ -62,7 +62,7 @@
             <div v-for="field in fields" :key="field.id" class="meta-label-wrapper">
                 <div class="font-weight-bold">{{ field.label }}</div>
                 <textarea
-                :class="`for-${field.id}`"
+                :class="tag.getTagLabel(field.id)"
                 @input="genericInput($event, field.id)"
                 :value="jsondata[field.id]"
                 ></textarea>
@@ -88,9 +88,9 @@ import { Vue, Options } from "vue-class-component";
 import { mapState } from 'vuex';
 
 import {store} from '../store/common/index';
-import {editMenuStore} from '../store/editMenu/index';
-import { PROP } from '../module/prop';
-import { FUNCTION } from '../module/function';
+import { PATH, TAG } from '../module/prop';
+import { API } from '../module/function';
+import { Menu } from '../module/editMenu/index';
 import { GenericObject } from '../module/type';
 
 @Options({
@@ -107,25 +107,18 @@ import { GenericObject } from '../module/type';
     }
 })
 export default class editMenu extends Vue {
-    prop = new PROP();
-    func = new FUNCTION();
+    path: PATH = new PATH();
+    tag: TAG = new TAG();
+    menu: Menu = new Menu();
 
     textareaStyle!: string;
     inputValues: {
         [key: string]: GenericObject;
     } = {};
-    fields = [
-        { id: 'pagetitle', label: 'タイトル' },
-        { id: 'description', label: 'ディスクリプション' },
-        { id: 'categoryID', label: 'categoryID' },
-        { id: 'thumbnail', label: 'thumbnail' },
-        { id: 'ogImg', label: 'ogImg' },
-        { id: 'created_at', label: '投稿日' },
-        { id: 'updated_at', label: '更新日' },
-    ];
+    fields = this.menu.fields;
     displayTrash = 'hide-trash';
-    addcontenticon = this.prop.addcontenticon;
-    trashicon = this.prop.trashicon;
+    addcontenticon = this.path.addcontenticon;
+    trashicon = this.path.trashicon;
 
     created () {
         //初期のデータを定義
@@ -197,7 +190,7 @@ export default class editMenu extends Vue {
         store.commit('setJsonData', store.state.jsondata);
     }
     readData() {
-        this.func.postAPI (
+        API.post (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileReadEndpoint}`,
             {filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`},
             (response: GenericObject) => {
@@ -218,7 +211,7 @@ export default class editMenu extends Vue {
         );
     }
     private ModifyJsonFile (endpoint: string, filepath: string) {
-        this.func.postAPI (
+        API.post (
             endpoint,
             {
                 fileData: store.state.jsondata,
@@ -235,7 +228,7 @@ export default class editMenu extends Vue {
 <style lang="scss" scoped>
 .edit-wrapper {
     max-width: 50rem;
-    padding-top: 4rem;
+    padding: 4rem;
     min-height: 100vh;
     margin: 0 auto;
     background: #ffff;

@@ -1,8 +1,8 @@
 import { GenericObject, APIFunc } from './type';
 import axios from 'axios';
 
-export class FUNCTION {
-    postAPI (endpoint: string, params: GenericObject, func: APIFunc) {
+export class API {
+    static post (endpoint: string, params: GenericObject, func: APIFunc) {
         axios.post(endpoint,params)
         .then((response) => {
             func(response);
@@ -11,11 +11,14 @@ export class FUNCTION {
             console.error(error);
         });
     }
-    addNewObjectVal (jsondata: GenericObject, nexttagNum: number, itemkey: string) {
-      const keys = Object.keys(jsondata);
-      if (!itemkey) {
-          return;
-      }
+}
+
+export class JSON {
+    static addNewObjectVal (jsondata: GenericObject, nexttagNum: number, itemkey: string) {
+        const keys = Object.keys(jsondata);
+        if (!itemkey) {
+            return;
+        }
         // 新しいキーを指定された位置に挿入
         keys.splice(nexttagNum, 0, itemkey);
         const regex = new RegExp(itemkey + "\\d*$");

@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { Vue, Options } from "vue-class-component";
-import { PROP } from './module/prop';
+import { PATH, TAG } from './module/prop';
 import Modal from '@/components/Modal.vue';
 import {store} from './store/common/index';
 
@@ -30,21 +30,22 @@ import {store} from './store/common/index';
 
 export default class App extends Vue {
 
-  prop = new PROP();
+    path: PATH = new PATH();
+    tag: TAG = new TAG();
 
-  navstatus = 'nav-open'
-  buttonsrc = this.prop.buttonsrc;
-  homeicon = this.prop.homeicon;
-  pagelisticon = this.prop.pagelisticon;
+    navstatus = 'nav-open'
+    buttonsrc = this.path.buttonsrc;
+    homeicon = this.path.homeicon;
+    pagelisticon = this.path.pagelisticon;
 
-  created(){
-    store.commit('updateStoreObj', { target: 'pageinfo', key: 'base_url', value: process.env.VUE_APP_API_Base_URL });
-  }
+    created(){
+        store.commit('updateStoreObj', { target: 'pageinfo', key: 'base_url', value: process.env.VUE_APP_API_Base_URL });
+    }
 
-  openButton () {
-    this.navstatus = this.navstatus === 'nav-open' ? 'nav-close' : 'nav-open';
-    this.buttonsrc = this.navstatus === 'nav-open' ? this.prop.openicon : this.prop.closeicon;
-  }
+    openButton () {
+        this.navstatus = this.navstatus === 'nav-open' ? 'nav-close' : 'nav-open';
+        this.buttonsrc = this.navstatus === 'nav-open' ? this.path.openicon : this.path.closeicon;
+    }
 }
 </script>
 

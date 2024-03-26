@@ -1,4 +1,4 @@
-export class PROP {
+export class PATH {
     buttonsrc = '/img/openicon.png';
     homeicon = '/img/homeicon.png';
     pagelisticon = '/img/pagelisticon.png';
@@ -7,7 +7,11 @@ export class PROP {
     closebutton = '/img/closebutton.png';
     trashicon = '/img/trashicon.png';
     addcontenticon = '/img/addcontenticon.png';
-
+    detailDirFormat (value: string) {
+        return `/${value}/language/jp`;
+    }
+}
+export class TAG {
     notDisplayArr: string[] = [
         'ogImg', 'description', 'pageName', 'categoryID',
         'created', 'updated', 'thumbnail', 'ogImg',
@@ -53,6 +57,12 @@ export class PROP {
         }
         return res;
     }
+    getTagLabel (key: string) {
+        return `for-${key}`;
+    }
+    getElementTagLabel (key: string) {
+        return `for-${this.getElementTag(key)}`;
+    }
 
     tProp = {
         "h2": {
@@ -92,7 +102,7 @@ export class PROP {
         }
 */
     }
-    bProp = {
+    static bProp = {
         "contenttitle": "h2",
         "contentsecondtitle": "h3",
         "contentthirdttitle": "h4",
