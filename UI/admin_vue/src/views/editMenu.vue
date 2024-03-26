@@ -202,6 +202,7 @@ export default class editMenu extends Vue {
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileReadEndpoint}`,
             {filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`},
             (response: GenericObject) => {
+                console.log(response.data);
                 store.commit('setJsonData', response.data);
             }
         );
@@ -211,6 +212,7 @@ export default class editMenu extends Vue {
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileEndpoint}`,
             `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
         );
+        console.log(store.state.jsondata);
     }
     translateJsonData () {
         this.ModifyJsonFile (
