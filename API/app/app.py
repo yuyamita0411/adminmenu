@@ -34,8 +34,6 @@ def save_json():
     if error:
         return error, status_code
     if not File.file_exists_adtion(data["filePath"]):
-        print(data["filePath"])
-        print(data["fileData"])
         return Json.save_json_data(data["filePath"], data["fileData"])
     if "fileData" not in data or data["fileData"] is None:
         return jsonify({'error': 'No JSON data provided'}), 400
