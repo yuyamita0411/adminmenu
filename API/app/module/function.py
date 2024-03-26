@@ -1,4 +1,4 @@
-from flask import jsonify
+from flask import request, jsonify
 import os
 
 class Function:
