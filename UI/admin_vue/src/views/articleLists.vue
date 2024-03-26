@@ -68,6 +68,7 @@ export default class articleLists extends Vue {
         this.maxPageNum = this.getMaxNumber(this.pagelist)+1;
         this.pagelist[Number(key)+1] = `${this.maxPageNum}`;
         this.rebaseDirectory();
+        this.getFileDirectory();
     }
 
     private getMaxNumber = (arr: string[]): number => {

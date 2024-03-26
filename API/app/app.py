@@ -89,15 +89,12 @@ def translate_json():
     data = request.get_json()
     if Function.fileExists(data["filePath"])["status_code"] != 200:
         return {}
-
     single(data["filePath"])
-
     return {"status_code": 200}
 
 @app.route(os.getenv("VUE_APP_rebaseDirEndpoint"), methods=['POST'])
 def make_dir_from_json():
     data = request.get_json()
-
     dirlits = os.listdir(f'{os.getenv("VUE_APP_articleDirPath")}')
 
     for dir in dirlits:
