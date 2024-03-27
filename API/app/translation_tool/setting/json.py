@@ -1,30 +1,27 @@
-import sys
-sys.path.append("/Users/yuyamita/docker_environment/adminmenu/API/app/translation_tool")
-
-from google.cloud import translate_v2 as translate
+from dotenv import load_dotenv
 import os
 
-class JSON:
-    @staticmethod
-    def trans(text, laguageVal):
-        # 環境変数にAPIキーのパスを設定
-        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./translation_tool/translation-key.json"
-        translate_client = translate.Client()
-        # 翻訳の実行
-        result = translate_client.translate(
-            text,
-            target_language=laguageVal
-        )
-        return result['translatedText']
-        # 翻訳結果の表示
+basedir = os.path.abspath(os.path.dirname(__file__))
+load_dotenv(os.path.join('/app/translation_tool', '.env'))
 
+import sys
+sys.path.append(os.getenv("Local_File_Directory"))
+
+from translation_tool.module.googleApi import GoogleAPI
+from translation_tool.module.ChatGPTApi import ChatGPTApi
+
+class JSON:
     @staticmethod
     def process_dict(di, lnkey):
         processed_dict = {}
         for key, value in di.items():
             if isinstance(value, str):
                 # 文字列の場合は翻訳処理を実行
-                processed_dict[key] = JSON.trans(value, lnkey)
+                processed_dict[key] = GoogleAPI.translate(value, lnkey)
+                # ここはjsonデータを変えないといけない。
+                # LangFrom   = "Japanese"
+                # LangTo   = "English"
+                # #processed_dict[key] = translate('japanese', lnkey, value)
             elif isinstance(value, dict):
                 # 辞書の場合はさらに再帰処理
                 processed_dict[key] = JSON.process_dict(value, lnkey)
