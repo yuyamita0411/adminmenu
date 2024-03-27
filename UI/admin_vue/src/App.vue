@@ -134,8 +134,10 @@ nav {
 .contents {
     background: rgb(0, 0, 0, 0.1);
     text-align: left;
-    padding: 3rem 2rem 0 6rem;
+    padding: 0 2rem 0 6rem;
     min-height: 100vh;
+    float: left;
+    width: 100%;
     ul {
         background: #ffff;
         padding: 1rem;

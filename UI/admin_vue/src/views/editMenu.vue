@@ -1,5 +1,5 @@
 <template>
-    <div class="edit-wrapper">
+    <div class="content-wrapper">
         <div
         v-for="(value, key, index) in jsondata"
         :key="key"
@@ -33,11 +33,11 @@
                     @mousemove="mouseOverButton"
                     @mouseout="mouseOutButton"
                     :index="index"
-                    class="addcontent-wrapper"
+                    class="addcontent-wrapper position-absolute"
                 >
                     <button
                     @click="addBlockFunc"
-                    class="addcontentbutton"
+                    class="addcontentbutton position-absolute"
                     ><img
                     :index="index"
                     @mouseover="mouseOverButton"
@@ -50,7 +50,7 @@
                 </div>
                 <button
                 v-if="key != 'pagetitle'"
-                class="trashbutton">
+                class="trashbutton position-absolute">
                     <img
                     :src="trashicon"
                     @click="deleteElement(key)"
@@ -224,14 +224,8 @@ export default class editMenu extends Vue {
     }
 }
 </script>
-
 <style lang="scss" scoped>
-.edit-wrapper {
-    max-width: 50rem;
-    padding: 4rem;
-    min-height: 100vh;
-    margin: 0 auto;
-    background: #ffff;
+.content-wrapper {
     .editelem {
         width: 100%;
         float: left;
@@ -245,9 +239,6 @@ export default class editMenu extends Vue {
             float: left;
             width: 100%;
             position: relative;
-        }
-        .addcontent-wrapper {
-            position: absolute;
         }
     }
     .editelem > * {
@@ -368,5 +359,8 @@ p,
 }
 .translationButton:hover {
 	border-bottom: 1px solid #C50B4F;
+}
+.trashbutton {
+    right: 2rem;
 }
 </style>

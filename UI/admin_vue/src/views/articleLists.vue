@@ -1,47 +1,55 @@
 <template>
-  記事リスト
-  <ul>
-    <li v-for="(value, key, index) in pagelist" :key="key">
-        <div
-        v-if="pagelist[key]"
-        >
-            <router-link :to="path.detailDirFormat(value)">{{value}}. {{pageandtitle[value]}}</router-link>
-            <div
-            class="addcontent-wrapper"
-            v-if="value == maxPageNum"
-            >
-                <button
-                @click="addBlockFunc(value)"
-                class="addcontentbutton"
-                ><img
-                :index="index"
-                :src="addcontenticon"></button>
-                <span class="bottom-border addcontent-border"></span>
-            </div>
-            <button
-            class="trashbutton">
-                <img
-                :src="trashicon"
-                @click="deleteElement(value)"
-                >
-            </button>
-        </div>
-    </li>
-  </ul>
-</template>
+    <div class="content-wrapper">
+        <h2>記事リスト</h2>
+        <table class="article-list-table w-100">
+            <thead>
+                <tr>
+                    <td class="font-weight-bold">タイトル</td>
+                    <td class="font-weight-bold">カテゴリ</td>
+                </tr>
+            </thead>
+            <tbody>
+                <template v-for="(value, key, index) in pagelist" :key="key">
+                    <tr v-if="pagelist[key]">
+                        <td v-if="pagelist[key]">
+                            <router-link :to="path.detailDirFormat(value)"
+                            class="text-decoration-none accent-text-color">
+                            {{pageInfoArr[value] && pageInfoArr[value]["title"] ? pageInfoArr[value]["title"] : ''}}
+                            </router-link>
+                        </td>
+                        <td v-if="pagelist[key]"
+                        class="text-decoration-none accent-text-color">
+                        {{pageInfoArr[value] && pageInfoArr[value]["category"] ? pageInfoArr[value]["category"] : ''}}
+                        </td>
+                        <td>
+                            <button
+                            v-if="pagelist[key]"
+                            class="trashbutton position-relative">
+                                <img
+                                :src="trashicon"
+                                @click="deleteElement(value)"
+                                >
+                            </button>
+                        </td>
 
-<style lang="scss" scoped>
-  ul li {
-    position: relative;
-    list-style: none;
-    div {
-        padding: .5rem 0;
-    }
-  }
-  .bottom-border {
-    bottom: 0;
-  }
-</style>
+                        <div
+                        class="addcontent-wrapper position-absolute"
+                        v-if="value == maxPageNum"
+                        >
+                            <button
+                            @click="addBlockFunc(value)"
+                            class="addcontentbutton position-absolute"
+                            ><img
+                            :index="index"
+                            :src="addcontenticon"></button>
+                            <span class="bottom-border addcontent-border"></span>
+                        </div>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</template>
 
 <script lang="ts">
 import { Vue } from "vue-class-component";
@@ -52,7 +60,7 @@ import { API } from '../module/function';
 
 export default class articleLists extends Vue {
     pagelist: string[] = [];
-    pageandtitle = {}
+    pageInfoArr = {}
     maxPageNum=1;
     path: PATH = new PATH();
     tag: TAG = new TAG();
@@ -114,10 +122,41 @@ export default class articleLists extends Vue {
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_filetitle}`,
             {filePath: this.pagelist},
             (response: GenericObject) => {
-                this.pageandtitle = response.data;
+                this.pageInfoArr = response.data;
                 this.maxPageNum = this.getMaxNumber(this.pagelist);
             }
         );
     }
 }
 </script>
+
+<style lang="scss" scoped>
+  ul li {
+    position: relative;
+    list-style: none;
+    div {
+        padding: .5rem 0;
+    }
+  }
+  .bottom-border {
+    bottom: 0;
+  }
+.article-list-table thead {
+    background: #0686b2;
+    color: #ffff;
+}
+.article-list-table tbody > tr:nth-child(2n) {
+    background: rgba(0,0,0,.1);
+}
+.article-list-table tbody > tr:nth-child(2n+1) {
+    background: #ffff;
+}
+.article-list-table tr td {
+    padding: .5rem;
+}
+.content-wrapper {
+    table {
+        box-shadow: .5px .5px 4px rgba(0,0,0,.3);
+    }
+}
+</style>

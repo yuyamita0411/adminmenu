@@ -55,10 +55,25 @@ def make_file_title_json_data():
     dirDict = {}
     for url in data["filePath"]:
         jsondir = f'{os.getenv("VUE_APP_articleDirPath")}/{url}/language/jp/index.json'
-        if os.path.exists(jsondir):
+        categorydir = f'{os.getenv("VUE_APP_listupPath")}/category/jp/index.json'
+        if os.path.exists(jsondir) and os.path.exists(categorydir):
             jsondata, _ = Json.read_json_data(jsondir)
-            if "pagetitle" in jsondata:
-                dirDict[url] = jsondata["pagetitle"]
+            categorydata, _ = Json.read_json_data(categorydir)
+            if url not in dirDict:
+                dirDict[url] = {}
+
+            dirDict[url]["title"] = ''
+            dirDict[url]["category"] = 'カテゴリなし'
+
+            if "pagetitle" not in jsondata:
+                continue
+            dirDict[url]["title"] = jsondata["pagetitle"]
+
+            try:
+                dirDict[url]["category"] = categorydata[jsondata["categoryID"]].get("description", 'カテゴリなし')
+            except:
+                continue
+
     return jsonify(dirDict), 200
 
 @app.route(os.getenv("VUE_APP_rebaseDirEndpoint"), methods=['POST'])
