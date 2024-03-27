@@ -31,19 +31,24 @@
                                 >
                             </button>
                         </td>
-
-                        <div
-                        class="addcontent-wrapper position-absolute"
-                        v-if="value == maxPageNum"
-                        >
-                            <button
-                            @click="addBlockFunc(value)"
-                            class="addcontentbutton position-absolute"
-                            ><img
-                            :index="index"
-                            :src="addcontenticon"></button>
-                            <span class="bottom-border addcontent-border"></span>
-                        </div>
+                    </tr>
+                    <tr v-if="pagelist[key] && value == maxPageNum">
+                        <td></td>
+                        <td>
+                            <div
+                            class="addcontent-wrapper"
+                            >
+                                <button
+                                @click="addBlockFunc(value)"
+                                class="addcontentbutton"
+                                >
+                                    <img
+                                    :index="index"
+                                    :src="addcontenticon">
+                                </button>
+                            </div>
+                        </td>
+                        <td></td>
                     </tr>
                 </template>
             </tbody>
@@ -145,10 +150,10 @@ export default class articleLists extends Vue {
     background: #0686b2;
     color: #ffff;
 }
-.article-list-table tbody > tr:nth-child(2n) {
+.article-list-table tbody > tr:nth-child(2n):not(:last-child) {
     background: rgba(0,0,0,.1);
 }
-.article-list-table tbody > tr:nth-child(2n+1) {
+.article-list-table tbody > tr:nth-child(2n+1):not(:last-child) {
     background: #ffff;
 }
 .article-list-table tr td {
