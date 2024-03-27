@@ -2,5 +2,6 @@
     "pagetitle": "記事追加テスト",
     "categoryID": "1",
     "contenttitle1": "h2テスト",
-    "content1": "pテスト"
+    "content1": "pテスト",
+    "description": "ディスクリプション追加"
 }

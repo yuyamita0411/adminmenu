@@ -56,23 +56,24 @@ def make_file_title_json_data():
     for url in data["filePath"]:
         jsondir = f'{os.getenv("VUE_APP_articleDirPath")}/{url}/language/jp/index.json'
         categorydir = f'{os.getenv("VUE_APP_listupPath")}/category/jp/index.json'
-        if os.path.exists(jsondir) and os.path.exists(categorydir):
-            jsondata, _ = Json.read_json_data(jsondir)
-            categorydata, _ = Json.read_json_data(categorydir)
-            if url not in dirDict:
-                dirDict[url] = {}
+        if not os.path.exists(jsondir) or not os.path.exists(categorydir):
+            continue
+        jsondata, _ = Json.read_json_data(jsondir)
+        categorydata, _ = Json.read_json_data(categorydir)
+        if url not in dirDict:
+            dirDict[url] = {}
 
-            dirDict[url]["title"] = ''
-            dirDict[url]["category"] = 'カテゴリなし'
+        dirDict[url]["title"] = ''
+        dirDict[url]["category"] = 'カテゴリなし'
 
-            if "pagetitle" not in jsondata:
-                continue
-            dirDict[url]["title"] = jsondata["pagetitle"]
+        if "pagetitle" not in jsondata:
+            continue
+        dirDict[url]["title"] = jsondata["pagetitle"]
 
-            try:
-                dirDict[url]["category"] = categorydata[jsondata["categoryID"]].get("description", 'カテゴリなし')
-            except:
-                continue
+        try:
+            dirDict[url]["category"] = categorydata[jsondata["categoryID"]].get("description", 'カテゴリなし')
+        except:
+            continue
 
     return jsonify(dirDict), 200
 
