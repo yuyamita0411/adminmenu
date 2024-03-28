@@ -17,15 +17,22 @@ class ChatGPTApi:
             model    = "gpt-3.5-turbo",
 
             messages  = [
-                {"role": "system", "content": f'You are a helpful assistant that translates {LangFrom} to {LangTo}.'},
+                {"role": "system", "content": f'You are a helpful assistant that translates {LangFrom} to {LangTo} naturally.'},
                 {"role": "user", "content": f'Translate the following {LangFrom} text to {LangTo} :「{text}」. And Output only translated text'}
             ] , 
 
-            max_tokens  = os.getenv("ChatGPT_MAX_TOKENS"),
-            n           = os.getenv("ChatGPT_Response_amount"),
-            stop        = os.getenv("ChatGPT_Stop"),
-            temperature = os.getenv("ChatGPT_Temperature"),
+            max_tokens  = int(os.getenv("ChatGPT_MAX_TOKENS")),
+            n           = int(os.getenv("ChatGPT_Response_amount")),
+            stop        = ChatGPTApi.convert_string_to_none(os.getenv("ChatGPT_Stop")),
+            temperature = int(os.getenv("ChatGPT_Temperature")),
         )
 
         response = completion.choices[0].message.content
         return response
+
+    @staticmethod
+    def convert_string_to_none(s):
+        if s == "None":
+            return None
+        else:
+            return s

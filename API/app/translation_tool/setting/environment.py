@@ -9,9 +9,17 @@ datafilrpatharr = [
     './translation_tool/pagecategory/home/language/jp/index.json'
 ]
 #翻訳する言語と言語コード
-lnarr = {
-    "ベトナム語":"uz"
-}
+# google APIで使う時
+#lnarr = {
+#    "英語語":"en"
+#}
 
+# ChatGPT APIで使う時
+lnarr = {
+    "英語":"en"
+}
+fullLinArr = {
+    "en": "english"
+}
 #python3 execute.py singleの時↓
 #saveDir = './language'

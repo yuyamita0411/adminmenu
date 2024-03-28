@@ -8,7 +8,7 @@ export class PATH {
     trashicon = '/img/trashicon.png';
     addcontenticon = '/img/addcontenticon.png';
     detailDirFormat (value: string) {
-        return `/${value}/language/jp`;
+        return `/${value}/language/${process.env.VUE_APP_FromCode}`;
     }
 }
 export class TAG {

@@ -54,8 +54,8 @@ def make_file_title_json_data():
         return error, status_code
     dirDict = {}
     for url in data["filePath"]:
-        jsondir = f'{os.getenv("VUE_APP_articleDirPath")}/{url}/language/jp/index.json'
-        categorydir = f'{os.getenv("VUE_APP_listupPath")}/category/jp/index.json'
+        jsondir = f'{os.getenv("VUE_APP_articleDirPath")}/{url}/language/{os.getenv("VUE_APP_FromCode")}/index.json'
+        categorydir = f'{os.getenv("VUE_APP_listupPath")}/category/{os.getenv("VUE_APP_FromCode")}/index.json'
         if not os.path.exists(jsondir) or not os.path.exists(categorydir):
             continue
         jsondata, _ = Json.read_json_data(jsondir)
@@ -96,8 +96,8 @@ def make_dir_from_json():
 
         File.make_directory(dirPath)
         File.make_directory(f'{dirPath}/language')
-        File.make_directory(f'{dirPath}/language/jp')
-        Json.save_json_data(f'{dirPath}/language/jp/index.json', {"pagetitle": "タイトルなし"})
+        File.make_directory(f'{dirPath}/language/{os.getenv("VUE_APP_FromCode")}')
+        Json.save_json_data(f'{dirPath}/language/{os.getenv("VUE_APP_FromCode")}/index.json', {"pagetitle": "タイトルなし"})
 
     return jsonify({}), 200
 

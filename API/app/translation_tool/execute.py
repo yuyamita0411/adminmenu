@@ -12,7 +12,7 @@ load_dotenv(os.path.join(basedir, '.env'))
 def multi():
     for lnkey, ln in lnarr.items():
         for val in datafilrpatharr:
-            savepath = val.replace('jp', ln)
+            savepath = val.replace(os.getenv("VUE_APP_FromCode"), ln)
             folderpath = savepath.replace('/index.json', '')
             common(val, folderpath, savepath, ln)
 
