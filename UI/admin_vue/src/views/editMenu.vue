@@ -95,7 +95,7 @@ import { GenericObject } from '../module/type';
 
 @Options({
     computed: {
-        ...mapState(['modalStatus', 'jsondata', 'HoverTargetIndex', 'EditingTargetIndex']),
+        ...mapState(['modalStatus', 'jsondata', 'HoverTargetIndex', 'EditingTargetIndex', 'isLoading']),
         EditingTargetIndex() {
             // Vuex ストアの state から EditingTargetIndex を取得してコンポーネントにマッピング
             return store.state.EditingTargetIndex;
@@ -103,6 +103,10 @@ import { GenericObject } from '../module/type';
         HoverTargetIndex() {
             // Vuex ストアの state から HoverTargetIndex を取得してコンポーネントにマッピング
             return store.state.HoverTargetIndex;
+        },
+        isLoading() {
+            // Vuex ストアの state から HoverTargetIndex を取得してコンポーネントにマッピング
+            return store.state.isLoading;
         }
     }
 })
@@ -210,7 +214,11 @@ export default class editMenu extends Vue {
             `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
         );
     }
+    private isLoading() {
+      return store.state.isLoading
+    }
     private ModifyJsonFile (endpoint: string, filepath: string) {
+        store.dispatch('isLoading');
         API.post (
             endpoint,
             {

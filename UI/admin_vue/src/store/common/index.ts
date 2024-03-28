@@ -9,6 +9,7 @@ export const store = createStore<StoreState>({
         modalStatus: {},
         HoverTargetIndex: {},
         nexttagNum: 0,
+        isLoading: false,
         targetTagInfo: {order: 0, setTargetTagNow: '', setTargetTagDetail: ''},
     },
     mutations: {

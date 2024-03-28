@@ -11,6 +11,7 @@
     </button>
   </div>
   <section class="contents">
+    <LoadingIconview class="dashboardloading w-100 d-inline-block text-center" v-if="isLoading"/>
     <router-view/>
   </section>
   <Modal />
@@ -18,13 +19,20 @@
 
 <script lang="ts">
 import { Vue, Options } from "vue-class-component";
+import { mapState } from 'vuex';
 import { PATH, TAG } from './module/prop';
 import Modal from '@/components/Modal.vue';
 import {store} from './store/common/index';
 
+import LoadingIconview from '@/components/icon/loadingIcon.vue';
+
 @Options({
+    computed: {
+      ...mapState(['isLoading'])
+    },
     components: {
-        Modal
+        Modal,
+        LoadingIconview
     }
 })
 

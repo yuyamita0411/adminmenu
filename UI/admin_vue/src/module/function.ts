@@ -1,11 +1,14 @@
+import {store} from '../store/common/index';
 import { GenericObject, APIFunc } from './type';
 import axios from 'axios';
 
 export class API {
     static post (endpoint: string, params: GenericObject, func: APIFunc) {
+        store.commit('updateVariableState', { key: 'isLoading', value: true });
         axios.post(endpoint,params)
         .then((response) => {
             func(response);
+            store.commit('updateVariableState', { key: 'isLoading', value: false });
         })
         .catch((error) => {
             console.error(error);
