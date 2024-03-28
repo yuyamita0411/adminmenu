@@ -8,6 +8,7 @@
             v-if="tag.getElementTag(key)"
             class="editelem">
                 <div
+                :class="getPaddingClass(key, index)"
                 >
                     <span
                         :index="index"
@@ -193,6 +194,18 @@ export default class editMenu extends Vue {
         delete store.state.jsondata[key];
         store.commit('setJsonData', store.state.jsondata);
     }
+    private getPaddingClass(key: string, index: number) {
+        let classname = "";
+        const entries = Object.entries(store.state.jsondata);
+        if (0 < index) {
+            if (this.tag.getElementTagLabel(key) === 'for-p') {
+                classname = `p-${this.tag.getElementTagLabel( entries[index - 1][0])}`
+            } else {
+                classname = `div-${this.tag.getElementTagLabel(key)}`;
+            }
+        }
+        return classname;
+    }
     readData() {
         API.post (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileReadEndpoint}`,
@@ -297,6 +310,35 @@ p,
     font-size: 1rem;
     margin: 0 0 .5rem 0;
 }
+
+.p-for-h2 {
+    padding-left: 1rem;
+}
+.div-for-h3 {
+    padding-left: 1rem;
+}
+.p-for-h3 {
+    padding-left: 2rem;
+}
+.div-for-h4 {
+    padding-left: 2rem;
+}
+.p-for-h4 {
+    padding-left: 3rem;
+}
+.div-for-h5 {
+    padding-left: 3rem;
+}
+.p-for-h5 {
+    padding-left: 4rem;
+}
+.div-for-h6 {
+    padding-left: 4rem;
+}
+.p-for-h6 {
+    padding-left: 5rem;
+}
+
 .submitButton,
 .translationButton {
     font-size: 1rem;
