@@ -9,6 +9,10 @@
         <p class="modalmenu" :data-itemkey="tag.tProp.h5.matchpattern" @click="clickTagButton">h5</p>
         <p class="modalmenu" :data-itemkey="tag.tProp.h6.matchpattern" @click="clickTagButton">h6</p>
         <p class="modalmenu" :data-itemkey="tag.tProp.p.matchpattern" @click="clickTagButton">p</p>
+        <p class="modalmenu" :data-itemkey="tag.tProp.fullimg.matchpattern" @click="clickTagButton">img</p>
+        <p class="modalmenu" :data-itemkey="tag.tProp.middleimg.matchpattern" @click="clickTagButton">img</p>
+        <p class="modalmenu" :data-itemkey="tag.tProp.smallimg.matchpattern" @click="clickTagButton">img</p>
+        <p class="modalmenu" :data-itemkey="tag.tProp.tinyimg.matchpattern" @click="clickTagButton">img</p>
         <!--p :class="`modalmenu`" :data-itemkey="tag.tProp.boxmenu.matchpattern" @click="clickTagButton">box menu</p-->
     </div>
 </template>

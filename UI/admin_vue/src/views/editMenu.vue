@@ -15,10 +15,10 @@
                         :data-itemkey="key"
                         :class="tag.getElementTagLabel(key)"
                         v-if="!EditingTargetIndex[index]"
-                        @click="clickTagButton"
+                        @click="clickTagButton($event, key)"
                         style="min-height:1.5rem;"
+                        v-html="displayArticleHTML(key, value)"
                     >
-                        {{ value }}
                     </span>
                     <textarea
                         v-else
@@ -124,6 +124,7 @@ export default class editMenu extends Vue {
     displayTrash = 'hide-trash';
     addcontenticon = this.path.addcontenticon;
     trashicon = this.path.trashicon;
+    touchtag: GenericObject = {};
 
     created () {
         //初期のデータを定義
@@ -132,20 +133,41 @@ export default class editMenu extends Vue {
         this.resetObj(store.state.jsondata, 'updateStoreObj', 'EditingTargetIndex');
         this.inputValues = store.state.jsondata;
     }
-    private clickTagButton (e: Event) {//今クリックしたタグの情報を更新する。状態管理はupdateTargetTagInfoが実行されtargetTagInfoが更新される。
+    readData() {
+        API.post (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileReadEndpoint}`,
+            {filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`},
+            (response: GenericObject) => {
+                store.commit('setJsonData', response.data);
+            }
+        );
+    }
+    updateJsonData () {
+        this.ModifyJsonFile (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileEndpoint}`,
+            `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
+        );
+    }
+    translateJsonData () {
+        this.ModifyJsonFile (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileTranslateEndpoint}`,
+            `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
+        );
+    }
+    private clickTagButton (e: Event, key: string) {//今クリックしたタグの情報を更新する。状態管理はupdateTargetTagInfoが実行されtargetTagInfoが更新される。
         const target = e.target as HTMLElement
         //編集中のタグ情報の状態を更新
         this.resetObj(store.state.jsondata, 'updateStoreObj', 'EditingTargetIndex');
         store.commit('updateStoreObj', { target: 'EditingTargetIndex', key: Number(target.getAttribute('index')), value: true });
         store.dispatch('TargetIndexProperty');
         this.inputValues = store.state.jsondata;
+        this.touchtag = this.isImgTag(this.tag.getElementTagLabel(key));
         //テキストエリアの高さを合わせる
         this.setTagHeight(target);
     }
     private handleInput (e: Event, key: string) {
         const target = e.target as HTMLTextAreaElement;
-        target.style.height = 'auto';
-        target.style.height = `${target.scrollHeight}px`;
+        this.setInputHeight(target);
         store.state.jsondata[key] = target.value;
         store.commit('setJsonData', store.state.jsondata);
     }
@@ -181,51 +203,9 @@ export default class editMenu extends Vue {
     private HoverIndexProperty() {
       return store.state.HoverTargetIndex
     }
-    private setTagHeight (target: HTMLElement) {
-        this.textareaStyle = `height: ${target.offsetHeight}px; margin-bottom: 0;`;
-    }
-    private addButtonStyle (index: number) {
-        if (store.state.HoverTargetIndex[index]) {
-            return 'opacity:1; transition: all .5s;';
-        }
-        return 'opacity:0; transition: all .5s;';
-    }
     private deleteElement(key: string) {
         delete store.state.jsondata[key];
         store.commit('setJsonData', store.state.jsondata);
-    }
-    private getPaddingClass(key: string, index: number) {
-        let classname = "";
-        const entries = Object.entries(store.state.jsondata);
-        if (0 < index) {
-            if (this.tag.getElementTagLabel(key) === 'for-p') {
-                classname = `p-${this.tag.getElementTagLabel( entries[index - 1][0])}`
-            } else {
-                classname = `div-${this.tag.getElementTagLabel(key)}`;
-            }
-        }
-        return classname;
-    }
-    readData() {
-        API.post (
-            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileReadEndpoint}`,
-            {filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`},
-            (response: GenericObject) => {
-                store.commit('setJsonData', response.data);
-            }
-        );
-    }
-    updateJsonData () {
-        this.ModifyJsonFile (
-            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileEndpoint}`,
-            `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
-        );
-    }
-    translateJsonData () {
-        this.ModifyJsonFile (
-            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileTranslateEndpoint}`,
-            `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
-        );
     }
     private isLoading() {
       return store.state.isLoading
@@ -242,6 +222,47 @@ export default class editMenu extends Vue {
                 console.log(response.data);
             }
         );
+    }
+
+    /***** html *****/
+    private setTagHeight (target: HTMLElement) {
+        this.textareaStyle = '';
+        if (!this.touchtag["isimg"]) {
+            this.textareaStyle = `height: ${target.offsetHeight}px; margin-bottom: 0;`;
+        }
+    }
+    private setInputHeight (target: HTMLElement) {
+        target.style.height = 'auto';
+        if (!this.touchtag["isimg"]) {
+            target.style.height = `${target.scrollHeight}px`;
+        }
+    }
+    private addButtonStyle (index: number) {
+        if (store.state.HoverTargetIndex[index]) {
+            return 'opacity:1; transition: all .5s;';
+        }
+        return 'opacity:0; transition: all .5s;';
+    }
+    private getPaddingClass(key: string, index: number) {
+        let classname = "";
+        const entries = Object.entries(store.state.jsondata);
+        if (0 < index) {
+            if (this.tag.getElementTagLabel(key) === 'for-p') {
+                classname = `p-${this.tag.getElementTagLabel( entries[index - 1][0])}`
+            } else {
+                classname = `div-${this.tag.getElementTagLabel(key)}`;
+            }
+        }
+        return classname;
+    }
+    private isImgTag (tagname: string) {
+        let wclass = this.tag.tagjson[tagname] ? this.tag.tagjson[tagname] : '';
+        let isimg = this.tag.tagjson[tagname] ? true : false;
+        return {"isimg": isimg, "wclass": wclass}
+    }
+    private displayArticleHTML (key: string, value: string) {
+        let prop = this.isImgTag(this.tag.getElementTagLabel(key));
+        return !prop["isimg"] ? value : `<img src='${process.env.VUE_APP_website_path}${value}' class='${prop["wclass"]}'>`;
     }
 }
 </script>

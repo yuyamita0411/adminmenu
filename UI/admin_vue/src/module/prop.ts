@@ -1,3 +1,5 @@
+import { GenericObject } from "./type";
+
 export class PATH {
     buttonsrc = '/img/openicon.png';
     homeicon = '/img/homeicon.png';
@@ -55,6 +57,18 @@ export class TAG {
         if (/boxmenu\d+/.test(itemKey)) {
             res = 'boxmenu'; // 'boxmenu' はHTML標準のタグではありません。カスタム要素や特定の処理に用いる場合が想定されます。
         }
+        if (/articleFullImg\d+/.test(itemKey)) {
+            res = 'full-img';
+        }
+        if (/articleMiddleImg\d+/.test(itemKey)) {
+            res = 'middle-img';
+        }
+        if (/articleSmallImg\d+/.test(itemKey)) {
+            res = 'small-img';
+        }
+        if (/articleTinyImg\d+/.test(itemKey)) {
+            res = 'tiny-img';
+        }
         return res;
     }
     getTagLabel (key: string) {
@@ -94,19 +108,32 @@ export class TAG {
             "tagname": "p",
             "tagfor": "for-p",
             "matchpattern": "content"
+        },
+        "fullimg": {
+            "tagname": "img",
+            "tagfor": "for-full-img",
+            "matchpattern": "articleFullImg"
+        },
+        "middleimg": {
+            "tagname": "img",
+            "tagfor": "for-middle-img",
+            "matchpattern": "articleMiddleImg"
+        },
+        "smallimg": {
+            "tagname": "img",
+            "tagfor": "for-small-img",
+            "matchpattern": "articleSmallImg"
+        },
+        "tinyimg": {
+            "tagname": "img",
+            "tagfor": "for-tiny-img",
+            "matchpattern": "articleTinyImg"
         }
-/*
-        ,
-        "boxmenu": {
-            "matchpattern": "boxmenu"
-        }
-*/
     }
-    static bProp = {
-        "contenttitle": "h2",
-        "contentsecondtitle": "h3",
-        "contentthirdttitle": "h4",
-        "content": "p",
-        "boxmenu": "boxmenu"
+    tagjson: GenericObject = {
+        "for-full-img": "w-100",
+        "for-middle-img": "w-75",
+        "for-small-img": "w-50",
+        "for-tiny-img": "w-25"
     }
 }
