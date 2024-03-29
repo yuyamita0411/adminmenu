@@ -275,6 +275,10 @@ export default class editMenu extends Vue {
         position: relative;
         div {
             width: 98%;
+            textarea {
+                border: none;
+                background: rgb(0, 0, 0, 0.05);
+            }
         }
         div:not(.addcontent-wrapper) {
             margin: 0 auto;
@@ -291,6 +295,7 @@ export default class editMenu extends Vue {
     textarea {
         font-size: 1rem;
         padding: .5rem 0 0 .5rem;
+        width: 100%;
     }
 }
 .meta-setting-area {
