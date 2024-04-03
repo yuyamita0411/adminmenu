@@ -1,5 +1,11 @@
-.env
 API/app/translation_tool/.env
-API/app/translation_tool/pagecategory/*
+API/app/translation_tool/genre/*
 API/app/translation_tool/translation-key.json
 UI/admin_vue/.env
+.env
+sitemap.md
+onlydesigned.py
+insertval.py
+logic.md
+gitpush.sh
+finished.md

@@ -4,6 +4,7 @@
         v-for="(value, key, index) in jsondata"
         :key="key"
         >
+        <AddTaskModal v-if="showChild" @ReRender="toggle"></AddTaskModal>
             <div
             v-if="tag.getElementTag(key)"
             class="editelem">
@@ -98,15 +99,12 @@ import { GenericObject } from '../module/type';
     computed: {
         ...mapState(['modalStatus', 'jsondata', 'HoverTargetIndex', 'EditingTargetIndex', 'isLoading']),
         EditingTargetIndex() {
-            // Vuex ストアの state から EditingTargetIndex を取得してコンポーネントにマッピング
             return store.state.EditingTargetIndex;
         },
         HoverTargetIndex() {
-            // Vuex ストアの state から HoverTargetIndex を取得してコンポーネントにマッピング
             return store.state.HoverTargetIndex;
         },
         isLoading() {
-            // Vuex ストアの state から HoverTargetIndex を取得してコンポーネントにマッピング
             return store.state.isLoading;
         }
     }

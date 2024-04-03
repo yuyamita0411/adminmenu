@@ -1,45 +1,17 @@
 <template>
-  <div :class="`container ${className}`">
-    <span
-      v-if="!isEditing"
-      @click="enableEditing"
-      v-html="content"
-    ></span>
-    <textarea
-      v-else
-      :value="content"
-      @input="updateContent"
-      @blur="disableEditing"
-    ></textarea>
+  <div :class="`container `">
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+export default defineComponent({
+  name: 'EditableContent',
   props: {
-    initialContent: String,
-    className: String
-  },
-  data() {
-    return {
-      content: this.initialContent,
-      isEditing: false
-    };
-  },
-  methods: {
-    enableEditing() {
-      this.isEditing = true;
-    },
-    updateContent(e) {
-      this.content = e.target.value;
-      this.$emit('update', this.content);
-    },
-    disableEditing() {
-      this.isEditing = false;
-      this.$emit('editComplete', this.content);
-    }
+    sendkey: String,
+    sendvalue: String
   }
-};
+});
 </script>
 
 <style lang="scss" scoped>
@@ -66,5 +38,58 @@ export default {
     .editelem > * {
         cursor: pointer;
     }
+}
+h2,
+.for-h2 {
+    font-size: 1.5rem;
+    margin: 0 0 .5rem 0;
+}
+
+h3,
+.for-h3,
+.for-box-h3 {
+    font-size: 1.17rem;
+    margin: 0 0 .5rem 0;
+}
+
+h4,
+.for-h4 {
+    font-size: 1.05rem;
+    margin: 0 0 .5rem 0;
+}
+
+p,
+.for-p,
+.for-box-description {
+    font-size: 1rem;
+    margin: 0 0 .5rem 0;
+}
+
+.p-for-h2 {
+    padding-left: 1rem;
+}
+.div-for-h3 {
+    padding-left: 1rem;
+}
+.p-for-h3 {
+    padding-left: 2rem;
+}
+.div-for-h4 {
+    padding-left: 2rem;
+}
+.p-for-h4 {
+    padding-left: 3rem;
+}
+.div-for-h5 {
+    padding-left: 3rem;
+}
+.p-for-h5 {
+    padding-left: 4rem;
+}
+.div-for-h6 {
+    padding-left: 4rem;
+}
+.p-for-h6 {
+    padding-left: 5rem;
 }
 </style>

@@ -42,7 +42,7 @@ export class TAG {
         if (/contentsecondtitle\d+/.test(itemKey)) {
             res = 'h3';
         }
-        if (/contentthirdttitle\d+/.test(itemKey)) {
+        if (/contentthirdtitle\d+/.test(itemKey)) {
             res = 'h4';
         }
         if (/contentforthtitle\d+/.test(itemKey)) {
@@ -92,7 +92,7 @@ export class TAG {
         "h4": {
             "tagname": "h4",
             "tagfor": "for-h4",
-            "matchpattern": "contentthirdttitle"
+            "matchpattern": "contentthirdtitle"
         },
         "h5": {
             "tagname": "h5",

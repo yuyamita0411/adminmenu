@@ -10,7 +10,7 @@ import os
 import shutil
 from pathlib import Path
 
-from translation_tool.execute import single
+from translation_tool.execute import single, multi
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}}) 
@@ -106,7 +106,8 @@ def translate_json():
     data = request.get_json()
     if Function.fileExists(data["filePath"])["status_code"] != 200:
         return {}
-    single(data["filePath"])
+    multi()
+#    single(data["filePath"])
     return {"status_code": 200}
 
 if __name__ == '__main__':

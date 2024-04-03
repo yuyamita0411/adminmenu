@@ -23,6 +23,15 @@ class JSON:
                 # LangFrom   = "Japanese"
                 # LangTo   = "English"
                 processed_dict[key] = ChatGPTApi.translate(os.getenv("VUE_APP_translateFrom"), fullLinArr[lnkey], value)
+                if "img" in key:
+                    processed_dict[key] = value
+                if "Img" in key:
+                    processed_dict[key] = value
+                if "thumbnail" in key:
+                    processed_dict[key] = value
+                if "categoryID" in key:
+                    processed_dict[key] = value
+
             elif isinstance(value, dict):
                 # 辞書の場合はさらに再帰処理
                 processed_dict[key] = JSON.process_dict(value, lnkey)
