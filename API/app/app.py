@@ -101,6 +101,31 @@ def make_dir_from_json():
 
     return jsonify({}), 200
 
+@app.route(os.getenv("VUE_APP_UpdateDirContentEndpoint"), methods=['POST'])
+def update_dir():
+    for filename in os.listdir(os.getenv("VUE_APP_targetDirPath")):
+        file_path = os.path.join(os.getenv("VUE_APP_targetDirPath"), filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            return {"msg": f"ファイルの削除中にエラーが発生しました: {e}", "status_code": 500}
+
+    for filename in os.listdir(os.getenv("VUE_APP_listupPath")):
+        src_file = os.path.join(os.getenv("VUE_APP_listupPath"), filename)
+        dst_file = os.path.join(os.getenv("VUE_APP_targetDirPath"), filename)
+        try:
+            if os.path.isfile(src_file):
+                shutil.copy(src_file, dst_file)
+            elif os.path.isdir(src_file):
+                shutil.copytree(src_file, dst_file)
+        except Exception as e:
+            return {"msg": f"ファイルの削除中にエラーが発生しました: {e}", "status_code": 500}
+
+    return {"msg": "ファイルのコピーが完了しました", "status_code": 200}
+
 @app.route(os.getenv("VUE_APP_fileTranslateEndpoint"), methods=['POST'])
 def translate_json():
     data = request.get_json()

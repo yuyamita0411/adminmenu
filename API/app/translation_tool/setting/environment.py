@@ -1,11 +1,19 @@
+from dotenv import load_dotenv
+import os
+basedir = os.path.abspath(os.path.dirname(__file__))
+load_dotenv(os.path.join('/app/translation_tool', '.env'))
+
+import sys
+sys.path.append(os.getenv("Local_File_Directory"))
+
 #基準のファイル
 #python3 execute.py singleの時↓
 #更新するファイルが複数ある時
 #python3 execute.py multiの時↓
 datafilrpatharr = [
-#    './translation_tool/genre/cosmetic_blog/pagecategory/category/ja/index.json',
-    './translation_tool/genre/cosmetic_blog/pagecategory/detail/2/language/ja/index.json',
-#    './translation_tool/genre/cosmetic_blog/pagecategory/home/language/ja/index.json'
+#    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/category/ja/index.json',
+    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/detail/2/language/ja/index.json',
+#    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/home/language/ja/index.json'
 ]
 #翻訳する言語と言語コード
 # google APIで使う時

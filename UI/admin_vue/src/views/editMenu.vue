@@ -145,6 +145,10 @@ export default class editMenu extends Vue {
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileEndpoint}`,
             `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
         );
+        this.ModifyJsonFile (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_UpdateDirContentEndpoint}`,
+            "dummy"
+        );
     }
     translateJsonData () {
         this.ModifyJsonFile (
