@@ -17,8 +17,8 @@ class ChatGPTApi:
             model    = "gpt-3.5-turbo",
 
             messages  = [
-                {"role": "system", "content": f'You are a helpful assistant that translates {LangFrom} to {LangTo} naturally.'},
-                {"role": "user", "content": f'Translate the following {LangFrom} text to {LangTo} :「{text}」. And Output only translated text'}
+                {"role": "system", "content": f'You are a helpful assistant that translates {LangFrom} to {LangTo} but translate only inside html string.'},
+                {"role": "user", "content": f'Translate the following {LangFrom} text which includes html string to {LangTo} :「{text}」. And Output only translated text'}
             ] , 
 
             max_tokens  = int(os.getenv("ChatGPT_MAX_TOKENS")),

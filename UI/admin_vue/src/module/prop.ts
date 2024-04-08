@@ -55,7 +55,7 @@ export class TAG {
             res = 'p';
         }
         if (/boxmenu\d+/.test(itemKey)) {
-            res = 'boxmenu'; // 'boxmenu' はHTML標準のタグではありません。カスタム要素や特定の処理に用いる場合が想定されます。
+            res = 'boxmenu';
         }
         if (/articleFullImg\d+/.test(itemKey)) {
             res = 'full-img';
@@ -128,6 +128,11 @@ export class TAG {
             "tagname": "img",
             "tagfor": "for-tiny-img",
             "matchpattern": "articleTinyImg"
+        },
+        "boxmenu": {
+            "tagname": "div",
+            "tagfor": "for-boxmenu",
+            "matchpattern": "boxmenu"
         }
     }
     tagjson: GenericObject = {
