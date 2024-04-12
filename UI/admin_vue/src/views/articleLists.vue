@@ -19,7 +19,14 @@
                         </td>
                         <td v-if="pagelist[key]"
                         class="text-decoration-none accent-text-color">
-                        {{pageInfoArr[value] && pageInfoArr[value]["category"] ? pageInfoArr[value]["category"] : ''}}
+                            <select v-model="selectedCategories[value]">
+                                <option
+                                v-for="(info, pageInfoKey) in pageInfoArr"
+                                :key="pageInfoKey"
+                                :value="info.categoryID">
+                                    {{ info.category }}
+                                </option>
+                            </select>
                         </td>
                         <td>
                             <button
@@ -69,6 +76,8 @@ export default class articleLists extends Vue {
     maxPageNum=1;
     path: PATH = new PATH();
     tag: TAG = new TAG();
+
+    selectedCategories: GenericObject = {};
 
     addcontenticon = this.path.addcontenticon;
     trashicon = this.path.trashicon;
@@ -127,6 +136,12 @@ export default class articleLists extends Vue {
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_filetitle}`,
             {filePath: this.pagelist},
             (response: GenericObject) => {
+
+                this.selectedCategories = Object.keys(response.data).reduce((acc, key) => ({
+                ...acc,
+                [key.toString()]: response.data[key].categoryID.toString(),
+                }), {});
+
                 this.pageInfoArr = response.data;
                 this.maxPageNum = this.getMaxNumber(this.pagelist);
             }

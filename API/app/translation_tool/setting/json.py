@@ -31,6 +31,12 @@ class JSON:
                     processed_dict[key] = value
                 if "categoryID" in key:
                     processed_dict[key] = value
+                if "created_at_for_sitemap" in key:
+                    processed_dict[key] = value
+                if "updated_at_for_sitemap" in key:
+                    processed_dict[key] = value
+                
+                print(f'{lnkey} - {value}: {processed_dict[key]}')
 
             elif isinstance(value, dict):
                 # 辞書の場合はさらに再帰処理

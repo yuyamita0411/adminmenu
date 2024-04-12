@@ -11,8 +11,8 @@ sys.path.append(os.getenv("Local_File_Directory"))
 #更新するファイルが複数ある時
 #python3 execute.py multiの時↓
 datafilrpatharr = [
-#    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/category/ja/index.json',
-    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/detail/2/language/ja/index.json',
+    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/category/ja/index.json',
+#    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/detail/1/language/ja/index.json',
 #    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/home/language/ja/index.json'
 ]
 #翻訳する言語と言語コード
@@ -23,14 +23,15 @@ datafilrpatharr = [
 
 # ChatGPT APIで使う時
 lnarr = {
-    "アラビア語": "ar",
+    "アムハラ語": "am",
     "アゼルバイジャン語": "az",
     "ベラルーシ語": "be",
+    "クメール語": "km",
+    "アラビア語": "ar",
     "ブルガリア語": "bg",
     "ベンガル語": "bn",
     "英語": "en",
     "アフリカーンス語": "af",
-    "アムハラ語": "am",
     "ボスニア語": "bs",
     "カタロニア語": "ca",
     "チェコ語": "cs",
@@ -56,7 +57,6 @@ lnarr = {
     "イタリア語": "it",
     "ジャワ語": "jv",
     "カザフ語": "kk",
-    "クメール語": "km",
     "カンナダ語": "kn",
     "韓国語": "ko",
     "クルド語": "ku",
@@ -93,14 +93,15 @@ lnarr = {
     "ウズベク語": "uz"
 }
 fullLinArr = {
-    "ar": "Arabic",
+    "am": "Amharic",
     "az": "Azerbaijani",
     "be": "Belarusian",
+    "km": "Khmer",
+    "ar": "Arabic",
     "bg": "Bulgarian",
     "bn": "Bengali",
     "en": "English",
     "af": "Afrikaans",
-    "am": "Amharic",
     "bs": "Bosnian",
     "ca": "Catalan",
     "cs": "Czech",
@@ -126,7 +127,6 @@ fullLinArr = {
     "it": "Italian",
     "jv": "Javanese",
     "kk": "Kazakh",
-    "km": "Khmer",
     "kn": "Kannada",
     "ko": "Korean",
     "ku": "Kurdish",
@@ -151,7 +151,6 @@ fullLinArr = {
     "sl": "Slovenian",
     "sq": "Albanian",
     "sv": "Swedish",
-    "sw": "Swahili",
     "ta": "Tamil",
     "te": "Telugu",
     "th": "Thai",
@@ -160,7 +159,8 @@ fullLinArr = {
     "ty": "Tahitian",
     "ug": "Uighur",
     "ur": "Urdu",
-    "uz": "Uzbek"
+    "uz": "Uzbek",
+    "sw": "Swahili"
 }
 #python3 execute.py singleの時↓
 #saveDir = './language'

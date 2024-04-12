@@ -69,6 +69,15 @@ export class TAG {
         if (/articleTinyImg\d+/.test(itemKey)) {
             res = 'tiny-img';
         }
+        if (/donutMeter\d+/.test(itemKey)) {
+            res = 'donut-meter';
+        }
+        if (/topArticleTable\d+/.test(itemKey)) {
+            res = 'top-article-table';
+        }
+        if (/purchaseButton\d+/.test(itemKey)) {
+            res = 'purchase-button';
+        }
         return res;
     }
     getTagLabel (key: string) {
@@ -133,7 +142,22 @@ export class TAG {
             "tagname": "div",
             "tagfor": "for-boxmenu",
             "matchpattern": "boxmenu"
-        }
+        },
+        "donutMeter": {
+            "tagname": "canvas",
+            "tagfor": "donut-meter",
+            "matchpattern": "donutMeter"
+        },
+        "topArticleTable": {
+            "tagname": "table",
+            "tagfor": "top-article-table",
+            "matchpattern": "topArticleTable"
+        },
+        "purchaseButton": {
+            "tagname": "button",
+            "tagfor": "purchase-button",
+            "matchpattern": "purchaseButton"
+        },
     }
     tagjson: GenericObject = {
         "for-full-img": "w-100",

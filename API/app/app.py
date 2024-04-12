@@ -65,10 +65,15 @@ def make_file_title_json_data():
 
         dirDict[url]["title"] = ''
         dirDict[url]["category"] = 'カテゴリなし'
+        dirDict[url]["categoryID"] = 0
 
         if "pagetitle" not in jsondata:
             continue
         dirDict[url]["title"] = jsondata["pagetitle"]
+
+        if "categoryID" not in jsondata:
+            continue
+        dirDict[url]["categoryID"] = jsondata["categoryID"]
 
         try:
             dirDict[url]["category"] = categorydata[jsondata["categoryID"]].get("description", 'カテゴリなし')
