@@ -11,8 +11,8 @@ sys.path.append(os.getenv("Local_File_Directory"))
 #更新するファイルが複数ある時
 #python3 execute.py multiの時↓
 datafilrpatharr = [
-    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/category/ja/index.json',
-#    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/detail/1/language/ja/index.json',
+#    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/category/ja/index.json',
+    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/detail/1/language/ja/index.json',
 #    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/home/language/ja/index.json'
 ]
 #翻訳する言語と言語コード
@@ -87,7 +87,6 @@ lnarr = {
     "タイ語": "th",
     "タガログ語": "tl",
     "トルコ語": "tr",
-    "タヒチ語": "ty",
     "ウイグル語": "ug",
     "ウルドゥ語": "ur",
     "ウズベク語": "uz"
@@ -156,7 +155,6 @@ fullLinArr = {
     "th": "Thai",
     "tl": "Tagalog",
     "tr": "Turkish",
-    "ty": "Tahitian",
     "ug": "Uighur",
     "ur": "Urdu",
     "uz": "Uzbek",
