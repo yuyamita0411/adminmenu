@@ -11,9 +11,10 @@ sys.path.append(os.getenv("Local_File_Directory"))
 #更新するファイルが複数ある時
 #python3 execute.py multiの時↓
 datafilrpatharr = [
-#    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/category/ja/index.json',
-    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/detail/1/language/ja/index.json',
-#    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/home/language/ja/index.json'
+    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/common/ja/index.json',
+    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/category/ja/index.json',
+#    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/detail/1/language/ja/index.json',
+    f'./translation_tool/genre/{os.getenv("VUE_APP_whichblog")}/pagecategory/home/language/ja/index.json'
 ]
 #翻訳する言語と言語コード
 # google APIで使う時
@@ -23,11 +24,9 @@ datafilrpatharr = [
 
 # ChatGPT APIで使う時
 lnarr = {
-    "アムハラ語": "am",
+    "アラビア語": "ar",
     "アゼルバイジャン語": "az",
     "ベラルーシ語": "be",
-    "クメール語": "km",
-    "アラビア語": "ar",
     "ブルガリア語": "bg",
     "ベンガル語": "bn",
     "英語": "en",
@@ -46,48 +45,39 @@ lnarr = {
     "フィンランド語": "fi",
     "フランス語": "fr",
     "ガリシア語": "gl",
-    "グジャラート語": "gu",
     "ヘブライ語": "he",
     "ヒンディー語": "hi",
     "クロアチア語": "hr",
     "ハンガリー語": "hu",
-    "アルメニア語": "hy",
     "インドネシア語": "id",
     "アイスランド語": "is",
     "イタリア語": "it",
     "ジャワ語": "jv",
     "カザフ語": "kk",
-    "カンナダ語": "kn",
     "韓国語": "ko",
     "クルド語": "ku",
     "リトアニア語": "lt",
     "ラトビア語": "lv",
     "マケドニア語": "mk",
-    "マラヤーラム語": "ml",
+    "モンゴル語": "mn",
     "モンゴル語": "mn",
     "マラーティー語": "mr",
     "マレー語": "ms",
-    "ミャンマー語": "my",
     "ネパール語": "ne",
     "オランダ語": "nl",
-    "パンジャブ語": "pa",
     "ポーランド語": "pl",
     "ポルトガル語": "pt",
     "ルーマニア語": "ro",
     "ロシア語": "ru",
-    "シンド語": "sd",
-    "シンハラ語": "si",
+   "シンド語": "sd",
     "スロバキア語": "sk",
     "スロベニア語": "sl",
     "アルバニア語": "sq",
     "スウェーデン語": "sv",
     "スワヒリ語": "sw",
-    "タミル語": "ta",
-    "テルグ語": "te",
     "タイ語": "th",
     "タガログ語": "tl",
     "トルコ語": "tr",
-    "ウイグル語": "ug",
     "ウルドゥ語": "ur",
     "ウズベク語": "uz"
 }

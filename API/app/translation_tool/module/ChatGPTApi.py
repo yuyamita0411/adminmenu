@@ -14,7 +14,7 @@ class ChatGPTApi:
         client = OpenAI(api_key=os.getenv("ChatGPT_API_KEY"))
 
         completion = client.chat.completions.create(
-            model    = "gpt-3.5-turbo",
+            model    = "gpt-4-turbo",
 
 #            messages  = [
 #                {"role": "system", "content": f'You are a helpful assistant that translates {LangFrom} to {LangTo} but translate only inside html string.'},
@@ -24,10 +24,14 @@ class ChatGPTApi:
 #                {"role": "system", "content": f'You are a translation assistant. Translate from {LangFrom} to {LangTo}. Only translate text that is inside HTML strings and output only the translated text.'},
 #                {"role": "user", "content": f'Translate this text from {LangFrom} to {LangTo}: "{text}"'}
 #            ],
-            messages=[
-                {"role": "system", "content": f'You are a translation assistant. Your task is to translate text from {LangFrom} to {LangTo} without adding any extra information.'},
-                {"role": "user", "content": f'Please translate this: {text}'}
-            ], 
+#            messages=[
+#                {"role": "system", "content": f'You are a translation assistant. Your task is to translate text from {LangFrom} to {LangTo} without adding any extra information.'},
+#                {"role": "user", "content": f'Please translate this: {text}'}
+#            ], 
+            messages = [
+                {"role": "system", "content": "Your task is to translate text without adding any extra information or characters such as 'translate in:' or HTML entities. Ensure all translations are accurate and complete, and remember to escape special characters like double quotations in strings."},
+                {"role": "user", "content": f"Please translate this text accurately from {LangFrom} to {LangTo}: {text}"}
+            ],
 #            messages=[
 #                {"role": "system", "content": f'You are a dedicated translation assistant. Your sole task is to provide direct translations from {LangFrom} to {LangTo}. Do not add any additional information or commentary, only the translated text.'},
 #                {"role": "user", "content": f'Please directly translate the following text from {LangFrom} to {LangTo}: {text}'}
