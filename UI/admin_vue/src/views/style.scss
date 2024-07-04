@@ -249,20 +249,28 @@ p,
 .submitButtonInner {
     display: flex;
     gap: 3px;
-    max-width: 15rem;
+    max-width: 25rem;
     width: 50%;
     margin: 0 auto;
 }
-.submitButton {
-    border-bottom: 7px solid #0686b2;
-    background: #27acd9;
-    color: #fff;
-}
-.translationButton {
+
+.button_pink {
     border-bottom: 7px solid #C50B4F;
     background: #f54785;
     color: #fff;
 }
+.button_pink:hover {
+	border-bottom: 1px solid #C50B4F;
+}
+.button_blue {
+    border-bottom: 7px solid #0686b2;
+    background: #27acd9;
+    color: #fff;
+}
+.button_blue:hover{
+    border-bottom: 1px solid #0686b2;
+}
+
 .submitButton,
 .translationButton {
     display: block;
@@ -282,12 +290,6 @@ p,
     margin-top: 6px;
 	color: #fff;
     transition: all .3s;
-}
-.submitButton:hover{
-    border-bottom: 1px solid #0686b2;
-}
-.translationButton:hover {
-	border-bottom: 1px solid #C50B4F;
 }
 .trashbutton {
     right: 2rem;

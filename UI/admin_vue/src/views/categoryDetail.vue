@@ -18,8 +18,8 @@
             </tbody>
         </table>
         <div class="flex-container mt2rem font1rem">
-            <button @click="goBack" class="menu-list-button menuicon submitButton font1rem">戻る</button>
-            <button type="button" @click="rebaseCategory" class="submitButton font1rem">更新する</button>
+            <button @click="goBack" class="menu-list-button menuicon submitButton button_blue font1rem">戻る</button>
+            <button type="button" @click="rebaseCategory" class="submitButton button_blue font1rem">更新する</button>
         </div>
     </div>
 </template>

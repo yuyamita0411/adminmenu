@@ -39,8 +39,8 @@
                 </tbody>
             </table>
             <div class="flex-container mt2rem font1rem">
-                <button type="button" @click="addCategory" class="submitButton font1rem">カテゴリを追加する</button>
-                <button type="button" class="submitButton font1rem">カテゴリを翻訳する</button>
+                <button type="button" @click="addCategory" class="submitButton button_blue font1rem">カテゴリを追加する</button>
+                <button type="button" class="submitButton button_blue font1rem">ChatGPTで翻訳する</button>
             </div>
         </div>
     </div>

@@ -3398,3 +3398,255 @@ spawned uWSGI worker 5 (pid: 13, cores: 1)
 [pid: 10|app: 0|req: 18/187] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 14:53:46 2024] OPTIONS /api/file/upload => generated 0 bytes in 3 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
 [pid: 13|app: 0|req: 84/188] 192.168.65.1 () {58 vars in 1031 bytes} [Thu Jul  4 14:53:46 2024] POST /api/file/upload => generated 43 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
 [pid: 12|app: 0|req: 43/189] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 14:53:46 2024] POST /api/dir/update => generated 119 bytes in 946 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 44/191] 192.168.65.1 () {52 vars in 876 bytes} [Thu Jul  4 14:55:30 2024] OPTIONS /api/category/detail => generated 0 bytes in 29 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 85/191] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 14:55:30 2024] OPTIONS /api/folder/read => generated 0 bytes in 32 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 19/192] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 14:55:30 2024] POST /api/folder/read => generated 15921 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 31/193] 192.168.65.1 () {58 vars in 1033 bytes} [Thu Jul  4 14:55:30 2024] POST /api/category/detail => generated 1431 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 86/194] 192.168.65.1 () {52 vars in 872 bytes} [Thu Jul  4 14:55:46 2024] OPTIONS /api/category/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ファイルデータ！
+{
+    "1": {
+        "category": "見出しブロック",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "最適なWordPressの見出しブロックを探しませんか？当ページでは、さまざまなデザインと機能を持つ見出しブロックを厳選して紹介。サイトの見た目を格上げし、コンテンツを際立たせるための最良の選択肢を見つけましょう。",
+        "ogImg": "/static/img/headline-icon.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    },
+    "2": {
+        "category": "新カテテスト",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "新ディスクリプション",
+        "ogImg": "test.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 12|app: 0|req: 45/195] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 14:55:46 2024] POST /api/category/list => generated 971 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 15/196] 192.168.65.1 () {52 vars in 876 bytes} [Thu Jul  4 14:56:31 2024] OPTIONS /api/category/detail => generated 0 bytes in 13 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 87/197] 192.168.65.1 () {58 vars in 1033 bytes} [Thu Jul  4 14:56:31 2024] POST /api/category/detail => generated 1431 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 32/198] 192.168.65.1 () {52 vars in 890 bytes} [Thu Jul  4 14:56:33 2024] OPTIONS /api/category/detail/delete => generated 0 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 46/199] 192.168.65.1 () {58 vars in 1047 bytes} [Thu Jul  4 14:56:33 2024] POST /api/category/detail/delete => generated 320 bytes in 30 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 47/200] 192.168.65.1 () {52 vars in 872 bytes} [Thu Jul  4 14:56:35 2024] OPTIONS /api/category/list => generated 0 bytes in 77 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ファイルデータ！
+{
+    "2": {
+        "category": "新カテテスト",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "新ディスクリプション",
+        "ogImg": "test.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 12|app: 0|req: 48/201] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 14:56:35 2024] POST /api/category/list => generated 338 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 49/202] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 14:56:38 2024] OPTIONS /api/folder/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 88/203] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 14:56:38 2024] POST /api/folder/list => generated 14 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 89/204] 192.168.65.1 () {52 vars in 886 bytes} [Thu Jul  4 14:56:38 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 90/205] 192.168.65.1 () {58 vars in 1043 bytes} [Thu Jul  4 14:56:38 2024] POST /api/folder/title/by/list => generated 478 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 91/206] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 14:56:39 2024] OPTIONS /api/folder/read => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 92/207] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 14:56:39 2024] POST /api/folder/read => generated 15921 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 20/208] 192.168.65.1 () {52 vars in 876 bytes} [Thu Jul  4 14:56:39 2024] OPTIONS /api/category/detail => generated 0 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 50/209] 192.168.65.1 () {58 vars in 1033 bytes} [Thu Jul  4 14:56:39 2024] POST /api/category/detail => generated 441 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 51/210] 192.168.65.1 () {52 vars in 872 bytes} [Thu Jul  4 14:56:48 2024] OPTIONS /api/category/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ファイルデータ！
+{
+    "2": {
+        "category": "新カテテスト",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "新ディスクリプション",
+        "ogImg": "test.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 12|app: 0|req: 52/211] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 14:56:48 2024] POST /api/category/list => generated 338 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 53/212] 192.168.65.1 () {52 vars in 890 bytes} [Thu Jul  4 14:56:50 2024] OPTIONS /api/category/detail/delete => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 93/213] 192.168.65.1 () {58 vars in 1047 bytes} [Thu Jul  4 14:56:50 2024] POST /api/category/detail/delete => generated 28 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+ファイルデータ！
+{}
+[pid: 13|app: 0|req: 94/214] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 14:56:52 2024] POST /api/category/list => generated 2 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 144 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 95/215] 192.168.65.1 () {52 vars in 884 bytes} [Thu Jul  4 14:57:06 2024] OPTIONS /api/category/detail/add => generated 0 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 96/216] 192.168.65.1 () {58 vars in 1043 bytes} [Thu Jul  4 14:57:06 2024] POST /api/category/detail/add => generated 1737 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 97/217] 192.168.65.1 () {52 vars in 872 bytes} [Thu Jul  4 14:57:08 2024] OPTIONS /api/category/list => generated 0 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ファイルデータ！
+{
+    "1": {
+        "category": "見出しブロック",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "最適なWordPressの見出しブロックを探しませんか？当ページでは、さまざまなデザインと機能を持つ見出しブロックを厳選して紹介。サイトの見た目を格上げし、コンテンツを際立たせるための最良の選択肢を見つけましょう。",
+        "ogImg": "/static/img/headline-icon.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 13|app: 0|req: 98/218] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 14:57:08 2024] POST /api/category/list => generated 635 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+ファイルデータ！
+{
+    "1": {
+        "category": "見出しブロック",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "最適なWordPressの見出しブロックを探しませんか？当ページでは、さまざまなデザインと機能を持つ見出しブロックを厳選して紹介。サイトの見た目を格上げし、コンテンツを際立たせるための最良の選択肢を見つけましょう。",
+        "ogImg": "/static/img/headline-icon.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 13|app: 0|req: 99/219] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 14:57:10 2024] POST /api/category/list => generated 635 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 100/220] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 14:57:15 2024] OPTIONS /api/folder/list => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 101/221] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 14:57:15 2024] POST /api/folder/list => generated 14 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 102/222] 192.168.65.1 () {52 vars in 886 bytes} [Thu Jul  4 14:57:15 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 103/223] 192.168.65.1 () {58 vars in 1043 bytes} [Thu Jul  4 14:57:15 2024] POST /api/folder/title/by/list => generated 484 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 104/224] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 14:57:16 2024] OPTIONS /api/folder/read => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 54/225] 192.168.65.1 () {52 vars in 876 bytes} [Thu Jul  4 14:57:16 2024] OPTIONS /api/category/detail => generated 0 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 105/226] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 14:57:16 2024] POST /api/folder/read => generated 15921 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 55/227] 192.168.65.1 () {58 vars in 1033 bytes} [Thu Jul  4 14:57:16 2024] POST /api/category/detail => generated 1005 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 106/228] 192.168.65.1 () {52 vars in 872 bytes} [Thu Jul  4 14:57:47 2024] OPTIONS /api/category/list => generated 0 bytes in 5 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ファイルデータ！
+{
+    "1": {
+        "category": "見出しブロック",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "最適なWordPressの見出しブロックを探しませんか？当ページでは、さまざまなデザインと機能を持つ見出しブロックを厳選して紹介。サイトの見た目を格上げし、コンテンツを際立たせるための最良の選択肢を見つけましょう。",
+        "ogImg": "/static/img/headline-icon.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 13|app: 0|req: 107/229] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 14:57:47 2024] POST /api/category/list => generated 635 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 108/230] 192.168.65.1 () {52 vars in 876 bytes} [Thu Jul  4 14:57:55 2024] OPTIONS /api/category/detail => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 109/231] 192.168.65.1 () {58 vars in 1033 bytes} [Thu Jul  4 14:57:55 2024] POST /api/category/detail => generated 1005 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 56/232] 192.168.65.1 () {52 vars in 872 bytes} [Thu Jul  4 14:58:01 2024] OPTIONS /api/category/list => generated 0 bytes in 3 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ファイルデータ！
+{
+    "1": {
+        "category": "見出しブロック",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "最適なWordPressの見出しブロックを探しませんか？当ページでは、さまざまなデザインと機能を持つ見出しブロックを厳選して紹介。サイトの見た目を格上げし、コンテンツを際立たせるための最良の選択肢を見つけましょう。",
+        "ogImg": "/static/img/headline-icon.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 13|app: 0|req: 110/233] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 14:58:01 2024] POST /api/category/list => generated 635 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+ファイルデータ！
+{
+    "1": {
+        "category": "見出しブロック",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "最適なWordPressの見出しブロックを探しませんか？当ページでは、さまざまなデザインと機能を持つ見出しブロックを厳選して紹介。サイトの見た目を格上げし、コンテンツを際立たせるための最良の選択肢を見つけましょう。",
+        "ogImg": "/static/img/headline-icon.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 13|app: 0|req: 111/234] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 14:58:03 2024] POST /api/category/list => generated 635 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 57/235] 192.168.65.1 () {52 vars in 876 bytes} [Thu Jul  4 15:18:20 2024] OPTIONS /api/category/detail => generated 0 bytes in 24 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 112/236] 192.168.65.1 () {58 vars in 1033 bytes} [Thu Jul  4 15:18:20 2024] POST /api/category/detail => generated 1005 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 113/237] 192.168.65.1 () {58 vars in 1033 bytes} [Thu Jul  4 15:18:21 2024] POST /api/category/detail => generated 1005 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 58/238] 192.168.65.1 () {52 vars in 872 bytes} [Thu Jul  4 15:59:19 2024] OPTIONS /api/category/list => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ファイルデータ！
+{
+    "1": {
+        "category": "見出しブロック",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "最適なWordPressの見出しブロックを探しませんか？当ページでは、さまざまなデザインと機能を持つ見出しブロックを厳選して紹介。サイトの見た目を格上げし、コンテンツを際立たせるための最良の選択肢を見つけましょう。",
+        "ogImg": "/static/img/headline-icon.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 13|app: 0|req: 114/239] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 15:59:19 2024] POST /api/category/list => generated 635 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 59/240] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 15:59:25 2024] OPTIONS /api/folder/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 60/241] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 15:59:25 2024] POST /api/folder/list => generated 14 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 61/242] 192.168.65.1 () {52 vars in 886 bytes} [Thu Jul  4 15:59:25 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 62/243] 192.168.65.1 () {58 vars in 1043 bytes} [Thu Jul  4 15:59:25 2024] POST /api/folder/title/by/list => generated 484 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 115/244] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 15:59:41 2024] OPTIONS /api/folder/read => generated 0 bytes in 5 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 63/245] 192.168.65.1 () {52 vars in 876 bytes} [Thu Jul  4 15:59:41 2024] OPTIONS /api/category/detail => generated 0 bytes in 7 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 116/246] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 15:59:41 2024] POST /api/folder/read => generated 15921 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 64/247] 192.168.65.1 () {58 vars in 1033 bytes} [Thu Jul  4 15:59:41 2024] POST /api/category/detail => generated 1005 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 65/248] 192.168.65.1 () {52 vars in 872 bytes} [Thu Jul  4 15:59:51 2024] OPTIONS /api/category/list => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ファイルデータ！
+{
+    "1": {
+        "category": "見出しブロック",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "最適なWordPressの見出しブロックを探しませんか？当ページでは、さまざまなデザインと機能を持つ見出しブロックを厳選して紹介。サイトの見た目を格上げし、コンテンツを際立たせるための最良の選択肢を見つけましょう。",
+        "ogImg": "/static/img/headline-icon.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 13|app: 0|req: 117/249] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 15:59:51 2024] POST /api/category/list => generated 635 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 66/250] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 16:00:05 2024] OPTIONS /api/folder/list => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 118/251] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 16:00:05 2024] POST /api/folder/list => generated 14 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 119/252] 192.168.65.1 () {52 vars in 886 bytes} [Thu Jul  4 16:00:05 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 120/253] 192.168.65.1 () {58 vars in 1043 bytes} [Thu Jul  4 16:00:05 2024] POST /api/folder/title/by/list => generated 484 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 121/254] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 16:00:06 2024] OPTIONS /api/folder/read => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 67/255] 192.168.65.1 () {52 vars in 876 bytes} [Thu Jul  4 16:00:06 2024] OPTIONS /api/category/detail => generated 0 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 122/256] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 16:00:06 2024] POST /api/folder/read => generated 15921 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 21/257] 192.168.65.1 () {58 vars in 1033 bytes} [Thu Jul  4 16:00:06 2024] POST /api/category/detail => generated 1005 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 123/258] 192.168.65.1 () {52 vars in 872 bytes} [Thu Jul  4 16:01:54 2024] OPTIONS /api/category/list => generated 0 bytes in 32 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ファイルデータ！
+{
+    "1": {
+        "category": "見出しブロック",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "最適なWordPressの見出しブロックを探しませんか？当ページでは、さまざまなデザインと機能を持つ見出しブロックを厳選して紹介。サイトの見た目を格上げし、コンテンツを際立たせるための最良の選択肢を見つけましょう。",
+        "ogImg": "/static/img/headline-icon.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 13|app: 0|req: 124/259] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 16:01:54 2024] POST /api/category/list => generated 635 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 125/260] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 16:01:57 2024] OPTIONS /api/folder/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 68/261] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 16:01:57 2024] POST /api/folder/list => generated 14 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 126/262] 192.168.65.1 () {52 vars in 886 bytes} [Thu Jul  4 16:01:57 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 127/263] 192.168.65.1 () {58 vars in 1043 bytes} [Thu Jul  4 16:01:57 2024] POST /api/folder/title/by/list => generated 484 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 128/264] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 16:02:00 2024] OPTIONS /api/folder/read => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 69/265] 192.168.65.1 () {52 vars in 876 bytes} [Thu Jul  4 16:02:00 2024] OPTIONS /api/category/detail => generated 0 bytes in 10 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 129/266] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 16:02:00 2024] POST /api/folder/read => generated 15921 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 70/267] 192.168.65.1 () {58 vars in 1033 bytes} [Thu Jul  4 16:02:00 2024] POST /api/category/detail => generated 1005 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 130/268] 192.168.65.1 () {52 vars in 868 bytes} [Thu Jul  4 16:03:15 2024] OPTIONS /api/folder/list => generated 0 bytes in 9 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 131/269] 192.168.65.1 () {58 vars in 1025 bytes} [Thu Jul  4 16:03:15 2024] POST /api/folder/list => generated 14 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 71/270] 192.168.65.1 () {52 vars in 886 bytes} [Thu Jul  4 16:03:15 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 132/271] 192.168.65.1 () {58 vars in 1043 bytes} [Thu Jul  4 16:03:15 2024] POST /api/folder/title/by/list => generated 484 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 133/272] 192.168.65.1 () {52 vars in 872 bytes} [Thu Jul  4 16:03:20 2024] OPTIONS /api/category/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ファイルデータ！
+{
+    "1": {
+        "category": "見出しブロック",
+        "catlist": [],
+        "created_at": "2024-07-04",
+        "created_at_for_sitemap": "2024-07-04",
+        "description": "最適なWordPressの見出しブロックを探しませんか？当ページでは、さまざまなデザインと機能を持つ見出しブロックを厳選して紹介。サイトの見た目を格上げし、コンテンツを際立たせるための最良の選択肢を見つけましょう。",
+        "ogImg": "/static/img/headline-icon.png",
+        "updated_at": "2024-07-04",
+        "updated_at_for_sitemap": "2024-07-04"
+    }
+}
+[pid: 13|app: 0|req: 134/273] 192.168.65.1 () {58 vars in 1029 bytes} [Thu Jul  4 16:03:20 2024] POST /api/category/list => generated 635 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)

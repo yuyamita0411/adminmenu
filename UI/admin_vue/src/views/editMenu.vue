@@ -127,13 +127,13 @@
         <div class="submitButtonWrapper">
             <div class="submitButtonInner">
                 <button
-                class="submitButton"
+                class="submitButton button_blue"
                 @click="updateJsonData"
                 >更新する</button>
                 <button
-                class="translationButton"
+                class="translationButton button_pink"
                 @click="translateJsonData"
-                >翻訳する</button>
+                >ChatGPTで翻訳する</button>
             </div>
         </div>
     </div>
