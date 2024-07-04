@@ -9,6 +9,7 @@ export class PATH {
     closebutton = '/img/closebutton.png';
     trashicon = '/img/trashicon.png';
     addcontenticon = '/img/addcontenticon.png';
+    categoryicon = '/img/category_icon.png';
     detailDirFormat (value: string) {
         return `/${value}/language/${process.env.VUE_APP_FromCode}`;
     }

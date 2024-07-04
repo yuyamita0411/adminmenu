@@ -5,6 +5,7 @@ export const store = createStore<StoreState>({
     state: {
         jsondata: {},
         pageinfo: {},
+        categoryinfo: {},
         EditingTargetIndex: {},
         modalStatus: {},
         HoverTargetIndex: {},
@@ -31,6 +32,9 @@ export const store = createStore<StoreState>({
         },
         setJsonData(state, data: GenericObject) {
             state.jsondata = data;
+        },
+        setCategoryData(state, data: GenericObject) {
+            state.categoryinfo = data;
         },
         changeJsonData(state, payload: { key: string; value: string }) {
             state.jsondata[payload.key] = payload.value;

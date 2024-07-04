@@ -140,5 +140,82 @@ def translate_json():
 #    single(data["filePath"])
     return {"status_code": 200}
 
+@app.route(os.getenv("VUE_APP_categoryDirectory"), methods=['POST'])
+def getCategory():
+    data = request.get_json()
+    if Function.fileExists(data["filePath"])["status_code"] != 200:
+        return {}
+
+    with open(data["filePath"], 'r', encoding='utf-8') as file:
+        data = file.read()
+        return data
+
+@app.route(os.getenv("VUE_APP_categoryDetailDirectory"), methods=['POST'])
+def getCategoryDetail():
+    info = request.get_json()
+    if Function.fileExists(info["filePath"])["status_code"] != 200:
+        return {}
+
+    with open(info["filePath"], 'r', encoding='utf-8') as file:
+        data = file.read()
+        return {"data": data, "cat_id": int(info["cat_id"])}
+
+@app.route(os.getenv("VUE_APP_categoryDetailRebaseDirectory"), methods=['POST'])
+def getCategoryDetailRebase():
+    info = request.get_json()
+    if Function.fileExists(info["filePath"])["status_code"] != 200:
+        return {}
+
+    with open(info["filePath"], 'r', encoding='utf-8') as file:
+        data = file.read()
+    
+        if not isinstance(data, dict):
+            data = json.loads(data)
+
+        cat_id_str = info["cat_id"]
+        if cat_id_str in data:
+            data[cat_id_str] = info["rebaseData"]
+
+        Json.save_json_data(info["filePath"], data)
+        return {"data": data, "cat_id": int(info["cat_id"]), "rebaseData": info["rebaseData"]}
+
+@app.route(os.getenv("VUE_APP_categoryAddDirectory"), methods=['POST'])
+def getCategoryDetailAdd():
+    info = request.get_json()
+    if Function.fileExists(info["filePath"])["status_code"] != 200:
+        return {}
+
+    with open(info["filePath"], 'r', encoding='utf-8') as file:
+        data = file.read()
+    
+        if not isinstance(data, dict):
+            data = json.loads(data)
+
+        if not isinstance(info["newData"], dict):
+            info["newData"] = json.loads(info["newData"])
+        
+        data = info["newData"]
+
+        Json.save_json_data(info["filePath"], data)
+        return {"data": data, "newData": info["newData"]}
+
+@app.route(os.getenv("VUE_APP_categoryDeleteDirectory"), methods=['POST'])
+def getCategoryDetailDelete():
+    info = request.get_json()
+    if Function.fileExists(info["filePath"])["status_code"] != 200:
+        return {}
+
+    with open(info["filePath"], 'r', encoding='utf-8') as file:
+        data = file.read()
+    
+        if not isinstance(data, dict):
+            data = json.loads(data)
+
+        if info["deleteNum"] in data:
+            del data[info["deleteNum"]]
+        
+        Json.save_json_data(info["filePath"], data)
+        return {"data": data, "deleteNum": info["deleteNum"]}
+
 if __name__ == '__main__':
     app.run(debug=True)

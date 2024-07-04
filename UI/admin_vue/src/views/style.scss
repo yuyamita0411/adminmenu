@@ -16,6 +16,36 @@ body {
 .w-25 {
     width: 25%;
 }
+.w2rem {
+    width: 2rem;
+}
+.h2rem {
+    height: 2rem;
+}
+.mt2rem {
+    margin-top: 2rem;
+}
+.mb2rem {
+    margin-bottom: 2rem;
+}
+.p05rem {
+    padding: .5rem;
+}
+.font1rem {
+    font-size: 1rem;
+}
+.list-chart {
+    border-bottom: .5px solid;
+}
+.list-chart tr:nth-child(2n+1) {
+    background: rgb(0, 0, 0, .05);
+}
+.list-chart tr:nth-child(2n) {
+    background: #fff;
+}
+.lh2rem {
+    line-height: 2rem;
+}
 .position-absolute {
     position: absolute;
 }
@@ -203,6 +233,59 @@ p,
 .for-h6::before {
     content: "h6";
 }
-
-.for-box-image {}
-.for-box-movie {}
+.flex-container {
+  display: flex;
+  gap: 10px;
+}
+.submitButtonWrapper {
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+    display: inline-block;
+}
+.submitButtonInner {
+    display: flex;
+    gap: 3px;
+    max-width: 15rem;
+    width: 50%;
+    margin: 0 auto;
+}
+.submitButton {
+    border-bottom: 7px solid #0686b2;
+    background: #27acd9;
+    color: #fff;
+}
+.translationButton {
+    border-bottom: 7px solid #C50B4F;
+    background: #f54785;
+    color: #fff;
+}
+.submitButton,
+.translationButton {
+    display: block;
+    flex:1;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    padding: 1rem 0rem;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    border: none;
+    transition: all .3s;
+}
+.submitButton:hover,
+.translationButton:hover {
+    margin-top: 6px;
+	color: #fff;
+    transition: all .3s;
+}
+.submitButton:hover{
+    border-bottom: 1px solid #0686b2;
+}
+.translationButton:hover {
+	border-bottom: 1px solid #C50B4F;
+}
+.trashbutton {
+    right: 2rem;
+}

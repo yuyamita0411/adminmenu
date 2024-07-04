@@ -2,6 +2,7 @@
   <nav :class="navstatus">
     <router-link to="/" class="menu-list-button menuicon"><img :src="homeicon"></router-link>
     <router-link to="/page/list" class="menu-list-button menuicon"><img :src="pagelisticon"></router-link>
+    <router-link :to="`/category/${lang}`" class="menu-list-button menuicon"><img :src="categoryicon"></router-link>
   </nav>
   <div class="menubutton-wrapper">
     <button
@@ -45,6 +46,8 @@ export default class App extends Vue {
     buttonsrc = this.path.buttonsrc;
     homeicon = this.path.homeicon;
     pagelisticon = this.path.pagelisticon;
+    categoryicon = this.path.categoryicon;
+    lang = process.env.VUE_APP_FromCode;
 
     created(){
         store.commit('updateStoreObj', { target: 'pageinfo', key: 'base_url', value: process.env.VUE_APP_API_Base_URL });
