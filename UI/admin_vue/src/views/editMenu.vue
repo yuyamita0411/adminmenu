@@ -61,12 +61,66 @@
             </div>
         </div>
         <div class="meta-setting-area">
-            <div v-for="field in fields" :key="field.id" class="meta-label-wrapper">
-                <div class="font-weight-bold">{{ field.label }}</div>
+            <div class="meta-label-wrapper">
+                <div class="font-weight-bold">タイトル</div>
                 <textarea
-                :class="tag.getTagLabel(field.id)"
-                @input="genericInput($event, field.id)"
-                :value="jsondata[field.id]"
+                :class="tag.getTagLabel('pagetitle')"
+                @input="genericInput($event, 'pagetitle')"
+                :value="jsondata['pagetitle']"
+                ></textarea>
+            </div>
+            <div class="meta-label-wrapper">
+                <div class="font-weight-bold">ディスクリプション</div>
+                <textarea
+                :class="tag.getTagLabel('description')"
+                @input="genericInput($event, 'description')"
+                :value="jsondata['description']"
+                ></textarea>
+            </div>
+            <div class="meta-label-wrapper">
+                <div class="font-weight-bold">categoryID</div>
+
+                <select v-model="selectedCategoryID" @change="genericInput($event, 'categoryID')">
+                    <option
+                        v-for="(value, key) in catListArr"
+                        :key="key"
+                        :value="key"
+                        :selected="key == jsondata['categoryID']"
+                    >
+                        {{ value.category }}
+                    </option>
+                </select>
+            </div>
+            <div class="meta-label-wrapper">
+                <div class="font-weight-bold">thumbnail</div>
+                <textarea
+                :class="tag.getTagLabel('thumbnail')"
+                @input="genericInput($event, 'thumbnail')"
+                :value="jsondata['thumbnail']"
+                ></textarea>
+            </div>
+            <div class="meta-label-wrapper">
+                <div class="font-weight-bold">ogImg</div>
+                <textarea
+                :class="tag.getTagLabel('ogImg')"
+                @input="genericInput($event, 'ogImg')"
+                :value="jsondata['ogImg']"
+                ></textarea>
+            </div>
+            <div class="meta-label-wrapper">
+                <div class="font-weight-bold">投稿日</div>
+                <textarea
+                :class="tag.getTagLabel('created_at')"
+                @input="genericInput($event, 'created_at')"
+                :value="jsondata['created_at']"
+                ></textarea>
+            </div>
+            <div class="meta-label-wrapper">
+                <div class="font-weight-bold">更新日</div>
+                <textarea
+                :class="tag.getTagLabel('updated_at')"
+                @input="genericInput($event, 'updated_at')"
+                :value="jsondata['updated_at']"
                 ></textarea>
             </div>
         </div>
@@ -119,10 +173,13 @@ export default class editMenu extends Vue {
         [key: string]: GenericObject;
     } = {};
     fields = this.menu.fields;
+
     displayTrash = 'hide-trash';
     addcontenticon = this.path.addcontenticon;
     trashicon = this.path.trashicon;
     touchtag: GenericObject = {};
+    catListArr: GenericObject = {};
+    selectedCategoryID = null;
 
     created () {
         //初期のデータを定義
@@ -130,6 +187,7 @@ export default class editMenu extends Vue {
         //編集中のタグ情報の状態を初期化
         this.resetObj(store.state.jsondata, 'updateStoreObj', 'EditingTargetIndex');
         this.inputValues = store.state.jsondata;
+        this.selectedCategoryID = store.state.jsondata["categoryID"];
     }
     readData() {
         API.post (
@@ -137,6 +195,14 @@ export default class editMenu extends Vue {
             {filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`},
             (response: GenericObject) => {
                 store.commit('setJsonData', response.data);
+                this.selectedCategoryID = store.state.jsondata["categoryID"];
+            }
+        );
+        API.post(
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_categoryDetailDirectory}`,
+            { filePath: `${process.env.VUE_APP_listupPath}/category/ja/index.json`},
+            (response: GenericObject) => {
+                this.catListArr = JSON.parse(response.data.data);
             }
         );
     }

@@ -1,27 +1,25 @@
 <template>
     <div class="content-wrapper">
         <h2>カテゴリ詳細</h2>
-        <table>
+        <table class="list-chart w-100">
             <thead>
                 <tr>
-                    <th>項目</th>
-                    <th>値</th>
+                    <th class="p05rem">項目</th>
+                    <th class="p05rem">値</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="(value, key) in catinfo" :key="key">
-                    <td>{{ key }}</td>
-                    <td>
-                        <input v-model="catinfo[key]" @input="updateCat(key, $event.target.value)" />
+                    <td class="p05rem">{{ key }}</td>
+                    <td class="p05rem">
+                        <input v-model="catinfo[key]" @input="updateCat(key, $event.target.value)" class="w-100 lh2rem font1rem"/>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <div>
-            <button type="button" @click="rebaseCategory">更新する</button>
-        </div>
-            <button @click="goBack" class="menu-list-button menuicon">戻る</button>
-        <div>
+        <div class="flex-container mt2rem font1rem">
+            <button @click="goBack" class="menu-list-button menuicon submitButton font1rem">戻る</button>
+            <button type="button" @click="rebaseCategory" class="submitButton font1rem">更新する</button>
         </div>
     </div>
 </template>
@@ -54,10 +52,10 @@ export default class categoryDetail extends Vue {
     readData() {
         API.post(
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_categoryDetailDirectory}`,
-            { filePath: this.catdir, cat_id: this.catnum },
+            { filePath: this.catdir},
             (response: GenericObject) => {
                 let rawdata = JSON.parse(response.data.data);
-                this.catinfo = rawdata[response.data.cat_id];
+                this.catinfo = rawdata[this.catnum];
             }
         );
     }

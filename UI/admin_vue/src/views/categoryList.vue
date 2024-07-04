@@ -3,10 +3,6 @@
         <div class="mb2rem">
             <h2>カテゴリ一覧</h2>
             <table class="list-chart w-100">
-                <thead>
-                    <th>カテゴリ</th>
-                    <th></th>
-                </thead>
                 <tbody>
                     <tr v-for="(cat, index) in catinfo" :key="cat.category">
                         <td class="p05rem">
@@ -25,19 +21,20 @@
             </table>
         </div>
         <div>
+            <h2>カテゴリー追加</h2>
             <table class="list-chart w-100">
                 <tbody>
                     <tr>
                         <td class="font-weight-bold p05rem">カテゴリ名</td>
-                        <td class="p05rem"><input type="text" class="w-100 lh2rem" v-model="categoryName" @input="editCatInfo('categoryName', $event.target.value)"></td>
+                        <td class="p05rem"><input type="text" class="w-100 lh2rem font1rem" v-model="categoryName" @input="editCatInfo('categoryName', $event.target.value)"></td>
                     </tr>
                     <tr>
                         <td class="font-weight-bold p05rem">ディスクリプション</td>
-                        <td class="p05rem"><input type="text" class="w-100 lh2rem" v-model="categoryDescription" @input="editCatInfo('categoryDescription', $event.target.value)"></td>
+                        <td class="p05rem"><input type="text" class="w-100 lh2rem font1rem" v-model="categoryDescription" @input="editCatInfo('categoryDescription', $event.target.value)"></td>
                     </tr>
                     <tr>
                         <td class="font-weight-bold p05rem">og画像</td>
-                        <td class="p05rem"><input type="text" class="w-100 lh2rem" v-model="categoryOgImgPath" @input="editCatInfo('categoryOgImgPath', $event.target.value)"></td>
+                        <td class="p05rem"><input type="text" class="w-100 lh2rem font1rem" v-model="categoryOgImgPath" @input="editCatInfo('categoryOgImgPath', $event.target.value)"></td>
                     </tr>
                 </tbody>
             </table>
@@ -80,26 +77,33 @@ export default class categoryList extends Vue {
             {filePath: this.catdir},
             (response: GenericObject) => {
                 this.catinfo = response.data;
+                console.log(this.catinfo);
             }
         );
     }
     addCategory () {
-        const keys = Object.keys(this.catinfo).map(key => parseInt(key, 10));
-        const newKey = Math.max(...keys) + 1;
-
         if (!this.categoryName || !this.categoryDescription || !this.categoryOgImgPath) {
             return;
         }
 
+        let newKey: number;
+        if (Object.keys(this.catinfo).length === 0) {
+            newKey = 1;
+        } else {
+            const keys = Object.keys(this.catinfo).map(key => parseInt(key, 10));
+            newKey = Math.max(...keys) + 1;
+        }
+
+        let today = this.getCurrentDateFormatted();
         this.catinfo[newKey] = {
             "category": this.categoryName,
             "catlist": [],
-            "created_at": this.getCurrentDateFormatted(),
-            "created_at_for_sitemap": this.getCurrentDateFormatted(),
+            "created_at": today,
+            "created_at_for_sitemap": today,
             "description": this.categoryDescription,
             "ogImg": this.categoryOgImgPath,
-            "updated_at": this.getCurrentDateFormatted(),
-            "updated_at_for_sitemap": this.getCurrentDateFormatted()
+            "updated_at": today,
+            "updated_at_for_sitemap": today
         };
 
         API.post (

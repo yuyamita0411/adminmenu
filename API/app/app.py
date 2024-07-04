@@ -76,7 +76,7 @@ def make_file_title_json_data():
         dirDict[url]["categoryID"] = jsondata["categoryID"]
 
         try:
-            dirDict[url]["category"] = categorydata[jsondata["categoryID"]].get("description", 'カテゴリなし')
+            dirDict[url]["category"] = categorydata[jsondata["categoryID"]].get("category", 'カテゴリなし')
         except:
             continue
 
@@ -148,6 +148,8 @@ def getCategory():
 
     with open(data["filePath"], 'r', encoding='utf-8') as file:
         data = file.read()
+        print("ファイルデータ！")
+        print(data)
         return data
 
 @app.route(os.getenv("VUE_APP_categoryDetailDirectory"), methods=['POST'])
@@ -158,7 +160,7 @@ def getCategoryDetail():
 
     with open(info["filePath"], 'r', encoding='utf-8') as file:
         data = file.read()
-        return {"data": data, "cat_id": int(info["cat_id"])}
+        return {"data": data}
 
 @app.route(os.getenv("VUE_APP_categoryDetailRebaseDirectory"), methods=['POST'])
 def getCategoryDetailRebase():
