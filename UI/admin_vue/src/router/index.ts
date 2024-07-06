@@ -5,10 +5,11 @@ import editMenu from '../views/editMenu.vue'
 import articleLists from '../views/articleLists.vue'
 import categoryList from '../views/categoryList.vue'
 import categoryDetail from '../views/categoryDetail.vue'
+import commonInfo from '../views/commonInfo.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '/:language/:country',
     name: 'home',
     component: HomeView
   },
@@ -31,7 +32,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/category/:country/:cat_id',
     name: 'category_detail',
     component: categoryDetail
-  }
+  },
+  {
+    path: '/common/:country',
+    name: 'commoninfo',
+    component: commonInfo
+  },
 ]
 
 const router = createRouter({

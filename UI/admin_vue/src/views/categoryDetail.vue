@@ -56,6 +56,7 @@ export default class categoryDetail extends Vue {
             (response: GenericObject) => {
                 let rawdata = JSON.parse(response.data.data);
                 this.catinfo = rawdata[this.catnum];
+                console.log(this.catinfo);
             }
         );
     }

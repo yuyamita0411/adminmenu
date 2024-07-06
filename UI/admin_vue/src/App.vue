@@ -1,8 +1,9 @@
 <template>
   <nav :class="navstatus">
-    <router-link to="/" class="menu-list-button menuicon"><img :src="homeicon"></router-link>
+    <router-link :to="`/language/${lang}`" class="menu-list-button menuicon"><img :src="homeicon"></router-link>
     <router-link to="/page/list" class="menu-list-button menuicon"><img :src="pagelisticon"></router-link>
     <router-link :to="`/category/${lang}`" class="menu-list-button menuicon"><img :src="categoryicon"></router-link>
+    <router-link :to="`/common/${lang}`" class="menu-list-button menuicon">common</router-link>
   </nav>
   <div class="menubutton-wrapper">
     <button

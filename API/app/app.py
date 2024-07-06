@@ -173,12 +173,17 @@ def getCategoryDetailRebase():
         if not isinstance(data, dict):
             data = json.loads(data)
 
-        cat_id_str = info["cat_id"]
-        if cat_id_str in data:
-            data[cat_id_str] = info["rebaseData"]
+        try:
+            cat_id_str = info["cat_id"]
+            if cat_id_str in data:
+                data[cat_id_str] = info["rebaseData"]
+            else:
+                data = info["rebaseData"]
+        except:
+            data = info["rebaseData"]
 
         Json.save_json_data(info["filePath"], data)
-        return {"data": data, "cat_id": int(info["cat_id"]), "rebaseData": info["rebaseData"]}
+        return {"data": data, "rebaseData": info["rebaseData"]}
 
 @app.route(os.getenv("VUE_APP_categoryAddDirectory"), methods=['POST'])
 def getCategoryDetailAdd():
