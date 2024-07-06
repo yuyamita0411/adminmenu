@@ -142,8 +142,6 @@ export default class articleLists extends Vue {
 
                 this.pageInfoArr = response.data;
                 this.maxPageNum = this.getMaxNumber(this.pagelist);
-                console.log("selectedCategoriesselectedCategoriesselectedCategoriesselectedCategoriesselectedCategories");
-                console.log(this.selectedCategories);
             }
         );
     }

@@ -238,7 +238,6 @@ export default class HomeView extends Vue {
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileReadEndpoint}`,
             {filePath: `${process.env.VUE_APP_homeDirPath}${this.$route.path}/index.json`},
             (response: GenericObject) => {
-                console.log(response.data);
                 store.commit('setJsonData', response.data);
                 this.selectedCategoryID = store.state.jsondata["categoryID"];
             }

@@ -103,7 +103,7 @@ import { Vue } from "vue-class-component";
 import { store } from '../store/common/index';
 import { GenericObject } from '../module/type';
 import { API } from '../module/function';
-import { PATH, TAG, lnarr, fullLinArr } from '../module/prop';
+import { lnarr, fullLinArr } from '../module/prop';
 
 export default class commonInfo extends Vue {
     categoryName = '';
@@ -122,7 +122,6 @@ export default class commonInfo extends Vue {
     }
 
     setCatData() {
-        let parts = this.$route.path.split('/');
         this.catdir = `${process.env.VUE_APP_listupPath}${this.$route.path}/index.json`;
     }
 
@@ -133,7 +132,6 @@ export default class commonInfo extends Vue {
             (response: GenericObject) => {
                 let rawdata = JSON.parse(response.data.data);
                 this.catinfo = rawdata;
-                console.log(this.catinfo);
             }
         );
     }
@@ -158,7 +156,6 @@ export default class commonInfo extends Vue {
         //ChatGpt,GoogleAPI
         const checkedElements = this.$el.querySelectorAll('.translate-language-area input[type="checkbox"]:checked');
         this.translateLnArr = Array.from(checkedElements).map(el => (el as HTMLInputElement).value);
-        console.log(`${process.env.VUE_APP_commonDirPath}/${this.$route.params.country}/index.json`);
         API.post (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileTranslateEndpoint}`,
             {

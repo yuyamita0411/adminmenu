@@ -109,7 +109,7 @@
 <script lang="ts">
 import { Vue } from "vue-class-component";
 import {store} from '../store/common/index';
-import { PATH, TAG, lnarr, fullLinArr } from '../module/prop';
+import { PATH, lnarr, fullLinArr } from '../module/prop';
 import { GenericObject } from '../module/type';
 import { API } from '../module/function';
 
@@ -141,7 +141,6 @@ export default class categoryList extends Vue {
             {filePath: this.catdir},
             (response: GenericObject) => {
                 this.catinfo = response.data;
-                console.log(this.catinfo);
             }
         );
     }
@@ -188,7 +187,6 @@ export default class categoryList extends Vue {
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_categoryDeleteDirectory}`,
             {filePath: this.catdir, deleteNum: val},
             (response: GenericObject) => {
-                console.log(response.data);
                 this.catinfo = response.data;
             }
         );
@@ -198,7 +196,6 @@ export default class categoryList extends Vue {
         //ChatGpt,GoogleAPI
         const checkedElements = this.$el.querySelectorAll('.translate-language-area input[type="checkbox"]:checked');
         this.translateLnArr = Array.from(checkedElements).map(el => (el as HTMLInputElement).value);
-        console.log(this.translateLnArr);
         API.post (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileTranslateEndpoint}`,
             {
@@ -217,8 +214,6 @@ export default class categoryList extends Vue {
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_checkFailTranslate}`,
             { directory: process.env.VUE_APP_categoryDirPath},
             (response: GenericObject) => {
-                console.log(response.data.data);
-
                 for (let key in this.lnarr) {
                     if (!response.data.data.includes(this.lnarr[key])) {
                         this.translateLnArr.push(this.lnarr[key]);
