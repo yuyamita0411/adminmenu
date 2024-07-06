@@ -167,10 +167,11 @@
             <div class="submitButtonInner">
                 <button
                 class="translationButton button_pink"
-                @click="translateJsonData"
+                @click="translateJsonData('ChatGpt')"
                 >ChatGPT</button>
                 <button
                 class="translationButton button_navy"
+                @click="translateJsonData('GoogleAPI')"
                 >Google Translate</button>
             </div>
         </div>
@@ -258,7 +259,8 @@ export default class editMenu extends Vue {
             "dummy"
         );
     }
-    translateJsonData () {
+    translateJsonData (whichlng: string) {
+        //ChatGpt,GoogleAPI
         const checkedElements = this.$el.querySelectorAll('.translate-language-area input[type="checkbox"]:checked');
         this.translateLnArr = Array.from(checkedElements).map(el => (el as HTMLInputElement).value);
         API.post (
@@ -266,7 +268,8 @@ export default class editMenu extends Vue {
             {
                 fileData: store.state.jsondata,
                 filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`,
-                translateLanguageArr: this.translateLnArr
+                translateLanguageArr: this.translateLnArr,
+                whichlng: whichlng
             },
             (response: GenericObject) => {
                 console.log(response.data);

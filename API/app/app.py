@@ -138,7 +138,7 @@ def translate_json():
     if Function.fileExists(data["filePath"])["status_code"] != 200:
         return {}
 #    multi(data["translateLanguageArr"])
-    single(data["filePath"], data["translateLanguageArr"])
+    single(data["filePath"], data["translateLanguageArr"], data["whichlng"])
     return {"status_code": 200}
 
 @app.route(os.getenv("VUE_APP_categoryDirectory"), methods=['POST'])
@@ -250,9 +250,9 @@ def checkFailTranslateDetail():
                             okArr.append(extract_language_codes(file_path))
                 except json.JSONDecodeError as e:
                     # JSON配列が空の時とか
-                    return {"status": "decode error"}
+                    continue
                 except UnicodeDecodeError as e:
-                    return {"status": "UnicodeDecodeError"}
+                    continue
     return {"data": okArr}
 
 if __name__ == '__main__':

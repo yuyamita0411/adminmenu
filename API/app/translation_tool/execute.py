@@ -16,10 +16,10 @@ def multi(translateLanguageArr):
             folderpath = savepath.replace('/index.json', '')
             common(val, folderpath, savepath, ln)
 
-def single(filePath, translateLanguageArr):
+def single(filePath, translateLanguageArr, which):
     for ln in translateLanguageArr:
         saveDir = GetTwoUpperDirectory(filePath)
-        common(filePath, f'{saveDir}/{ln}', f'{saveDir}/{ln}/{os.getenv("SaveFilename")}', ln)
+        common(filePath, f'{saveDir}/{ln}', f'{saveDir}/{ln}/{os.getenv("SaveFilename")}', ln, which)
 
 def GetTwoUpperDirectory(fileDir):
     # 相対パスを絶対パスに変換
@@ -27,7 +27,7 @@ def GetTwoUpperDirectory(fileDir):
     # 2つ上のディレクトリへのパスを取得
     return os.path.dirname(os.path.dirname(absolute_path))
 
-def common(data, folderpath, savepath, ln):
+def common(data, folderpath, savepath, ln, which):
     #メソッドを制御するクラス
     handler = Handler("Handler")
     #メソッドを実行するクラス
@@ -44,6 +44,6 @@ def common(data, folderpath, savepath, ln):
     if(os.path.exists(savepath) == False):
         handler.define_callback(executeClass.MakeFile(savepath))
 
-    appendData = JSON.WriteJsonData(di, ln)
+    appendData = JSON.WriteJsonData(di, ln, which)
     #指定したパスへjsonファイルを保存する
     executeClass.PreserveFile(appendData, savepath, "json")

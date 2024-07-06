@@ -13,16 +13,20 @@ from translation_tool.setting.environment import fullLinArr
 
 class JSON:
     @staticmethod
-    def process_dict(di, lnkey):
+    def process_dict(di, lnkey, which):
         processed_dict = {}
         for key, value in di.items():
             if isinstance(value, str):
                 # 文字列の場合は翻訳処理を実行
-                # processed_dict[key] = GoogleAPI.translate(value, lnkey)
+                # 
                 # ここはjsonデータを変えないといけない。
                 # LangFrom   = "Japanese"
                 # LangTo   = "English"
-                processed_dict[key] = ChatGPTApi.translate(os.getenv("VUE_APP_translateFrom"), fullLinArr[lnkey], value)
+                if which == "GoogleAPI":
+                    processed_dict[key] = GoogleAPI.translate(value, lnkey)
+                if which == "ChatGpt":
+                    processed_dict[key] = ChatGPTApi.translate(os.getenv("VUE_APP_translateFrom"), fullLinArr[lnkey], value)
+
                 if "img" in key:
                     processed_dict[key] = value
                 if "Img" in key:
@@ -40,12 +44,12 @@ class JSON:
 
             elif isinstance(value, dict):
                 # 辞書の場合はさらに再帰処理
-                processed_dict[key] = JSON.process_dict(value, lnkey)
+                processed_dict[key] = JSON.process_dict(value, lnkey, which)
             else:
                 # その他のデータ型はそのまま保持
                 processed_dict[key] = value
         return processed_dict
 
     @staticmethod
-    def WriteJsonData(di, ln):
-        return JSON.process_dict(di, ln)
+    def WriteJsonData(di, ln, which):
+        return JSON.process_dict(di, ln, which)
