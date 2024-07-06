@@ -499,11 +499,6 @@ p,
 .p-for-h6 {
     padding-left: 5rem;
 }
-
-.submitButton,
-.translationButton {
-    font-size: 1rem;
-}
 .display-addbutton,
 .display-trash {
     opacity: 1;

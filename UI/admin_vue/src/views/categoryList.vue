@@ -38,26 +38,54 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="flex-container mt2rem mb2rem font1rem">
-                <button type="button" @click="addCategory" class="submitButton button_blue font1rem">カテゴリを追加する</button>
-                <button type="button" class="submitButton button_pink font1rem">ChatGPTで翻訳する</button>
-                <button type="button" class="submitButton button_navy font1rem">Google Translateで翻訳する</button>
+            <div class="submitButtonWrapper">
+                <div class="submitButtonInner">
+                    <button
+                    class="submitButton button_blue"
+                    >カテゴリを追加する</button>
+                </div>
             </div>
             <div class="mb2rem">
-                <h2>翻訳に失敗した言語一覧</h2>
+                <h2>翻訳する</h2>
+                <h3>翻訳に失敗した言語、まだ翻訳が済んでない言語一覧</h3>
                 <div>
-                    <div class="d-inline-block float-left w-auto">
-                        <label for="ja">ja</label>
-                        <input type="checkbox" value="ja" id="ja">
-                    </div>
-                    <div class="d-inline-block float-left w-auto">
-                        <label for="en">en</label>
-                        <input type="checkbox" value="en" id="en">
+                    <div
+                    v-for="(value, key) in lnarr"
+                    :key="key"
+                    class="d-inline-block float-left w-auto"
+                    >
+                        <span
+                        v-if="translateLnArr.includes(value)"
+                        >{{key}},</span>
                     </div>
                 </div>
-                <div class="flex-container mt2rem font1rem">
-                    <button type="button" class="submitButton button_pink font1rem">ChatGPTで再度翻訳する</button>
-                    <button type="button" class="submitButton button_navy font1rem">Google Translateで再度翻訳する</button>
+                <h3>言語を選ぶ</h3>
+                <div
+                v-for="(value, key) in lnarr"
+                :key="key"
+                class="translate-language-area d-inline-block float-left w-auto"
+                >
+                    <input
+                    v-if="!translateLnArr.includes(value)"
+                    type="checkbox" :id="value" :value="value"
+                    v-model="translateLnArr">
+                    <input
+                    v-else
+                    type="checkbox" :id="value" :value="value"
+                    v-model="translateLnArr"
+                    checked
+                    >
+                    <label :for="value">{{key}}</label>
+                </div>
+                <div class="submitButtonInner">
+                    <button
+                    class="translationButton button_pink"
+                    @click="translateJsonData('ChatGpt')"
+                    >ChatGPT</button>
+                    <button
+                    class="translationButton button_navy"
+                    @click="translateJsonData('GoogleAPI')"
+                    >Google Translate</button>
                 </div>
             </div>
         </div>
@@ -67,7 +95,7 @@
 <script lang="ts">
 import { Vue } from "vue-class-component";
 import {store} from '../store/common/index';
-import { PATH } from '../module/prop';
+import { PATH, TAG, lnarr, fullLinArr } from '../module/prop';
 import { GenericObject } from '../module/type';
 import { API } from '../module/function';
 
@@ -79,11 +107,15 @@ export default class categoryList extends Vue {
     categoryOgImgPath = '';
     catdir = '';
     catinfo: GenericObject = {}
+    lnarr: GenericObject = lnarr;
+    fullLinArr: GenericObject = fullLinArr;
+    translateLnArr: string[] = [];
     currentPath = '';
 
     created () {
         this.setCatData();
         this.readData();
+        this.checkTranslateSuccess();
         this.currentPath = this.$route.path;
     }
     setCatData() {
@@ -148,6 +180,38 @@ export default class categoryList extends Vue {
         );
     }
 
+    translateJsonData (whichlng: string) {
+        //ChatGpt,GoogleAPI
+        const checkedElements = this.$el.querySelectorAll('.translate-language-area input[type="checkbox"]:checked');
+        this.translateLnArr = Array.from(checkedElements).map(el => (el as HTMLInputElement).value);
+        console.log(this.translateLnArr);
+        API.post (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileTranslateEndpoint}`,
+            {
+                filePath: `${process.env.VUE_APP_listupPath}${this.$route.path}/index.json`,
+                translateLanguageArr: this.translateLnArr,
+                whichlng: whichlng
+            },
+            (response: GenericObject) => {
+                console.log(response.data);
+            }
+        );
+    }
+    checkTranslateSuccess () {
+        API.post(
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_checkFailTranslate}`,
+            { directory: process.env.VUE_APP_categoryDirPath},
+            (response: GenericObject) => {
+                console.log(response.data.data);
+
+                for (let key in this.lnarr) {
+                    if (!response.data.data.includes(this.lnarr[key])) {
+                        this.translateLnArr.push(this.lnarr[key]);
+                    }
+                }
+            }
+        );
+    }
     private getCurrentDateFormatted (): string {
         const today = new Date();
         

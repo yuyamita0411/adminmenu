@@ -40,7 +40,6 @@
                         </td>
                     </tr>
                     <tr v-if="pagelist[key] && value == maxPageNum">
-                        <td></td>
                         <td>
                             <div
                             class="addcontent-wrapper"
@@ -55,7 +54,6 @@
                                 </button>
                             </div>
                         </td>
-                        <td></td>
                     </tr>
                 </template>
             </tbody>

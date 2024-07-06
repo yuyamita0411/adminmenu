@@ -26,6 +26,7 @@ def GetTwoUpperDirectory(fileDir):
     absolute_path = os.path.abspath(fileDir)
     # 2つ上のディレクトリへのパスを取得
     return os.path.dirname(os.path.dirname(absolute_path))
+#    return os.path.dirname(absolute_path)
 
 def common(data, folderpath, savepath, ln, which):
     #メソッドを制御するクラス
