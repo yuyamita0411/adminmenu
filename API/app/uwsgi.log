@@ -1156,3 +1156,247 @@ ty - 2024-04-11: 2024-04-11
 ty - 2024-04-11: 2024-04-11
 ty - 2024-04-11: 2024-04-11
 [pid: 12|app: 0|req: 27/96] 192.168.65.1 () {52 vars in 851 bytes} [Sat Jul  6 11:11:04 2024] POST /api/file/translate => generated 20 bytes in 817644 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 15/99] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 12:27:31 2024] OPTIONS /api/category/detail => generated 0 bytes in 19 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 47/99] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 12:27:31 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 19 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 28/99] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 12:27:31 2024] OPTIONS /api/folder/read => generated 0 bytes in 19 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 29/100] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 12:27:31 2024] POST /api/folder/read => generated 14534 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 4/101] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 12:27:31 2024] POST /api/category/detail => generated 1304 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 7/102] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 12:27:31 2024] POST /api/dir/translate/check => generated 341 bytes in 205 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 48/103] 192.168.65.1 () {54 vars in 856 bytes} [Sat Jul  6 12:27:39 2024] OPTIONS /api/file/translate => generated 0 bytes in 16 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+ta - 医療脱毛完全ガイド：選び方からアフターケアまで: மருத்துவ முடி அகற்றுவதற்கான முழுமையான வழிகாட்டி: தேர்வு முதல் பின் பராமரிப்பு வரை
+ta - はじめに: அறிமுகம்
+ta - かつてはエステ脱毛が主流で、医療脱毛は「高額で痛みが伴うが効果的」というイメージが強かったものです。
+これは、永久脱毛は医療行為であり、永久減毛が可能であること、また医療脱毛が高い安全性を誇り、資格を持った医療従事者によって施術されるためです。: கடந்த காலத்தில், அழகியல் முடி அகற்றுதல் முக்கிய நீரோட்டமாக இருந்தது, மேலும் மருத்துவ முடி அகற்றுதல் `` விலை உயர்ந்தது மற்றும் வேதனையானது, ஆனால் பயனுள்ளது&#39;&#39; என்ற வலுவான பிம்பத்தைக் கொண்டிருந்தது. ஏனெனில் நிரந்தர முடி அகற்றுதல் என்பது ஒரு மருத்துவ முறை மற்றும் நிரந்தர முடி குறைப்பு சாத்தியமாகும், மேலும் மருத்துவ முடி அகற்றுதல் மிகவும் பாதுகாப்பானது மற்றும் தகுதி வாய்ந்த மருத்துவ நிபுணர்களால் செய்யப்படுகிறது.
+ta - /data/detail/2/img/doctor.png: /data/detail/2/img/doctor.png
+ta - しかし、最近になり医療脱毛への理解が深まり、人気が高まっています。
+医療脱毛の人気が高まってる理由として、痛みの軽減技術が進化し、トータルの費用も以前に比べて抑えられるようになったためです。これらのメリットが広く認識され、医療脱毛に行く人が急増しているのです。
+それでは医療脱毛とエステ脱毛の違いを交えながら医療脱毛の人気が上昇している理由などを詳しく解説していきたいと思います。: இருப்பினும், சமீபத்தில், மருத்துவ முடி அகற்றுதல் பற்றிய புரிதல் ஆழமடைந்துள்ளது, மேலும் அதன் புகழ் அதிகரித்துள்ளது. மருத்துவ முடி அகற்றுதல் மிகவும் பிரபலமாகி வருவதற்குக் காரணம், வலியைக் குறைக்கும் தொழில்நுட்பம் உருவாகிவிட்டதாலும், மொத்தச் செலவும் முன்பை விடக் குறைந்திருப்பதாலும் ஆகும். இந்த நன்மைகள் பரவலாக அங்கீகரிக்கப்பட்டுள்ளதால், மருத்துவ முடி அகற்றும் நபர்களின் எண்ணிக்கை வேகமாக அதிகரித்து வருகிறது. இப்போது, மருத்துவ முடி அகற்றுதல் மற்றும் அழகியல் முடி அகற்றுதல் ஆகியவற்றுக்கு இடையேயான வேறுபாடுகள் உட்பட மருத்துவ முடி அகற்றுதல் பிரபலமடைந்து வருவதற்கான காரணங்களை விரிவாக விளக்க விரும்புகிறேன்.
+ta - 医療脱毛とエステ脱毛の違い: மருத்துவ முடி அகற்றுதல் மற்றும் அழகியல் முடி அகற்றுதல் ஆகியவற்றுக்கு இடையே உள்ள வேறுபாடு
+ta - 医療脱毛とは: மருத்துவ முடி அகற்றுதல் என்றால் என்ன?
+ta - /data/detail/2/img/medical-lazor.png: /data/detail/2/img/medical-lazor.png
+ta - 医療機関によって提供される脱毛サービスで、医療レーザー脱毛機を使用して直接毛根細胞を破壊し、毛の再生を防ぎます。: மருத்துவ நிறுவனத்தால் வழங்கப்படும் முடி அகற்றும் சேவையானது, முடியின் வேர் செல்களை நேரடியாக அழித்து, முடி மீண்டும் வளர்வதைத் தடுக்க மருத்துவ லேசர் முடி அகற்றும் இயந்திரத்தைப் பயன்படுத்துகிறது.
+ta - 医療脱毛と永久脱毛: மருத்துவ முடி அகற்றுதல் மற்றும் நிரந்தர முடி அகற்றுதல்
+ta - /data/detail/2/img/qualification.png: /data/detail/2/img/qualification.png
+ta - 医療脱毛は、行政や法律による厳格な基準をクリアし、資格を持った医療従事者が施術を行います。これにより、"永久脱毛"の効果が期待できます。: மருத்துவ முடி அகற்றுதல் கண்டிப்பான நிர்வாக மற்றும் சட்ட தரங்களை சந்திக்கும் தகுதி வாய்ந்த மருத்துவ நிபுணர்களால் செய்யப்படுகிறது. இதன் விளைவாக, &quot;நிரந்தர முடி அகற்றுதல்&quot; விளைவை நீங்கள் எதிர்பார்க்கலாம்.
+ta - 医療脱毛とエステ脱毛の違い: மருத்துவ முடி அகற்றுதல் மற்றும் அழகியல் முடி அகற்றுதல் ஆகியவற்றுக்கு இடையே உள்ள வேறுபாடு
+ta - 使用機器の差: பயன்படுத்தப்படும் உபகரணங்களில் வேறுபாடு
+ta - 医療脱毛では高いパワーの医療レーザーを使用し、毛根を破壊します。一方、エステサロンの光脱毛は、毛の成長を一時的に抑制する処理に留まり、毛根を破壊することはありません。: மருத்துவ முடி அகற்றுதல் முடி வேர்களை அழிக்க உயர் சக்தி மருத்துவ லேசர் பயன்படுத்துகிறது. மறுபுறம், அழகு நிலையங்களில் போட்டோரிமோவல் முடி வளர்ச்சியை தற்காலிகமாக அடக்குகிறது மற்றும் முடி வேர்களை அழிக்காது.
+ta - 法律上の制限: சட்ட கட்டுப்பாடுகள்
+ta - /data/detail/2/img/law-restriction.png: /data/detail/2/img/law-restriction.png
+ta - 医師法により、エステサロンでは毛根を破壊する脱毛処理が禁止されています。: மருத்துவ பயிற்சியாளர்கள் சட்டத்தின்படி, அழகு நிலையங்களில் முடி வேர்களை அழிக்கும் முடி அகற்றுதல் சிகிச்சைகள் தடைசெய்யப்பட்டுள்ளன.
+ta - 医療脱毛の利点: மருத்துவ முடி அகற்றுதலின் நன்மைகள்
+ta - 安全性: பாதுகாப்பு
+ta - 医療従事者による施術であり、医師の常駐による万が一の際の迅速な対応が可能です。: சிகிச்சையானது மருத்துவ நிபுணர்களால் செய்யப்படுகிறது, மேலும் அவசரநிலை ஏற்பட்டால் விரைவான பதிலை வழங்க ஒரு மருத்துவர் எப்போதும் தயாராக இருக்கிறார்.
+ta - 施術の効果: சிகிச்சையின் விளைவு
+ta - /data/detail/2/img/beautiful-skin.png: /data/detail/2/img/beautiful-skin.png
+ta - 高いパワーの機器と専門的な技術を用いることで、効果的な脱毛結果を期待できます。: அதிக ஆற்றல் கொண்ட உபகரணங்கள் மற்றும் சிறப்பு நுட்பங்களைப் பயன்படுத்துவதன் மூலம், நீங்கள் பயனுள்ள முடி அகற்றுதல் முடிவுகளை எதிர்பார்க்கலாம்.
+ta - コストパフォーマンス: செலவு செயல்திறன்
+ta - /data/detail/2/img/cost-performance.png: /data/detail/2/img/cost-performance.png
+ta - 施術回数が少なく、短期間での脱毛完了が可能です。これにより、最終的なコストはエステ脱毛に比べて低く抑えられる傾向にあります。: சிகிச்சையின் எண்ணிக்கை சிறியது, முடி அகற்றுதல் குறுகிய காலத்தில் முடிக்கப்படும். இதன் விளைவாக, இறுதிச் செலவு அழகியல் முடி அகற்றுவதை விட குறைவாக இருக்கும்.
+ta - アクセシビリティ: அணுகல்
+ta - 近年、手頃な価格で医療脱毛を提供するクリニックが増え、より多くの人にとってアクセスしやすくなっています。: சமீபத்திய ஆண்டுகளில், அதிகமான கிளினிக்குகள் மலிவு விலையில் மருத்துவ முடி அகற்றுதலை வழங்குகின்றன, மேலும் இது அதிகமான மக்களுக்கு அணுகக்கூடியதாக உள்ளது.
+ta - 医療脱毛の流れ: மருத்துவ முடி அகற்றும் செயல்முறை
+ta - 予約: இட ஒதுக்கீடு
+ta - /data/detail/2/img/reservation.png: /data/detail/2/img/reservation.png
+ta - 脱毛への第一歩は、適切なクリニックやエステサロンを選び、予約をすることから始まります。自宅や職場から通いやすい場所を選んで、電話やインターネットでカウンセリングの予約を取りましょう。
+初診時には、自分の悩みや施術したい部位、肌の状態などを詳しく話し、施術方法や注意点について専門家から説明を受けましょう。: முடி அகற்றுவதற்கான முதல் படி பொருத்தமான கிளினிக் அல்லது அழகு நிலையத்தைத் தேர்ந்தெடுத்து சந்திப்பை மேற்கொள்வதன் மூலம் தொடங்குகிறது. உங்கள் வீடு அல்லது பணியிடத்திலிருந்து எளிதாகச் செல்லக்கூடிய ஒரு இடத்தைத் தேர்வுசெய்து, தொலைபேசி அல்லது ஆன்லைன் மூலம் ஆலோசனை பெற ஒரு சந்திப்பை மேற்கொள்ளுங்கள். உங்கள் முதல் வருகையின் போது, உங்கள் கவலைகள், நீங்கள் சிகிச்சையளிக்க விரும்பும் பகுதி மற்றும் உங்கள் தோலின் நிலை ஆகியவற்றைப் பற்றி விரிவாகப் பேசுங்கள், மேலும் சிகிச்சை முறை மற்றும் முன்னெச்சரிக்கைகள் குறித்து நிபுணரிடமிருந்து விளக்கத்தைப் பெறுங்கள்.
+ta - 事前準備: அ
+ta - /data/detail/2/img/moisturizing.png: /data/detail/2/img/moisturizing.png
+ta - 施術日が決まったら、前日までの準備が重要です。特に自己処理は施術の2～3日前に済ませ、肌を保湿することが推奨されます。
+また、日焼けや予防接種、薬の服用、飲酒は施術に影響を与えるため、避けるようにしましょう。: சிகிச்சையின் தேதியை முடிவு செய்தவுடன், அதற்கு முந்தைய நாளைத் தயாரிப்பது முக்கியம். குறிப்பாக, உங்கள் சருமத்தை ஈரப்பதமாக்குவதற்கு சிகிச்சைக்கு 2 முதல் 3 நாட்களுக்கு முன்பு சுய-சிகிச்சையை மேற்கொள்ள பரிந்துரைக்கப்படுகிறது. மேலும், வெயில், தடுப்பூசிகள், மருந்து உட்கொள்வது மற்றும் மது அருந்துதல் ஆகியவை சிகிச்சையை பாதிக்கும் என்பதால் தவிர்க்கவும்.
+ta - 施術: சிகிச்சை
+ta - /data/detail/2/img/operation.png: /data/detail/2/img/operation.png
+ta - 施術当日は、受付を済ませた後、着替えてから肌の状態をチェックします。問題がなければ施術が開始され、レーザーや光を使った脱毛が行われます。施術中は、痛みや不安があればすぐにスタッフに伝えましょう。施術後は、肌の冷却や保湿ケアをして、もし継続して施術を受ける場合は、次回の予約を入れます。: உங்கள் சிகிச்சையின் நாளில், செக்-இன் செய்த பிறகு, உங்கள் ஆடைகளை மாற்றி, உங்கள் தோலின் நிலையைச் சரிபார்க்கவும். எந்த பிரச்சனையும் இல்லை என்றால், சிகிச்சை தொடங்கும் மற்றும் லேசர் அல்லது ஒளியைப் பயன்படுத்தி முடி அகற்றப்படும். சிகிச்சையின் போது, உங்களுக்கு ஏதேனும் வலி அல்லது பதட்டம் இருந்தால், உடனடியாக ஊழியர்களிடம் தெரிவிக்கவும். சிகிச்சைக்குப் பிறகு, உங்கள் தோல் குளிர்ச்சியடையும் மற்றும் ஈரப்பதமூட்டப்படும், மேலும் நீங்கள் தொடர்ந்து சிகிச்சை பெற விரும்பினால், அடுத்த சந்திப்பிற்கு நீங்கள் திட்டமிடப்படுவீர்கள்.
+ta - このように、脱毛の過程は予約から施術などありますが、適切な準備とケアを行うことで、肌トラブルを最小限に抑えつつ、スムーズに進めれるでしょう。初めての脱毛でも、この流れを知っておくと、安心して施術を受けられるでしょう。: நீங்கள் பார்க்கிறபடி, முடி அகற்றும் செயல்முறையானது முன்பதிவுகள் முதல் சிகிச்சைகள் வரை அனைத்தையும் உள்ளடக்கியது, ஆனால் சரியான தயாரிப்பு மற்றும் கவனிப்புடன், தோல் பிரச்சனைகளை குறைக்கும் போது நீங்கள் சீராக தொடர முடியும். முடி அகற்றுதல் உங்களுக்கு முதல் முறையாக இருந்தாலும், இந்த செயல்முறையை அறிந்துகொள்வது நம்பிக்கையுடன் சிகிச்சையைப் பெற உதவும்.
+ta - 施術を受ける前に知っておくべきこと: அறுவை சிகிச்சைக்கு முன் நீங்கள் தெரிந்து கொள்ள வேண்டியது
+ta - 脱毛前の準備: முடி அகற்றுவதற்கு முன் தயாரிப்பு
+ta - シェービングの必要性: ஷேவிங் தேவை
+ta - /data/detail/2/img/shaving.png: /data/detail/2/img/shaving.png
+ta - 脱毛施術前には、対象部位の毛を自分で剃る必要があります。これはレーザーが毛根に直接作用するためで、ムダ毛が長いと肌に火傷を負うリスクが高まります。: முடி அகற்றுதல் சிகிச்சைக்கு முன், நீங்கள் இலக்கு பகுதியில் முடியை நீங்களே ஷேவ் செய்ய வேண்டும். லேசர் முடி வேரில் நேரடியாகச் செயல்படுவதே இதற்குக் காரணம், மேலும் முடி நீளமாக இருந்தால், தோல் எரியும் அபாயம் அதிகம்.
+ta - スキンケア: சரும பராமரிப்பு
+ta - /data/detail/2/img/moisturizing.png: /data/detail/2/img/moisturizing.png
+ta - 施術前は保湿や紫外線対策を入念に行い、肌のコンディションを整えます。健康的な肌は施術後の回復も早いため、施術による負担を軽減します。: சிகிச்சைக்கு முன், கவனமாக ஈரப்பதமாக்கி, உங்கள் சருமத்தை தயார்படுத்த UV கதிர்களுக்கு எதிராக நடவடிக்கை எடுக்கவும். சிகிச்சையின் பின்னர் ஆரோக்கியமான தோல் விரைவாக குணமடைகிறது, இது சிகிச்சையின் சுமையை குறைக்கிறது.
+ta - 部位別シェービング方法: பகுதி வாரியாக ஷேவிங் முறை
+ta - 手の届きにくい部位: பகுதிகளை அடைவது கடினம்
+ta - /data/detail/2/img/unreachable-part.png: /data/detail/2/img/unreachable-part.png
+ta - 背中やOラインなど手の届きにくい部位のシェービングは、クリニックやサロンに依頼することが可能です。追加料金が発生する場合があるため、事前に確認が必要です。: உங்கள் முதுகு அல்லது ஓ-லைன் போன்ற அணுக முடியாத பகுதிகளை ஷேவ் செய்ய நீங்கள் கிளினிக் அல்லது சலூனைக் கேட்கலாம். கூடுதல் கட்டணங்கள் விதிக்கப்படலாம் மற்றும் முன்கூட்டியே உறுதிப்படுத்தப்பட வேண்டும்.
+ta - 顔: முகம்
+ta - /data/detail/2/img/face.png: /data/detail/2/img/face.png
+ta - 顔の毛は電気シェーバーで処理し、保湿を忘れずに。: எலக்ட்ரிக் ஷேவர் மூலம் உங்கள் முக முடியை ட்ரிம் செய்து, ஈரப்பதமாக்க மறக்காதீர்கள்.
+ta - VIO: SAW
+ta - /data/detail/2/img/vio.png: /data/detail/2/img/vio.png
+ta - 長い毛は先にハサミでカット後、電気シェーバーで剃ります。: நீளமான முடி முதலில் கத்தரிக்கோலால் வெட்டப்பட்டு பின்னர் மின்சார ஷேவர் மூலம் மொட்டையடிக்கப்படுகிறது.
+ta - 体（全身）: உடல் (முழு உடல்)
+ta - 全身も電気シェーバーを使用し、毛の流れに沿って処理します。: முடி வளர்ச்சியின் திசையைப் பின்பற்றி, முழு உடலையும் ஷேவ் செய்ய மின்சார ஷேவரைப் பயன்படுத்தவும்.
+ta - 脱毛期間中のスキンケア: முடி அகற்றும் காலத்தில் தோல் பராமரிப்பு
+ta - 保湿: ஈரப்பதமூட்டுதல்
+ta - /data/detail/2/img/moisturizing.png: /data/detail/2/img/moisturizing.png
+ta - 脱毛期間中は特に保湿を心がけ、肌が乾燥しやすいため、保湿ジェルやローションでしっかりとケアします。: முடி அகற்றும் காலத்தில், உங்கள் சருமத்தை ஈரப்பதத்துடன் வைத்திருப்பதை உறுதிப்படுத்திக் கொள்ளுங்கள், ஏனெனில் உங்கள் தோல் எளிதில் வறண்டு போகும், எனவே ஈரப்பதமூட்டும் ஜெல் அல்லது லோஷனைப் பயன்படுத்த மறக்காதீர்கள்.
+ta - 紫外線対策: புற ஊதா பாதுகாப்பு
+ta - /data/detail/2/img/sunburn.png: /data/detail/2/img/sunburn.png
+ta - 日焼けは脱毛施術を受けられない原因になり得るため、施術前後は日焼け対策を徹底しましょう。: சன் பர்ன் உங்களை முடி அகற்றுதல் சிகிச்சையில் இருந்து தடுக்கலாம், எனவே உங்கள் சிகிச்சைக்கு முன்னும் பின்னும் வெயிலுக்கு எதிராக முன்னெச்சரிக்கை நடவடிக்கைகளை எடுக்க மறக்காதீர்கள்.
+ta - 脱毛当日の注意点: முடி அகற்றும் நாளில் கவனிக்க வேண்டிய புள்ளிகள்
+ta - 日焼け止め・制汗剤NG: சன்ஸ்கிரீன்/ஆண்டிபெர்ஸ்பிரண்ட் இல்லை
+ta - 施術当日は日焼け止めや制汗剤の使用を避けます。これらがレーザーの効果を妨げたり、肌トラブルの原因になったりする可能性があります。: உங்கள் சிகிச்சையின் நாளில் சன்ஸ்கிரீன் அல்லது ஆன்டிபெர்ஸ்பிரண்ட்களைப் பயன்படுத்துவதைத் தவிர்க்கவும். இவை லேசரின் செயல்திறனில் தலையிடலாம் அல்லது தோல் பிரச்சனைகளை ஏற்படுத்தலாம்.
+ta - 体温上昇を避ける: உடல் வெப்பநிலை அதிகரிப்பதை தவிர்க்கவும்
+ta - 激しい運動やサウナ、飲酒など体温が上がる行動は施術前に避けてください。これらは肌トラブルを引き起こすリスクがあります。: உங்கள் சிகிச்சைக்கு முன், கடுமையான உடற்பயிற்சி, சானாக்கள் மற்றும் மது அருந்துதல் போன்ற உங்கள் உடல் வெப்பநிலையை உயர்த்தும் செயல்களைத் தவிர்க்கவும். இவை சரும பிரச்சனைகளை ஏற்படுத்தும் அபாயம் உள்ளது.
+ta - 予防接種・薬の服用: தடுப்பூசிகள்/மருந்து
+ta - 予防接種は施術前後の1週間から10日間は避けるべきです。また、服用中の薬がある場合は、医師に相談してください。: செயல்முறைக்கு முன்னும் பின்னும் 1 வாரம் முதல் 10 நாட்கள் வரை தடுப்பூசிகள் தவிர்க்கப்பட வேண்டும். மேலும், நீங்கள் ஏதேனும் மருந்துகளை எடுத்துக் கொண்டால் உங்கள் மருத்துவரிடம் சொல்லுங்கள்.
+ta - 来院時の準備: மருத்துவமனைக்குச் செல்வதற்கான தயாரிப்பு
+ta - メイク: செய்ய
+ta - /data/detail/2/img/cleansing.png: /data/detail/2/img/cleansing.png
+ta - 顔脱毛の施術当日でもメイクをしての来院が可能ですが、施術前に落とす必要があります。施術後のメイクは肌負担を考えて控えめに。: உங்கள் முகத்தில் முடி அகற்றும் சிகிச்சையின் நாளில் நீங்கள் ஒப்பனை அணிந்து கிளினிக்கிற்கு வரலாம், ஆனால் சிகிச்சைக்கு முன் அதை அகற்ற வேண்டும். உங்கள் சருமத்திற்கு அழுத்தம் கொடுக்காமல் இருக்க, சிகிச்சைக்குப் பிறகு மேக்கப் போடுவதைத் தவிர்க்கவும்.
+ta - 服装: ஆடை
+ta - /data/detail/2/img/fashion.png: /data/detail/2/img/fashion.png
+ta - 施術部位や肌への刺激を考慮して、着脱しやすく肌に優しい素材の服を選ぶと良いでしょう。: சிகிச்சை பகுதி மற்றும் தோலில் ஏற்படும் எரிச்சலைக் கருத்தில் கொண்டு, அணிவதற்கும் கழற்றுவதற்கும் எளிதான ஆடைகளைத் தேர்ந்தெடுப்பது நல்லது.
+ta - 医療脱毛のリスクとアフターケア: மருத்துவ முடி அகற்றுதல் அபாயங்கள் மற்றும் பின் பராமரிப்பு
+ta - 医療レーザー脱毛は、美容医療の一環として人気があり、多くの方がその効果を求めています。しかし、この施術にはリスクや副作用も存在します。ですので、施術が終わったアフターケアがとても大切です。: மருத்துவ லேசர் முடி அகற்றுதல் அழகியல் மருத்துவத்தின் ஒரு பகுதியாக பிரபலமாக உள்ளது, மேலும் பலர் அதன் விளைவுகளை நாடுகிறார்கள். இருப்பினும், இந்த செயல்முறை அபாயங்களையும் பக்க விளைவுகளையும் கொண்டுள்ளது. எனவே, சிகிச்சைக்குப் பிறகு கவனிப்பு மிகவும் முக்கியமானது.
+ta - 医療脱毛の可能性ある副作用: மருத்துவ முடி அகற்றுவதன் சாத்தியமான பக்க விளைவுகள்
+ta - やけど（炎症）: தீக்காயம் (வீக்கம்)
+ta - /data/detail/2/img/burned-skin.png: /data/detail/2/img/burned-skin.png
+ta - 医療レーザー脱毛は、レーザーの熱によって毛穴内の発毛組織を破壊します。施術後は軽いやけどによる赤みが現れることがありますが、これは一般的に数時間から数日で消失します。しかし、稀に強い症状が出ることもあり、その場合は色素沈着のリスクがあります。: மருத்துவ லேசர் முடி அகற்றுதல் துளைகளுக்குள் முடி வளர்ச்சி திசுக்களை அழிக்க லேசர் வெப்பத்தைப் பயன்படுத்துகிறது. செயல்முறைக்குப் பிறகு தீக்காயத்திலிருந்து சிறிது சிவத்தல் இருக்கலாம், ஆனால் இது பொதுவாக சில மணிநேரங்கள் முதல் சில நாட்களுக்குள் மறைந்துவிடும். இருப்பினும், அரிதான சந்தர்ப்பங்களில், கடுமையான அறிகுறிகள் ஏற்படலாம், இதில் நிறமி ஆபத்து உள்ளது.
+ta - 毛嚢炎: ஃபோலிகுலிடிஸ்
+ta - /data/detail/2/img/acne.png: /data/detail/2/img/acne.png
+ta - 脱毛後にニキビのような炎症が起きることがあります。これは毛穴の奥に細菌が入り込み、炎症が生じる毛嚢炎です。多くの場合自然に治癒しますが、悪化すると跡が残ることもあります。: முடி அகற்றப்பட்ட பிறகு முகப்பரு போன்ற வீக்கம் ஏற்படலாம். இது ஃபோலிகுலிடிஸ் ஆகும், அங்கு பாக்டீரியா துளைகளுக்குள் ஆழமாக சென்று வீக்கத்தை ஏற்படுத்துகிறது. இது பெரும்பாலும் தானாகவே குணமாகும், ஆனால் அது மோசமாகிவிட்டால், அது வடுக்களை விட்டுவிடும்.
+ta - 硬毛化: கடினப்படுத்துதல்
+ta - 脱毛後に毛が太くなる現象も報告されています。これは毛細胞が活性化し、毛が太くなる可能性があります。特に産毛や細い毛に対して起こりやすいとされています。: முடி அகற்றப்பட்ட பிறகு முடி அடர்த்தியாகிறது என்றும் தெரிவிக்கப்பட்டுள்ளது. இது முடி செல்களை செயல்படுத்தி உங்கள் முடியை அடர்த்தியாக்கும். இது குறிப்பாக தாழ்வான அல்லது மெல்லிய கூந்தலில் ஏற்படும் என்று கூறப்படுகிறது.
+ta - 医療脱毛とサロン脱毛のリスク比較: மருத்துவ முடி அகற்றுதல் மற்றும் வரவேற்புரை முடி அகற்றுதல் ஆகியவற்றுக்கு இடையே உள்ள அபாயங்களின் ஒப்பீடு
+ta - /data/detail/2/img/risk.png: /data/detail/2/img/risk.png
+ta - 医療レーザー脱毛がサロンの光脱毛よりもリスクが高いと考える方もいらっしゃいますが、それは必ずしも正しくありません。
+どちらの脱毛方法も基本的なリスクは似ています。サロン脱毛は出力が弱いため、硬毛化が起きやすい傾向にあります。: சிலர் மருத்துவ லேசர் முடி அகற்றுதல் வரவேற்புரை அடிப்படையிலான ஒளி நீக்கம் செய்வதை விட ஆபத்தானது என்று நினைக்கிறார்கள், ஆனால் அது உண்மையல்ல. இரண்டு முடி அகற்றும் முறைகளும் ஒரே மாதிரியான அடிப்படை அபாயங்களைக் கொண்டுள்ளன. வரவேற்புரை முடி அகற்றுதல் பலவீனமான வெளியீட்டைக் கொண்டுள்ளது, எனவே முடி கடினமாகிறது.
+ta - 自分でできる予防策: முன்னெச்சரிக்கை நடவடிக்கைகளை நீங்களே எடுத்துக் கொள்ளலாம்
+ta - 保湿と紫外線対策: ஈரப்பதம் மற்றும் புற ஊதா பாதுகாப்பு
+ta - 脱毛前後の肌は乾燥しやすいため、保湿は非常に重要です。また、日焼けは肌トラブルのリスクを高めるため、紫外線対策も必須です。
+保湿をするとしないとで次回脱毛に行った時の痛みが大きく変わってくるので保湿ケアはしっかりしましょう！: முடி அகற்றுவதற்கு முன்னும் பின்னும் உங்கள் சருமத்தை ஈரப்பதமாக்குவது மிகவும் முக்கியமானது, ஏனெனில் அது வறண்டு போகும். மேலும், வெயிலின் தாக்கம் தோல் பிரச்சினைகளின் அபாயத்தை அதிகரிப்பதால், புற ஊதா கதிர்களுக்கு எதிராக நடவடிக்கை எடுக்க வேண்டியது அவசியம். உங்கள் தலைமுடியை ஈரப்பதமாக்குவது, அடுத்த முறை நீங்கள் முடி அகற்றுவதற்குச் செல்லும் போது வலியில் மிகப்பெரிய வித்தியாசத்தை ஏற்படுத்தும், எனவே ஈரப்பதமாக்குவதை உறுதிப்படுத்திக் கொள்ளுங்கள்!
+ta - 医療脱毛の選び方: மருத்துவ முடி அகற்றுதலை எவ்வாறு தேர்வு செய்வது
+ta - 効果を重視する: செயல்திறனில் கவனம் செலுத்துங்கள்
+ta - /data/detail/2/img/merit.png: /data/detail/2/img/merit.png
+ta - 脱毛機の種類: முடி அகற்றும் இயந்திரங்களின் வகைகள்
+ta - アレキサンドライトレーザー、ダイオードレーザー、ヤグレーザーの3種類が一般的。各レーザーは毛の濃さ、色、肌の色によって効果が異なるため、自分の肌質や毛質に合ったレーザーを選べるクリニックが望ましい。: மூன்று பொதுவான வகைகள் உள்ளன: அலெக்ஸாண்ட்ரைட் லேசர், டையோடு லேசர் மற்றும் YAG லேசர். ஒவ்வொரு லேசரும் முடியின் அடர்த்தி, நிறம் மற்றும் தோல் தொனி ஆகியவற்றைப் பொறுத்து வெவ்வேறு விளைவுகளைக் கொண்டுள்ளது, எனவே உங்கள் தோல் மற்றும் முடி வகைக்கு ஏற்ற லேசரை நீங்கள் தேர்வுசெய்யக்கூடிய கிளினிக்கிற்குச் செல்வது சிறந்தது.
+ta - 照射方法: கதிர்வீச்சு முறை
+ta - 熱破壊式が高い脱毛効果を提供するが、痛みを伴う可能性がある。蓄熱式は痛みが少ないが、効果が低め。: வெப்ப-அழிவு முறைகள் அதிக முடி அகற்றும் விளைவுகளை வழங்குகின்றன, ஆனால் வலியை ஏற்படுத்தும். வெப்ப சேமிப்பு வகை குறைவான வலி, ஆனால் குறைவான செயல்திறன் கொண்டது.
+ta - 料金をチェック: விலைகளை சரிபார்க்கவும்
+ta - /data/detail/2/img/cost-performance.png: /data/detail/2/img/cost-performance.png
+ta - 相場の把握: சந்தை விலையை புரிந்து கொள்ளுங்கள்
+ta - 全身脱毛の相場を知り、それに基づいて料金を比較する。: உடல் முழுவதும் முடி அகற்றுவதற்கான சந்தை விலையை அறிந்து அதன் அடிப்படையில் விலைகளை ஒப்பிடுங்கள்.
+ta - 医療脱毛完了までの回数: மருத்துவ முடி அகற்றுதல் முடியும் வரை எண்ணிக்கை
+ta - 8～12回が目安。クリニックによってはパッケージプランが用意されている場合もあるので、コストパフォーマンスを考慮する。: 8 முதல் 12 முறை இலக்கு வைக்கவும். சில கிளினிக்குகள் தொகுப்பு திட்டங்களை வழங்குகின்றன, எனவே செலவு செயல்திறனைக் கருத்தில் கொள்ளுங்கள்.
+ta - 口コミを参考にする: மதிப்புரைகளைப் பார்க்கவும்
+ta - /data/detail/2/img/sns.png: /data/detail/2/img/sns.png
+ta - 実際の体験談: உண்மையான அனுபவங்கள்
+ta - SNSやGoogleの口コミを参照し、実際に通った人の意見を確認する。: உண்மையில் உணவகத்திற்குச் சென்றவர்கள் என்ன சொல்கிறார்கள் என்பதைப் பார்க்க சமூக ஊடகங்கள் மற்றும் Google இல் உள்ள மதிப்புரைகளைப் பார்க்கவும்.
+ta - まとめ: சுருக்கம்
+ta - 医療脱毛は以前に比べて、技術の進化により痛みが少なくなり、料金も手頃になっています。
+エステ脱毛と異なり、高出力のレーザーで毛根を破壊し、資格を持った医療従事者が施術するため、安全性が高く、効果も永続的です。
+施術前のシェービングや保湿、紫外線対策など、適切な準備とアフターケアを心がけることが大切です。
+医療脱毛を選ぶ際は、機器の種類や料金、実際の体験談をチェックし、自分に合ったクリニックを見つけることが重要です。
+このように、医療脱毛はその安全性と効果で選ばれており、適切に対応すれば理想の結果を期待できます: தொழில்நுட்பத்தின் முன்னேற்றம் காரணமாக மருத்துவ முடி அகற்றுதல் முன்பை விட குறைவான வலி மற்றும் மலிவானது. அழகியல் முடி அகற்றுதல் போலல்லாமல், இது முடி வேர்களை அழிக்க அதிக சக்தி கொண்ட லேசரைப் பயன்படுத்துகிறது மற்றும் ஒரு தகுதி வாய்ந்த மருத்துவ நிபுணரால் செய்யப்படுகிறது, எனவே இது மிகவும் பாதுகாப்பானது மற்றும் முடிவுகள் நீண்ட காலம் நீடிக்கும். சிகிச்சைக்கு முன் ஷேவிங், மாய்ஸ்சரைசிங் மற்றும் புற ஊதா பாதுகாப்பு போன்ற சரியான தயாரிப்பு மற்றும் பிந்தைய பராமரிப்பு ஆகியவற்றை எடுத்துக்கொள்வது முக்கியம். மருத்துவ முடி அகற்றுதலைத் தேர்ந்தெடுக்கும்போது, உபகரணங்களின் வகைகள், விலைகள் மற்றும் உண்மையான அனுபவங்களைச் சரிபார்த்து, உங்களுக்கு ஏற்ற கிளினிக்கைக் கண்டறியவும். இந்த வழியில், மருத்துவ முடி அகற்றுதல் அதன் பாதுகாப்பு மற்றும் செயல்திறனுக்காக தேர்ந்தெடுக்கப்படுகிறது, மேலும் சரியான முறையில் சிகிச்சையளிக்கப்பட்டால், நீங்கள் சிறந்த முடிவுகளை எதிர்பார்க்கலாம்.
+ta - 医療脱毛について紹介: மருத்துவ முடி அகற்றுதல் அறிமுகம்
+ta - 2: 2
+ta - /data/detail/2/img/medical-shaving-real.png: /data/detail/2/img/medical-shaving-real.png
+ta - /data/detail/2/img/medical-shaving-real.png: /data/detail/2/img/medical-shaving-real.png
+ta - 2024-04-11: 2024-04-11
+ta - 2024-04-11: 2024-04-11
+ta - 2024-04-11: 2024-04-11
+ta - 2024-04-11: 2024-04-11
+[pid: 12|app: 0|req: 30/104] 192.168.65.1 () {52 vars in 851 bytes} [Sat Jul  6 12:27:39 2024] POST /api/file/translate => generated 20 bytes in 90850 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 5/107] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 12:42:13 2024] OPTIONS /api/category/detail => generated 0 bytes in 41 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 8/107] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 12:42:13 2024] OPTIONS /api/folder/read => generated 0 bytes in 41 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 16/107] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 12:42:13 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 41 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 6/108] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 12:42:13 2024] POST /api/category/detail => generated 1304 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 31/109] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 12:42:13 2024] POST /api/folder/read => generated 14534 bytes in 27 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 49/110] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 12:42:13 2024] POST /api/dir/translate/check => generated 346 bytes in 163 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 17/113] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:16:31 2024] OPTIONS /api/category/detail => generated 0 bytes in 45 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 50/113] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:16:31 2024] OPTIONS /api/folder/read => generated 0 bytes in 45 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 9/113] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:16:31 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 45 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 18/114] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:16:31 2024] POST /api/category/detail => generated 1304 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 32/115] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:16:31 2024] POST /api/folder/read => generated 3455 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 147 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 7/116] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:16:31 2024] POST /api/dir/translate/check => generated 296 bytes in 82 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 51/117] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:16:37 2024] OPTIONS /api/folder/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 52/118] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:16:37 2024] POST /api/folder/list => generated 14 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 33/119] 192.168.65.1 () {54 vars in 868 bytes} [Sat Jul  6 14:16:37 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 53/120] 192.168.65.1 () {52 vars in 857 bytes} [Sat Jul  6 14:16:37 2024] POST /api/folder/title/by/list => generated 686 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 10/121] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:16:38 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 34/122] 192.168.65.1 () {54 vars in 854 bytes} [Sat Jul  6 14:16:38 2024] OPTIONS /api/category/list => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 35/123] 192.168.65.1 () {52 vars in 843 bytes} [Sat Jul  6 14:16:38 2024] POST /api/category/list => generated 1093 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 147 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 54/124] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:16:38 2024] POST /api/dir/translate/check => generated 346 bytes in 80 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 55/125] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:16:43 2024] OPTIONS /api/category/detail => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 8/126] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:16:43 2024] POST /api/category/detail => generated 1304 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 36/127] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:16:47 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 56/128] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:16:47 2024] POST /api/category/detail => generated 1301 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 19/129] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:16:47 2024] POST /api/dir/translate/check => generated 351 bytes in 86 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 57/130] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:16:57 2024] OPTIONS /api/folder/list => generated 0 bytes in 13 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 58/131] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:16:57 2024] POST /api/folder/list => generated 14 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 59/132] 192.168.65.1 () {54 vars in 868 bytes} [Sat Jul  6 14:16:57 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 60/133] 192.168.65.1 () {52 vars in 857 bytes} [Sat Jul  6 14:16:57 2024] POST /api/folder/title/by/list => generated 686 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 61/134] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:16:58 2024] OPTIONS /api/folder/read => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 20/135] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:16:58 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 37/136] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:16:58 2024] OPTIONS /api/category/detail => generated 0 bytes in 12 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 21/137] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:16:58 2024] POST /api/folder/read => generated 13957 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 38/138] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:16:58 2024] POST /api/category/detail => generated 1304 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 62/139] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:16:58 2024] POST /api/dir/translate/check => generated 346 bytes in 147 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 63/141] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:26:31 2024] OPTIONS /api/category/detail => generated 0 bytes in 122 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 39/141] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:26:31 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 113 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 11/142] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:26:31 2024] OPTIONS /api/folder/read => generated 0 bytes in 140 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 22/143] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:26:31 2024] POST /api/category/detail => generated 1304 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 9/144] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:26:31 2024] POST /api/folder/read => generated 13957 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 40/145] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:26:31 2024] POST /api/dir/translate/check => generated 346 bytes in 539 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 64/146] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:27:27 2024] OPTIONS /api/folder/read => generated 0 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 10/147] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:27:27 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 39 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 23/148] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:27:27 2024] OPTIONS /api/category/detail => generated 0 bytes in 44 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 65/149] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:27:27 2024] POST /api/folder/read => generated 3455 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 147 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 41/150] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:27:27 2024] POST /api/category/detail => generated 1304 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 11/151] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:27:27 2024] POST /api/dir/translate/check => generated 296 bytes in 110 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 66/152] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:27:55 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 13 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 67/153] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:27:55 2024] POST /api/dir/translate/check => generated 296 bytes in 90 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 68/154] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:27:57 2024] POST /api/dir/translate/check => generated 296 bytes in 59 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 42/155] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:27:59 2024] POST /api/dir/translate/check => generated 296 bytes in 99 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 24/156] 192.168.65.1 () {54 vars in 854 bytes} [Sat Jul  6 14:28:06 2024] OPTIONS /api/category/list => generated 0 bytes in 15 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 43/157] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:28:06 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 11 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 25/158] 192.168.65.1 () {52 vars in 843 bytes} [Sat Jul  6 14:28:06 2024] POST /api/category/list => generated 1093 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 147 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 44/159] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:28:06 2024] POST /api/dir/translate/check => generated 346 bytes in 90 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 45/160] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:28:08 2024] OPTIONS /api/category/detail => generated 0 bytes in 3 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 46/161] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:28:08 2024] POST /api/category/detail => generated 1301 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 69/162] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:28:08 2024] POST /api/dir/translate/check => generated 351 bytes in 98 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 70/163] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:28:09 2024] OPTIONS /api/folder/list => generated 0 bytes in 11 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 71/164] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:28:09 2024] POST /api/folder/list => generated 14 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 72/165] 192.168.65.1 () {54 vars in 868 bytes} [Sat Jul  6 14:28:09 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 26/166] 192.168.65.1 () {52 vars in 857 bytes} [Sat Jul  6 14:28:09 2024] POST /api/folder/title/by/list => generated 686 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 73/167] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:28:10 2024] OPTIONS /api/folder/read => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 47/168] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:28:10 2024] POST /api/category/detail => generated 1304 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 74/169] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:28:10 2024] POST /api/folder/read => generated 13957 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 12/170] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:28:10 2024] POST /api/dir/translate/check => generated 346 bytes in 182 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 13/172] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:28:11 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 75/172] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:28:11 2024] POST /api/folder/read => generated 13957 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 48/173] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:28:11 2024] POST /api/category/detail => generated 1304 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 14/174] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:28:11 2024] POST /api/dir/translate/check => generated 346 bytes in 98 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 15/175] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:37:19 2024] OPTIONS /api/folder/read => generated 0 bytes in 106 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 76/176] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:37:19 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 122 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 12/177] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:37:19 2024] OPTIONS /api/category/detail => generated 0 bytes in 112 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 49/178] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:37:19 2024] POST /api/folder/read => generated 13957 bytes in 87 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 27/179] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:37:19 2024] POST /api/category/detail => generated 1304 bytes in 84 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 77/180] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:37:19 2024] POST /api/dir/translate/check => generated 346 bytes in 364 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 28/183] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:38:11 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 78/183] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:38:11 2024] OPTIONS /api/category/detail => generated 0 bytes in 23 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 50/183] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:38:11 2024] OPTIONS /api/folder/read => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 51/184] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:38:11 2024] POST /api/category/detail => generated 1304 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 16/185] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:38:11 2024] POST /api/folder/read => generated 13957 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 79/186] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:38:11 2024] POST /api/dir/translate/check => generated 346 bytes in 209 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 80/188] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:41:56 2024] OPTIONS /api/category/detail => generated 0 bytes in 53 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 17/188] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:41:56 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 53 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 29/189] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:41:56 2024] OPTIONS /api/folder/read => generated 0 bytes in 54 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 18/190] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:41:56 2024] POST /api/folder/read => generated 13957 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 30/191] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:41:56 2024] POST /api/category/detail => generated 1304 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 13/192] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:41:56 2024] POST /api/dir/translate/check => generated 346 bytes in 225 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 19/193] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:49:17 2024] OPTIONS /api/category/detail => generated 0 bytes in 105 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 81/194] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:49:17 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 109 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 52/195] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:49:17 2024] OPTIONS /api/folder/read => generated 0 bytes in 157 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 20/196] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:49:17 2024] POST /api/category/detail => generated 1304 bytes in 45 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 82/197] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:49:17 2024] POST /api/folder/read => generated 13957 bytes in 63 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 31/198] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:49:17 2024] POST /api/dir/translate/check => generated 346 bytes in 192 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 32/199] 192.168.65.1 () {54 vars in 866 bytes} [Sat Jul  6 14:51:18 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 28 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 83/200] 192.168.65.1 () {54 vars in 850 bytes} [Sat Jul  6 14:51:18 2024] OPTIONS /api/folder/read => generated 0 bytes in 31 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 53/201] 192.168.65.1 () {54 vars in 858 bytes} [Sat Jul  6 14:51:18 2024] OPTIONS /api/category/detail => generated 0 bytes in 31 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 33/202] 192.168.65.1 () {52 vars in 839 bytes} [Sat Jul  6 14:51:18 2024] POST /api/folder/read => generated 13957 bytes in 34 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 84/203] 192.168.65.1 () {52 vars in 847 bytes} [Sat Jul  6 14:51:18 2024] POST /api/category/detail => generated 1304 bytes in 55 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 14/204] 192.168.65.1 () {52 vars in 855 bytes} [Sat Jul  6 14:51:18 2024] POST /api/dir/translate/check => generated 346 bytes in 198 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)

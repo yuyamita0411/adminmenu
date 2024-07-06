@@ -18,7 +18,7 @@
                         v-if="!EditingTargetIndex[index]"
                         @click="clickTagButton($event, key)"
                         style="min-height:1.5rem;"
-                        v-html="displayArticleHTML(key, value)"
+                        v-html="!isImageKey(key) ? displayArticleHTML(key, value) : ''"
                     >
                     </span>
                     <textarea
@@ -29,6 +29,11 @@
                         @input="handleInput($event, key)"
                     >
                     </textarea>
+                    <ImageUploader
+                        v-if="isImageKey(key) && !EditingTargetIndex[index]"
+                        :key="`uploader-${key}`"
+                        :initialImageUrl="getFullImageUrl(value)"
+                    />
                 </div>
                 <div
                     @mouseover="mouseOverButton"
@@ -80,7 +85,11 @@
             <div class="meta-label-wrapper">
                 <div class="font-weight-bold">categoryID</div>
 
-                <select v-model="selectedCategoryID" @change="genericInput($event, 'categoryID')">
+                <select
+                v-model="selectedCategoryID"
+                @change="genericInput($event, 'categoryID')"
+                class="category-select-button"
+                >
                     <option
                         v-for="(value, key) in catListArr"
                         :key="key"
@@ -202,6 +211,8 @@ import { API } from '../module/function';
 import { Menu } from '../module/editMenu/index';
 import { GenericObject } from '../module/type';
 
+import ImageUploader from '../components/editMenu/ImageUploader.vue';
+
 @Options({
     computed: {
         ...mapState(['modalStatus', 'jsondata', 'HoverTargetIndex', 'EditingTargetIndex', 'isLoading']),
@@ -214,6 +225,9 @@ import { GenericObject } from '../module/type';
         isLoading() {
             return store.state.isLoading;
         }
+    },
+    components: {
+        ImageUploader
     }
 })
 export default class editMenu extends Vue {
@@ -425,9 +439,16 @@ export default class editMenu extends Vue {
         let isimg = this.tag.tagjson[tagname] ? true : false;
         return {"isimg": isimg, "wclass": wclass}
     }
+    private isImageKey(key: string): boolean {
+        let prop = this.isImgTag(this.tag.getElementTagLabel(key));
+        return prop["isimg"];
+    }
+    private getFullImageUrl(value: string): string {
+        return `${process.env.VUE_APP_website_path}${value}`;
+    }
     private displayArticleHTML (key: string, value: string) {
         let prop = this.isImgTag(this.tag.getElementTagLabel(key));
-        return !prop["isimg"] ? value : `<img src='${process.env.VUE_APP_website_path}${value}' class='${prop["wclass"]}'>`;
+        return !prop["isimg"] ? value : `<img src='${this.getFullImageUrl(value)}' class='${prop["wclass"]}'>`;
     }
 }
 </script>
@@ -546,5 +567,19 @@ p,
 .addcontentbutton,
 .addcontentbutton img {
     cursor: pointer;
+}
+.category-select-button {
+    border: solid .5px;
+    margin-top: .5rem;
+    height: 2rem;
+    cursor: pointer;
+    background: #ffff;
+    font-size: 1rem;
+    width: 10rem;
+    text-align-last: center;
+    border-radius: 0px;
+    border-top-left-radius: 0;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    appearance: none;
 }
 </style>
