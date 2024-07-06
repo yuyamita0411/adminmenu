@@ -38,9 +38,27 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="flex-container mt2rem font1rem">
+            <div class="flex-container mt2rem mb2rem font1rem">
                 <button type="button" @click="addCategory" class="submitButton button_blue font1rem">カテゴリを追加する</button>
-                <button type="button" class="submitButton button_blue font1rem">ChatGPTで翻訳する</button>
+                <button type="button" class="submitButton button_pink font1rem">ChatGPTで翻訳する</button>
+                <button type="button" class="submitButton button_navy font1rem">Google Translateで翻訳する</button>
+            </div>
+            <div class="mb2rem">
+                <h2>翻訳に失敗した言語一覧</h2>
+                <div>
+                    <div class="d-inline-block float-left w-auto">
+                        <label for="ja">ja</label>
+                        <input type="checkbox" value="ja" id="ja">
+                    </div>
+                    <div class="d-inline-block float-left w-auto">
+                        <label for="en">en</label>
+                        <input type="checkbox" value="en" id="en">
+                    </div>
+                </div>
+                <div class="flex-container mt2rem font1rem">
+                    <button type="button" class="submitButton button_pink font1rem">ChatGPTで再度翻訳する</button>
+                    <button type="button" class="submitButton button_navy font1rem">Google Translateで再度翻訳する</button>
+                </div>
             </div>
         </div>
     </div>

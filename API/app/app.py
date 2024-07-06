@@ -7,6 +7,7 @@ from module.json import Json
 import json
 from dotenv import load_dotenv
 import os
+import re
 import shutil
 from pathlib import Path
 
@@ -218,6 +219,46 @@ def getCategoryDetailDelete():
         
         Json.save_json_data(info["filePath"], data)
         return {"data": data, "deleteNum": info["deleteNum"]}
+
+def contains_japanese(text):
+    # 日本語の文字範囲を確認する正規表現
+    return bool(re.search(r'[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]', text))
+
+def extract_language_codes(path):
+    pattern = r'/([^/]+)/index\.json$'
+    ln = ''
+    match = re.search(pattern, path)
+    if match:
+        ln = match.group(1)
+    return ln
+
+@app.route(os.getenv("VUE_APP_checkFailTranslate"), methods=['POST'])
+# 第一引数には API/app/translation_tool/genre/webblog/pagecategory/detail などの翻訳できてるかチェックするディレクトリが入る
+def checkFailTranslateDetail():
+    info = request.get_json()
+    # ディレクトリを再帰的に探索
+    errorArr = []
+    okArr = []
+    for root, dirs, files in os.walk(info["directory"]):
+        for file in files:
+            if file.endswith('.json'):
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                        print("ああああああああ！！！！！！")
+                        print(file_path)
+                        print(extract_language_codes(file_path))
+                        if any(contains_japanese(str(value)) for value in data.values()):
+                            errorArr.append(extract_language_codes(file_path))
+                        else:
+                            okArr.append(extract_language_codes(file_path))
+                except json.JSONDecodeError as e:
+                    # JSON配列が空の時とか
+                    return {"status": "decode error"}
+                except UnicodeDecodeError as e:
+                    return {"status": "UnicodeDecodeError"}
+    return {"data": okArr}
 
 if __name__ == '__main__':
     app.run(debug=True)

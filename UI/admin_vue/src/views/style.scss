@@ -22,6 +22,12 @@ body {
 .h2rem {
     height: 2rem;
 }
+.w-auto {
+    width: auto;
+}
+.d-inline-block {
+    display: inline-block;
+}
 .cursor {
     cursor: pointer;
 }
@@ -249,8 +255,7 @@ p,
 .submitButtonInner {
     display: flex;
     gap: 3px;
-    max-width: 25rem;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -269,6 +274,14 @@ p,
 }
 .button_blue:hover{
     border-bottom: 1px solid #0686b2;
+}
+.button_navy {
+    border-bottom: 7px solid #023949;
+    background: #04617F;
+    color: #fff;
+}
+.button_navy:hover{
+    border-bottom: 1px solid #023949;
 }
 
 .submitButton,

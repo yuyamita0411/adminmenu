@@ -130,10 +130,48 @@
                 class="submitButton button_blue"
                 @click="updateJsonData"
                 >更新する</button>
+            </div>
+        </div>
+        <div class="mb2rem">
+            <h2>翻訳する</h2>
+            <h3>翻訳に失敗した言語、まだ翻訳が済んでない言語一覧</h3>
+            <div>
+                <div
+                v-for="(value, key) in lnarr"
+                :key="key"
+                class="d-inline-block float-left w-auto"
+                >
+                    <span
+                    v-if="translateLnArr.includes(value)"
+                    >{{key}},</span>
+                </div>
+            </div>
+            <h3>言語を選ぶ</h3>
+            <div
+            v-for="(value, key) in lnarr"
+            :key="key"
+            class="translate-language-area d-inline-block float-left w-auto"
+            >
+                <input
+                v-if="!translateLnArr.includes(value)"
+                type="checkbox" :id="value" :value="value"
+                v-model="translateLnArr">
+                <input
+                v-else
+                type="checkbox" :id="value" :value="value"
+                v-model="translateLnArr"
+                checked
+                >
+                <label :for="value">{{key}}</label>
+            </div>
+            <div class="submitButtonInner">
                 <button
                 class="translationButton button_pink"
                 @click="translateJsonData"
-                >ChatGPTで翻訳する</button>
+                >ChatGPT</button>
+                <button
+                class="translationButton button_navy"
+                >Google Translate</button>
             </div>
         </div>
     </div>
@@ -144,7 +182,7 @@ import { Vue, Options } from "vue-class-component";
 import { mapState } from 'vuex';
 
 import {store} from '../store/common/index';
-import { PATH, TAG } from '../module/prop';
+import { PATH, TAG, lnarr, fullLinArr } from '../module/prop';
 import { API } from '../module/function';
 import { Menu } from '../module/editMenu/index';
 import { GenericObject } from '../module/type';
@@ -179,6 +217,9 @@ export default class editMenu extends Vue {
     trashicon = this.path.trashicon;
     touchtag: GenericObject = {};
     catListArr: GenericObject = {};
+    lnarr: GenericObject = lnarr;
+    fullLinArr: GenericObject = fullLinArr;
+    translateLnArr: string[] = [];
     selectedCategoryID = null;
 
     created () {
@@ -186,6 +227,7 @@ export default class editMenu extends Vue {
         this.readData();
         //編集中のタグ情報の状態を初期化
         this.resetObj(store.state.jsondata, 'updateStoreObj', 'EditingTargetIndex');
+        this.checkTranslateSuccess();
         this.inputValues = store.state.jsondata;
         this.selectedCategoryID = store.state.jsondata["categoryID"];
     }
@@ -217,9 +259,26 @@ export default class editMenu extends Vue {
         );
     }
     translateJsonData () {
-        this.ModifyJsonFile (
+        const checkedElements = this.$el.querySelectorAll('.translate-language-area input[type="checkbox"]:checked');
+        this.translateLnArr = Array.from(checkedElements).map(el => (el as HTMLInputElement).value);
+        console.log(this.translateLnArr);
+        return;
+        /*this.ModifyJsonFile (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileTranslateEndpoint}`,
             `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
+        );*/
+    }
+    checkTranslateSuccess () {
+        API.post(
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_checkFailTranslate}`,
+            { directory: `${process.env.VUE_APP_articleDirPath}/${this.$route.params.id}`},
+            (response: GenericObject) => {
+                for (let key in this.lnarr) {
+                    if (!response.data.data.includes(this.lnarr[key])) {
+                        this.translateLnArr.push(this.lnarr[key]);
+                    }
+                }
+            }
         );
     }
     private clickTagButton (e: Event, key: string) {//今クリックしたタグの情報を更新する。状態管理はupdateTargetTagInfoが実行されtargetTagInfoが更新される。
