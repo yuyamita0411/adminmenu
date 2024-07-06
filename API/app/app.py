@@ -137,8 +137,8 @@ def translate_json():
     data = request.get_json()
     if Function.fileExists(data["filePath"])["status_code"] != 200:
         return {}
-    multi()
-#    single(data["filePath"])
+#    multi(data["translateLanguageArr"])
+    single(data["filePath"], data["translateLanguageArr"])
     return {"status_code": 200}
 
 @app.route(os.getenv("VUE_APP_categoryDirectory"), methods=['POST'])
@@ -149,8 +149,6 @@ def getCategory():
 
     with open(data["filePath"], 'r', encoding='utf-8') as file:
         data = file.read()
-        print("ファイルデータ！")
-        print(data)
         return data
 
 @app.route(os.getenv("VUE_APP_categoryDetailDirectory"), methods=['POST'])
@@ -246,9 +244,6 @@ def checkFailTranslateDetail():
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
                         data = json.load(f)
-                        print("ああああああああ！！！！！！")
-                        print(file_path)
-                        print(extract_language_codes(file_path))
                         if any(contains_japanese(str(value)) for value in data.values()):
                             errorArr.append(extract_language_codes(file_path))
                         else:

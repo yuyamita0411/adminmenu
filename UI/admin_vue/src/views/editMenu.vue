@@ -261,12 +261,17 @@ export default class editMenu extends Vue {
     translateJsonData () {
         const checkedElements = this.$el.querySelectorAll('.translate-language-area input[type="checkbox"]:checked');
         this.translateLnArr = Array.from(checkedElements).map(el => (el as HTMLInputElement).value);
-        console.log(this.translateLnArr);
-        return;
-        /*this.ModifyJsonFile (
+        API.post (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileTranslateEndpoint}`,
-            `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
-        );*/
+            {
+                fileData: store.state.jsondata,
+                filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`,
+                translateLanguageArr: this.translateLnArr
+            },
+            (response: GenericObject) => {
+                console.log(response.data);
+            }
+        );
     }
     checkTranslateSuccess () {
         API.post(

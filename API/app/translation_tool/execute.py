@@ -9,15 +9,15 @@ from translation_tool.setting.json import JSON
 basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, '.env'))
 
-def multi():
-    for lnkey, ln in lnarr.items():
+def multi(translateLanguageArr):
+    for lnkey, ln in translateLanguageArr.items():
         for val in datafilrpatharr:
             savepath = val.replace(os.getenv("VUE_APP_FromCode"), ln)
             folderpath = savepath.replace('/index.json', '')
             common(val, folderpath, savepath, ln)
 
-def single(filePath):
-    for lnkey, ln in lnarr.items():
+def single(filePath, translateLanguageArr):
+    for ln in translateLanguageArr:
         saveDir = GetTwoUpperDirectory(filePath)
         common(filePath, f'{saveDir}/{ln}', f'{saveDir}/{ln}/{os.getenv("SaveFilename")}', ln)
 
