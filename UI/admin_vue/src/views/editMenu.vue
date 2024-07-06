@@ -164,6 +164,20 @@
                 >
                 <label :for="value">{{key}}</label>
             </div>
+            <div class="submitButtonInner pt1rem pb1rem">
+                <button
+                class="translationButton button_blue"
+                @click="checkall"
+                >全てにチェックを入れる</button>
+                <button
+                class="translationButton button_blue"
+                @click="unCheckall"
+                >全てのチェックを外す</button>
+                <button
+                class="translationButton button_blue"
+                @click="checkTranslateSuccess"
+                >翻訳できてない箇所のみ</button>
+            </div>
             <div class="submitButtonInner">
                 <button
                 class="translationButton button_pink"
@@ -277,6 +291,7 @@ export default class editMenu extends Vue {
         );
     }
     checkTranslateSuccess () {
+        this.translateLnArr = [];
         API.post(
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_checkFailTranslate}`,
             { directory: `${process.env.VUE_APP_articleDirPath}/${this.$route.params.id}`},
@@ -288,6 +303,21 @@ export default class editMenu extends Vue {
                 }
             }
         );
+    }
+    checkall () {
+        this.translateLnArr = [];
+        API.post(
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_checkFailTranslate}`,
+            { directory: `${process.env.VUE_APP_articleDirPath}/${this.$route.params.id}`},
+            (response: GenericObject) => {
+                for (let key in this.lnarr) {
+                    this.translateLnArr.push(this.lnarr[key]);
+                }
+            }
+        );
+    }
+    unCheckall () {
+        this.translateLnArr = [];
     }
     private clickTagButton (e: Event, key: string) {//今クリックしたタグの情報を更新する。状態管理はupdateTargetTagInfoが実行されtargetTagInfoが更新される。
         const target = e.target as HTMLElement
