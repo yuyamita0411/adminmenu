@@ -11,6 +11,7 @@
                 <div
                 :class="getPaddingClass(key, index)"
                 >
+                {{getFullImageUrl(value)}}
                     <span
                         :index="index"
                         :data-itemkey="key"
