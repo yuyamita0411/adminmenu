@@ -11,30 +11,40 @@
                 <div
                 :class="getPaddingClass(key, index)"
                 >
-                {{getFullImageUrl(value)}}
-                    <span
-                        :index="index"
-                        :data-itemkey="key"
-                        :class="tag.getElementTagLabel(key)"
-                        v-if="!EditingTargetIndex[index]"
-                        @click="clickTagButton($event, key)"
-                        style="min-height:1.5rem;"
-                        v-html="!isImageKey(key) ? displayArticleHTML(key, value) : ''"
+                    <div
+                    v-if="isImageKey(key)"
                     >
-                    </span>
-                    <textarea
-                        v-else
-                        :class="tag.getElementTagLabel(key)"
-                        :value="inputValues[key]"
-                        :style="textareaStyle"
-                        @input="handleInput($event, key)"
+                        <ImageUploader
+                            :key="`uploader-${key}`"
+                            :initialImageUrl="getFullImageUrl(value)"
+                            :isDragging="isDragging"
+                            :imgsrc="getFullImageUrl(value)"
+                            @updateImageUrl="updateImageUrl(key, $event)"
+                            @updateDraggingState="updateDraggingState"
+                        />
+                    </div>
+                    <div
+                    v-else
                     >
-                    </textarea>
-                    <ImageUploader
-                        v-if="isImageKey(key) && !EditingTargetIndex[index]"
-                        :key="`uploader-${key}`"
-                        :initialImageUrl="getFullImageUrl(value)"
-                    />
+                        <span
+                            v-if="!EditingTargetIndex[index]"
+                            :index="index"
+                            :data-itemkey="key"
+                            :class="tag.getElementTagLabel(key)"
+                            @click="clickTagButton($event, key)"
+                            style="min-height:1.5rem;"
+                            v-html="displayArticleHTML(key, value)"
+                        >
+                        </span>
+                        <textarea
+                            v-else
+                            :class="tag.getElementTagLabel(key)"
+                            :value="inputValues[key]"
+                            :style="textareaStyle"
+                            @input="handleInput($event, key)"
+                        >
+                        </textarea>
+                    </div>
                 </div>
                 <div
                     @mouseover="mouseOverButton"
@@ -251,6 +261,7 @@ export default class editMenu extends Vue {
     fullLinArr: GenericObject = fullLinArr;
     translateLnArr: string[] = [];
     selectedCategoryID = null;
+    isDragging = false;
 
     created () {
         //初期のデータを定義
@@ -333,6 +344,20 @@ export default class editMenu extends Vue {
     }
     unCheckall () {
         this.translateLnArr = [];
+    }
+
+    onDragOver() {
+        this.isDragging = true;
+    }
+    onDragLeave() {
+        this.isDragging = false;
+    }
+    updateDraggingState(isDragging: boolean) {
+        this.isDragging = isDragging;
+    }
+    updateImageUrl(key: string, url: string) {
+        store.commit('updateStoreObj', { target: 'inputValues', key: key, value: url });
+        store.commit('updateStoreObj', { target: 'jsondata', key: key, value: url });
     }
     private clickTagButton (e: Event, key: string) {//今クリックしたタグの情報を更新する。状態管理はupdateTargetTagInfoが実行されtargetTagInfoが更新される。
         const target = e.target as HTMLElement
