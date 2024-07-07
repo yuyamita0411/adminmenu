@@ -1822,3 +1822,462 @@ ty - 2024-04-17: 2024-04-17
 [pid: 11|app: 0|req: 103/572] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 02:22:17 2024] POST /api/category/detail => generated 1304 bytes in 27 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
 [pid: 9|app: 0|req: 38/573] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 02:22:17 2024] POST /api/folder/read => generated 13964 bytes in 140 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
 [pid: 12|app: 0|req: 157/574] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 02:22:17 2024] POST /api/dir/translate/check => generated 346 bytes in 283 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 205/576] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:10:42 2024] OPTIONS /api/folder/read => generated 0 bytes in 16 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 158/576] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:10:42 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 16 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 73/577] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:10:42 2024] OPTIONS /api/category/detail => generated 0 bytes in 36 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 104/578] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:10:42 2024] POST /api/folder/read => generated 13964 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 74/579] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:10:42 2024] POST /api/category/detail => generated 1304 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 159/580] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:10:42 2024] POST /api/dir/translate/check => generated 346 bytes in 341 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 105/581] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:11:18 2024] OPTIONS /api/folder/list => generated 0 bytes in 25 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 206/582] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:11:18 2024] POST /api/folder/list => generated 14 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 160/583] 192.168.65.1 () {54 vars in 868 bytes} [Sun Jul  7 03:11:18 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 161/584] 192.168.65.1 () {52 vars in 857 bytes} [Sun Jul  7 03:11:18 2024] POST /api/folder/title/by/list => generated 686 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 162/585] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:11:20 2024] OPTIONS /api/folder/read => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 163/586] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:11:20 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 207/587] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:11:20 2024] POST /api/folder/read => generated 13964 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 39/588] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:11:20 2024] OPTIONS /api/category/detail => generated 0 bytes in 21 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 164/589] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:11:20 2024] POST /api/category/detail => generated 1304 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 106/590] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:11:20 2024] POST /api/dir/translate/check => generated 346 bytes in 160 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 208/591] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:11:52 2024] OPTIONS /api/folder/list => generated 0 bytes in 31 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 209/592] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:11:52 2024] POST /api/folder/list => generated 14 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 210/593] 192.168.65.1 () {54 vars in 868 bytes} [Sun Jul  7 03:11:52 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 211/594] 192.168.65.1 () {52 vars in 857 bytes} [Sun Jul  7 03:11:52 2024] POST /api/folder/title/by/list => generated 686 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 212/595] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:11:53 2024] OPTIONS /api/folder/read => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 213/596] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:11:53 2024] POST /api/folder/read => generated 14534 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 165/597] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:11:53 2024] OPTIONS /api/category/detail => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 107/598] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:11:53 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 21 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 214/599] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:11:53 2024] POST /api/category/detail => generated 1304 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 75/600] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:11:53 2024] POST /api/dir/translate/check => generated 346 bytes in 172 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 166/601] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:12:19 2024] OPTIONS /api/folder/list => generated 0 bytes in 25 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 167/602] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:12:19 2024] POST /api/folder/list => generated 14 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 168/603] 192.168.65.1 () {54 vars in 868 bytes} [Sun Jul  7 03:12:19 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 169/604] 192.168.65.1 () {52 vars in 857 bytes} [Sun Jul  7 03:12:19 2024] POST /api/folder/title/by/list => generated 686 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 170/605] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:12:21 2024] OPTIONS /api/category/detail => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 171/606] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:12:21 2024] POST /api/category/detail => generated 1304 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 215/607] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:12:21 2024] OPTIONS /api/folder/read => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 108/608] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:12:21 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 21 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 109/609] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:12:21 2024] POST /api/folder/read => generated 13964 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 216/610] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:12:21 2024] POST /api/dir/translate/check => generated 346 bytes in 245 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 217/611] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:12:22 2024] POST /api/category/detail => generated 1304 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 172/612] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:12:22 2024] POST /api/folder/read => generated 13964 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 110/613] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:12:22 2024] POST /api/dir/translate/check => generated 346 bytes in 91 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 218/614] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:12:42 2024] OPTIONS /api/folder/list => generated 0 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 219/615] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:12:42 2024] POST /api/folder/list => generated 14 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 220/616] 192.168.65.1 () {54 vars in 868 bytes} [Sun Jul  7 03:12:42 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 173/617] 192.168.65.1 () {52 vars in 857 bytes} [Sun Jul  7 03:12:42 2024] POST /api/folder/title/by/list => generated 686 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 221/618] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:12:43 2024] OPTIONS /api/folder/read => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 174/619] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:12:43 2024] OPTIONS /api/category/detail => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 175/620] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:12:43 2024] POST /api/category/detail => generated 1304 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 76/621] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:12:43 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 15 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 111/622] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:12:43 2024] POST /api/folder/read => generated 13964 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 176/623] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:12:43 2024] POST /api/dir/translate/check => generated 346 bytes in 79 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 112/624] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:13:32 2024] OPTIONS /api/folder/read => generated 0 bytes in 92 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 77/625] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:13:32 2024] OPTIONS /api/category/detail => generated 0 bytes in 96 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 113/626] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:13:32 2024] POST /api/folder/read => generated 13964 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 40/627] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:13:32 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 181 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 222/628] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:13:32 2024] POST /api/category/detail => generated 1304 bytes in 96 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 78/629] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:13:32 2024] POST /api/dir/translate/check => generated 346 bytes in 412 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 79/631] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:14:29 2024] OPTIONS /api/folder/read => generated 0 bytes in 50 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 223/631] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:14:29 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 51 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 177/632] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:14:29 2024] OPTIONS /api/category/detail => generated 0 bytes in 61 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 178/633] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:14:29 2024] POST /api/category/detail => generated 1304 bytes in 58 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 224/634] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:14:29 2024] POST /api/folder/read => generated 13964 bytes in 78 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 114/635] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:14:29 2024] POST /api/dir/translate/check => generated 346 bytes in 291 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 179/637] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:15:57 2024] OPTIONS /api/category/detail => generated 0 bytes in 30 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 80/637] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:15:57 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 30 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 225/638] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:15:57 2024] OPTIONS /api/folder/read => generated 0 bytes in 38 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 81/639] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:15:57 2024] POST /api/category/detail => generated 1304 bytes in 31 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 115/640] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:15:57 2024] POST /api/folder/read => generated 13964 bytes in 52 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 226/641] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:15:57 2024] POST /api/dir/translate/check => generated 346 bytes in 237 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 227/642] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:19:31 2024] OPTIONS /api/category/detail => generated 0 bytes in 112 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 41/643] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:19:31 2024] OPTIONS /api/folder/read => generated 0 bytes in 113 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 180/644] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:19:31 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 113 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 228/645] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:19:32 2024] POST /api/category/detail => generated 1304 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 42/646] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:19:32 2024] POST /api/folder/read => generated 13964 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 181/647] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:19:32 2024] POST /api/dir/translate/check => generated 346 bytes in 181 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 229/648] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:20:23 2024] OPTIONS /api/folder/read => generated 0 bytes in 29 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 182/649] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:20:23 2024] OPTIONS /api/category/detail => generated 0 bytes in 29 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 116/650] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:20:23 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 70 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 230/651] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:20:23 2024] POST /api/category/detail => generated 1304 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 82/652] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:20:23 2024] POST /api/folder/read => generated 13964 bytes in 168 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 183/653] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:20:23 2024] POST /api/dir/translate/check => generated 346 bytes in 276 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 83/656] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:21:28 2024] OPTIONS /api/category/detail => generated 0 bytes in 15 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 184/656] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:21:28 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 15 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 231/656] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:21:28 2024] OPTIONS /api/folder/read => generated 0 bytes in 15 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 232/657] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:21:28 2024] POST /api/folder/read => generated 13964 bytes in 90 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 117/658] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:21:28 2024] POST /api/category/detail => generated 1304 bytes in 128 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 185/659] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:21:28 2024] POST /api/dir/translate/check => generated 346 bytes in 307 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 84/662] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:22:01 2024] OPTIONS /api/category/detail => generated 0 bytes in 25 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 233/662] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:22:01 2024] OPTIONS /api/folder/read => generated 0 bytes in 25 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 118/662] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:22:01 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 25 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 119/663] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:22:01 2024] POST /api/category/detail => generated 1304 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 234/664] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:22:01 2024] POST /api/folder/read => generated 13964 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 186/665] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:22:01 2024] POST /api/dir/translate/check => generated 346 bytes in 136 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 235/667] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:23:02 2024] OPTIONS /api/category/detail => generated 0 bytes in 39 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 85/667] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:23:02 2024] OPTIONS /api/folder/read => generated 0 bytes in 40 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 187/668] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:23:02 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 39 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 188/669] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:23:02 2024] POST /api/folder/read => generated 13964 bytes in 27 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 236/670] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:23:02 2024] POST /api/category/detail => generated 1304 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 120/671] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:23:02 2024] POST /api/dir/translate/check => generated 346 bytes in 442 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 121/673] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:35:09 2024] OPTIONS /api/category/detail => generated 0 bytes in 37 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 86/673] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:35:09 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 37 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 237/674] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:35:09 2024] OPTIONS /api/folder/read => generated 0 bytes in 45 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 238/675] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:35:09 2024] POST /api/category/detail => generated 1304 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 87/676] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:35:09 2024] POST /api/folder/read => generated 13964 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 122/677] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:35:09 2024] POST /api/dir/translate/check => generated 346 bytes in 301 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 239/679] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:35:40 2024] OPTIONS /api/folder/read => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 123/679] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:35:40 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 20 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 88/680] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:35:40 2024] POST /api/folder/read => generated 13964 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 189/681] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:35:40 2024] OPTIONS /api/category/detail => generated 0 bytes in 55 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 89/682] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:35:40 2024] POST /api/category/detail => generated 1304 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 240/683] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:35:40 2024] POST /api/dir/translate/check => generated 346 bytes in 224 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 90/684] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:38:41 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 204 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 124/685] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:38:41 2024] OPTIONS /api/category/detail => generated 0 bytes in 206 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 43/686] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:38:41 2024] OPTIONS /api/folder/read => generated 0 bytes in 292 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 241/687] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:38:41 2024] POST /api/category/detail => generated 1304 bytes in 111 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 125/688] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:38:41 2024] POST /api/folder/read => generated 13964 bytes in 86 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 190/689] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:38:41 2024] POST /api/dir/translate/check => generated 346 bytes in 446 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 44/692] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:41:52 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 91/692] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:41:52 2024] OPTIONS /api/category/detail => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 242/692] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:41:52 2024] OPTIONS /api/folder/read => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 92/693] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:41:52 2024] POST /api/category/detail => generated 1304 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 243/694] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:41:52 2024] POST /api/folder/read => generated 13964 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 45/695] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:41:52 2024] POST /api/dir/translate/check => generated 346 bytes in 319 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 93/696] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:44:38 2024] OPTIONS /api/folder/read => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 244/697] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:44:38 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 23 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 191/698] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:44:38 2024] OPTIONS /api/category/detail => generated 0 bytes in 36 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 94/699] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:44:38 2024] POST /api/folder/read => generated 13964 bytes in 33 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 245/700] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:44:38 2024] POST /api/category/detail => generated 1304 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 126/701] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:44:38 2024] POST /api/dir/translate/check => generated 346 bytes in 267 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 95/702] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:46:06 2024] OPTIONS /api/category/detail => generated 0 bytes in 47 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 46/703] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:46:06 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 50 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 192/704] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:46:06 2024] OPTIONS /api/folder/read => generated 0 bytes in 50 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 246/705] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:46:06 2024] POST /api/category/detail => generated 1304 bytes in 30 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 193/706] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:46:06 2024] POST /api/folder/read => generated 13964 bytes in 74 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 127/707] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:46:06 2024] POST /api/dir/translate/check => generated 346 bytes in 369 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 47/709] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:47:07 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 11 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 194/709] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:47:07 2024] OPTIONS /api/folder/read => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 247/710] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:47:07 2024] OPTIONS /api/category/detail => generated 0 bytes in 13 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 248/711] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:47:07 2024] POST /api/category/detail => generated 1304 bytes in 73 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 128/712] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:47:07 2024] POST /api/folder/read => generated 13964 bytes in 112 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 96/713] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:47:07 2024] POST /api/dir/translate/check => generated 346 bytes in 339 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 97/714] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:48:50 2024] OPTIONS /api/folder/read => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 249/715] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:48:50 2024] OPTIONS /api/category/detail => generated 0 bytes in 16 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 129/716] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:48:50 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 32 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 98/717] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:48:50 2024] POST /api/folder/read => generated 13964 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 250/718] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:48:50 2024] POST /api/category/detail => generated 1304 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 99/719] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:48:50 2024] POST /api/dir/translate/check => generated 346 bytes in 301 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 251/720] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:50:01 2024] OPTIONS /api/category/detail => generated 0 bytes in 38 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 130/721] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:50:01 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 53 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 195/722] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:50:01 2024] OPTIONS /api/folder/read => generated 0 bytes in 58 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 252/723] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:50:01 2024] POST /api/folder/read => generated 13964 bytes in 99 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 48/724] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:50:01 2024] POST /api/category/detail => generated 1304 bytes in 120 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 131/725] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:50:01 2024] POST /api/dir/translate/check => generated 346 bytes in 376 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 100/726] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 03:53:05 2024] OPTIONS /api/folder/read => generated 0 bytes in 47 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 132/727] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 03:53:05 2024] OPTIONS /api/category/detail => generated 0 bytes in 49 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 49/728] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 03:53:05 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 52 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 101/729] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 03:53:05 2024] POST /api/category/detail => generated 1304 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 196/730] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 03:53:05 2024] POST /api/folder/read => generated 13964 bytes in 140 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 253/731] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 03:53:05 2024] POST /api/dir/translate/check => generated 346 bytes in 323 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 102/732] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:01:18 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 115 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 254/733] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:01:18 2024] OPTIONS /api/category/detail => generated 0 bytes in 117 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 133/734] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:01:18 2024] POST /api/category/detail => generated 1304 bytes in 69 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 50/735] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:01:18 2024] OPTIONS /api/folder/read => generated 0 bytes in 457 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 134/736] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:01:19 2024] POST /api/folder/read => generated 13964 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 255/737] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:01:18 2024] POST /api/dir/translate/check => generated 346 bytes in 439 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 256/738] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:04:27 2024] OPTIONS /api/folder/read => generated 0 bytes in 12 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 135/739] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:04:27 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 12 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 257/740] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:04:27 2024] POST /api/folder/read => generated 13964 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 197/741] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:04:27 2024] OPTIONS /api/category/detail => generated 0 bytes in 46 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 258/742] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:04:27 2024] POST /api/category/detail => generated 1304 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 136/743] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:04:27 2024] POST /api/dir/translate/check => generated 346 bytes in 265 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 137/745] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:06:39 2024] OPTIONS /api/category/detail => generated 0 bytes in 39 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 259/745] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:06:39 2024] OPTIONS /api/folder/read => generated 0 bytes in 39 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 198/746] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:06:39 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 47 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 138/747] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:06:39 2024] POST /api/folder/read => generated 13964 bytes in 54 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 260/748] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:06:39 2024] POST /api/category/detail => generated 1304 bytes in 65 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 51/749] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:06:39 2024] POST /api/dir/translate/check => generated 346 bytes in 328 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 199/751] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:09:41 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 52/751] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:09:41 2024] OPTIONS /api/category/detail => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 139/752] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:09:41 2024] OPTIONS /api/folder/read => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 140/753] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:09:41 2024] POST /api/category/detail => generated 1304 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 200/754] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:09:41 2024] POST /api/folder/read => generated 13964 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 261/755] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:09:41 2024] POST /api/dir/translate/check => generated 346 bytes in 200 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 262/756] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:11:04 2024] OPTIONS /api/folder/read => generated 0 bytes in 12 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 141/757] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:11:04 2024] OPTIONS /api/category/detail => generated 0 bytes in 13 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 201/758] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:11:04 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 13 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 263/759] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:11:04 2024] POST /api/folder/read => generated 13964 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 103/760] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:11:04 2024] POST /api/category/detail => generated 1304 bytes in 33 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 53/761] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:11:04 2024] POST /api/dir/translate/check => generated 346 bytes in 212 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 54/763] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:17:11 2024] OPTIONS /api/category/detail => generated 0 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 264/763] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:17:11 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 142/764] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:17:11 2024] OPTIONS /api/folder/read => generated 0 bytes in 28 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 104/765] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:17:11 2024] POST /api/folder/read => generated 13964 bytes in 61 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 202/766] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:17:11 2024] POST /api/category/detail => generated 1304 bytes in 67 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 55/767] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:17:11 2024] POST /api/dir/translate/check => generated 346 bytes in 236 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 265/769] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:18:25 2024] OPTIONS /api/folder/read => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 203/769] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:18:25 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 143/770] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:18:25 2024] OPTIONS /api/category/detail => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 266/771] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:18:25 2024] POST /api/category/detail => generated 1304 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 144/772] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:18:25 2024] POST /api/folder/read => generated 13964 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 204/773] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:18:25 2024] POST /api/dir/translate/check => generated 346 bytes in 225 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 145/774] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:26:56 2024] OPTIONS /api/folder/list => generated 0 bytes in 25 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 205/775] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:26:56 2024] POST /api/folder/list => generated 14 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 267/776] 192.168.65.1 () {54 vars in 868 bytes} [Sun Jul  7 04:26:56 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 8 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 206/777] 192.168.65.1 () {52 vars in 857 bytes} [Sun Jul  7 04:26:56 2024] POST /api/folder/title/by/list => generated 686 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 105/779] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:33:07 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 35 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 207/780] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:33:07 2024] OPTIONS /api/category/detail => generated 0 bytes in 38 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 268/779] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:33:07 2024] OPTIONS /api/folder/read => generated 0 bytes in 36 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 106/781] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:33:07 2024] POST /api/folder/read => generated 13964 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 146/782] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:33:07 2024] POST /api/category/detail => generated 1304 bytes in 65 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 269/783] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:33:07 2024] POST /api/dir/translate/check => generated 346 bytes in 241 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 270/785] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:33:52 2024] OPTIONS /api/category/detail => generated 0 bytes in 13 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 208/785] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:33:52 2024] OPTIONS /api/folder/read => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 107/786] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:33:52 2024] POST /api/category/detail => generated 1304 bytes in 42 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 147/787] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:33:52 2024] POST /api/folder/read => generated 13964 bytes in 49 msecs (HTTP/1.1 200) 4 headers in 148 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 56/788] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:33:52 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 68 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 271/789] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:33:52 2024] POST /api/dir/translate/check => generated 346 bytes in 183 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 272/790] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:34:02 2024] OPTIONS /api/folder/list => generated 0 bytes in 12 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 273/791] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:34:02 2024] POST /api/folder/list => generated 14 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 274/792] 192.168.65.1 () {54 vars in 868 bytes} [Sun Jul  7 04:34:02 2024] OPTIONS /api/folder/title/by/list => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 275/793] 192.168.65.1 () {52 vars in 857 bytes} [Sun Jul  7 04:34:02 2024] POST /api/folder/title/by/list => generated 686 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 276/794] 192.168.65.1 () {54 vars in 844 bytes} [Sun Jul  7 04:34:06 2024] OPTIONS /api/dir/make => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 277/795] 192.168.65.1 () {52 vars in 833 bytes} [Sun Jul  7 04:34:06 2024] POST /api/dir/make => generated 3 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 136 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 209/796] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:34:06 2024] POST /api/folder/list => generated 18 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 210/797] 192.168.65.1 () {52 vars in 857 bytes} [Sun Jul  7 04:34:06 2024] POST /api/folder/title/by/list => generated 804 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 278/798] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:34:08 2024] OPTIONS /api/folder/read => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 211/799] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:34:08 2024] OPTIONS /api/category/detail => generated 0 bytes in 3 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 279/800] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:34:08 2024] POST /api/folder/read => generated 41 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 145 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 212/801] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:34:08 2024] POST /api/category/detail => generated 1304 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 108/802] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:34:08 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 213/803] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:34:08 2024] POST /api/dir/translate/check => generated 12 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 280/805] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:34:59 2024] OPTIONS /api/file/upload => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 214/805] 192.168.65.1 () {54 vars in 848 bytes} [Sun Jul  7 04:34:59 2024] OPTIONS /api/dir/update => generated 0 bytes in 14 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 281/806] 192.168.65.1 () {52 vars in 841 bytes} [Sun Jul  7 04:34:59 2024] POST /api/file/upload => generated 43 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 215/808] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:35:02 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 27 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 109/808] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:35:02 2024] OPTIONS /api/category/detail => generated 0 bytes in 27 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 282/809] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:35:02 2024] OPTIONS /api/folder/read => generated 0 bytes in 33 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 283/810] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:35:02 2024] POST /api/category/detail => generated 1304 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 216/811] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:35:02 2024] POST /api/folder/read => generated 328 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 57/812] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:35:02 2024] POST /api/dir/translate/check => generated 12 bytes in 48 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 148/813] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:34:59 2024] POST /api/dir/update => generated 119 bytes in 2703 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 2 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.24 (64bit) on [Sun Jul  7 04:50:35 2024] ***
+compiled with version: 12.2.0 on 02 April 2024 03:29:23
+os: Linux-6.5.11-linuxkit #1 SMP PREEMPT Wed Dec  6 17:08:31 UTC 2023
+nodename: febec337b4f4
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :3243 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.19 (default, Mar 20 2024, 20:47:03)  [GCC 12.2.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xaaaac5cf8ab0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xaaaac5cf8ab0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 9, cores: 1)
+spawned uWSGI worker 2 (pid: 10, cores: 1)
+spawned uWSGI worker 3 (pid: 11, cores: 1)
+spawned uWSGI worker 4 (pid: 12, cores: 1)
+spawned uWSGI worker 5 (pid: 13, cores: 1)
+[pid: 12|app: 0|req: 1/3] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:51:11 2024] OPTIONS /api/category/detail => generated 0 bytes in 33 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 1/3] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:51:11 2024] OPTIONS /api/folder/read => generated 0 bytes in 32 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 1/3] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:51:11 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 32 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 2/4] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:51:11 2024] POST /api/category/detail => generated 1304 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 1/5] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:51:11 2024] POST /api/folder/read => generated 328 bytes in 46 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 2/6] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:51:11 2024] POST /api/dir/translate/check => generated 12 bytes in 51 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 3/8] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:51:21 2024] OPTIONS /api/file/upload => generated 0 bytes in 9 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 2/9] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:51:21 2024] OPTIONS /api/file/upload => generated 0 bytes in 9 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 3/9] 192.168.65.1 () {54 vars in 848 bytes} [Sun Jul  7 04:51:21 2024] OPTIONS /api/dir/update => generated 0 bytes in 9 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 4/10] 192.168.65.1 () {52 vars in 841 bytes} [Sun Jul  7 04:51:21 2024] POST /api/file/upload => generated 43 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[2024-07-07 04:51:21,203] ERROR in app: Exception on /api/file/upload [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/./app.py", line 38, in save_json
+    if not File.file_exists_adtion(data["filePath"]):
+KeyError: 'filePath'
+[pid: 13|app: 0|req: 4/11] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:51:21 2024] POST /api/file/upload => generated 265 bytes in 19 msecs (HTTP/1.1 500) 4 headers in 165 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 3/12] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:51:21 2024] POST /api/dir/update => generated 119 bytes in 2541 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 5/14] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:54:34 2024] OPTIONS /api/category/detail => generated 0 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 5/14] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:54:34 2024] OPTIONS /api/folder/read => generated 0 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 2/15] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:54:34 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 27 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 6/16] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:54:34 2024] POST /api/category/detail => generated 1304 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 6/17] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:54:34 2024] POST /api/folder/read => generated 328 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 1/18] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:54:34 2024] POST /api/dir/translate/check => generated 12 bytes in 51 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 7/20] 192.168.65.1 () {54 vars in 848 bytes} [Sun Jul  7 04:54:44 2024] OPTIONS /api/dir/update => generated 0 bytes in 33 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 7/20] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:54:44 2024] OPTIONS /api/file/upload => generated 0 bytes in 33 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 4/21] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:54:44 2024] OPTIONS /api/file/upload => generated 0 bytes in 34 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[2024-07-07 04:54:44,823] ERROR in app: Exception on /api/file/upload [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/./app.py", line 38, in save_json
+    if not File.file_exists_adtion(data["filePath"]):
+KeyError: 'filePath'
+[pid: 13|app: 0|req: 8/22] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:54:44 2024] POST /api/file/upload => generated 265 bytes in 11 msecs (HTTP/1.1 500) 4 headers in 165 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 3/23] 192.168.65.1 () {52 vars in 841 bytes} [Sun Jul  7 04:54:44 2024] POST /api/file/upload => generated 43 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 8/24] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:54:44 2024] POST /api/dir/update => generated 119 bytes in 2261 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 9/25] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:54:47 2024] OPTIONS /api/category/detail => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 13|app: 0|req: 9/26] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:54:47 2024] OPTIONS /api/folder/read => generated 0 bytes in 11 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 2/27] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:54:47 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 15 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 5/28] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:54:47 2024] POST /api/category/detail => generated 1304 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 10/29] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:54:47 2024] POST /api/folder/read => generated 317 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 10/30] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:54:47 2024] POST /api/dir/translate/check => generated 12 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.24 (64bit) on [Sun Jul  7 04:56:33 2024] ***
+compiled with version: 12.2.0 on 02 April 2024 03:29:23
+os: Linux-6.5.11-linuxkit #1 SMP PREEMPT Wed Dec  6 17:08:31 UTC 2023
+nodename: febec337b4f4
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :3243 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.19 (default, Mar 20 2024, 20:47:03)  [GCC 12.2.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xaaaae5dd8ab0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xaaaae5dd8ab0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+[pid: 10|app: 0|req: 1/1] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:57:12 2024] OPTIONS /api/category/detail => generated 0 bytes in 53 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 1/2] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:57:12 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 40 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 1/3] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:57:12 2024] OPTIONS /api/folder/read => generated 0 bytes in 54 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 2/4] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:57:12 2024] POST /api/folder/read => generated 317 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 146 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 1/5] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:57:12 2024] POST /api/category/detail => generated 1304 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 8|app: 0|req: 1/6] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:57:12 2024] POST /api/dir/translate/check => generated 12 bytes in 54 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 2/8] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:57:26 2024] OPTIONS /api/file/upload => generated 0 bytes in 25 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 2/8] 192.168.65.1 () {54 vars in 848 bytes} [Sun Jul  7 04:57:26 2024] OPTIONS /api/dir/update => generated 0 bytes in 21 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 3/9] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:57:26 2024] OPTIONS /api/file/upload => generated 0 bytes in 11 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[2024-07-07 04:57:26,748] ERROR in app: Exception on /api/file/upload [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/./app.py", line 38, in save_json
+    if not File.file_exists_adtion(data["filePath"]):
+KeyError: 'filePath'
+[pid: 9|app: 0|req: 2/10] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:57:26 2024] POST /api/file/upload => generated 265 bytes in 46 msecs (HTTP/1.1 500) 4 headers in 165 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 3/11] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:57:26 2024] POST /api/file/upload => generated 43 bytes in 50 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 3/12] 192.168.65.1 () {52 vars in 845 bytes} [Sun Jul  7 04:57:26 2024] POST /api/dir/update => generated 119 bytes in 2491 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 4/14] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 04:57:35 2024] OPTIONS /api/category/detail => generated 0 bytes in 12 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 4/14] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 04:57:35 2024] OPTIONS /api/folder/read => generated 0 bytes in 12 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 4/15] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 04:57:35 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 11 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 8|app: 0|req: 2/16] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 04:57:35 2024] POST /api/category/detail => generated 1304 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 5/17] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 04:57:35 2024] POST /api/folder/read => generated 908240 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 149 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 3/18] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 04:57:35 2024] POST /api/dir/translate/check => generated 12 bytes in 81 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 5/20] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 05:00:01 2024] OPTIONS /api/category/detail => generated 0 bytes in 44 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 6/20] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 05:00:01 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 44 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 9|app: 0|req: 4/21] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 05:00:01 2024] OPTIONS /api/folder/read => generated 0 bytes in 66 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 8|app: 0|req: 3/22] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 05:00:01 2024] POST /api/category/detail => generated 1304 bytes in 52 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 5/23] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 05:00:01 2024] POST /api/folder/read => generated 908240 bytes in 74 msecs (HTTP/1.1 200) 4 headers in 149 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 6/24] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 05:00:01 2024] POST /api/dir/translate/check => generated 12 bytes in 154 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 5/26] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 05:00:11 2024] OPTIONS /api/file/upload => generated 0 bytes in 20 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 6/26] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 05:00:11 2024] OPTIONS /api/file/upload => generated 0 bytes in 20 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 8|app: 0|req: 4/27] 192.168.65.1 () {54 vars in 848 bytes} [Sun Jul  7 05:00:11 2024] OPTIONS /api/dir/update => generated 0 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 8|app: 0|req: 5/28] 192.168.65.1 () {52 vars in 843 bytes} [Sun Jul  7 05:00:11 2024] POST /api/file/upload => generated 43 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)
+[2024-07-07 05:00:11,204] ERROR in app: Exception on /api/file/upload [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/./app.py", line 38, in save_json
+    if not File.file_exists_adtion(data["filePath"]):
+  File "/app/./module/file.py", line 10, in file_exists_adtion
+    os.makedirs(os.path.dirname(filePath), exist_ok=True)
+  File "/usr/local/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+FileNotFoundError: [Errno 2] No such file or directory: ''
+[pid: 11|app: 0|req: 7/29] 192.168.65.1 () {52 vars in 843 bytes} [Sun Jul  7 05:00:11 2024] POST /api/file/upload => generated 265 bytes in 42 msecs (HTTP/1.1 500) 4 headers in 165 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 6/30] 192.168.65.1 () {52 vars in 841 bytes} [Sun Jul  7 05:00:11 2024] POST /api/dir/update => generated 119 bytes in 2469 msecs (HTTP/1.1 200) 4 headers in 138 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 8/33] 192.168.65.1 () {54 vars in 858 bytes} [Sun Jul  7 05:01:15 2024] OPTIONS /api/category/detail => generated 0 bytes in 38 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 10|app: 0|req: 7/33] 192.168.65.1 () {54 vars in 850 bytes} [Sun Jul  7 05:01:15 2024] OPTIONS /api/folder/read => generated 0 bytes in 39 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 12|app: 0|req: 7/33] 192.168.65.1 () {54 vars in 866 bytes} [Sun Jul  7 05:01:15 2024] OPTIONS /api/dir/translate/check => generated 0 bytes in 38 msecs (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+[pid: 11|app: 0|req: 9/34] 192.168.65.1 () {52 vars in 839 bytes} [Sun Jul  7 05:01:15 2024] POST /api/folder/read => generated 6643 bytes in 34 msecs (HTTP/1.1 200) 4 headers in 147 bytes (1 switches on core 0)
+[pid: 8|app: 0|req: 6/35] 192.168.65.1 () {52 vars in 847 bytes} [Sun Jul  7 05:01:15 2024] POST /api/category/detail => generated 1304 bytes in 39 msecs (HTTP/1.1 200) 4 headers in 139 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 7/36] 192.168.65.1 () {52 vars in 855 bytes} [Sun Jul  7 05:01:15 2024] POST /api/dir/translate/check => generated 12 bytes in 42 msecs (HTTP/1.1 200) 4 headers in 137 bytes (1 switches on core 0)

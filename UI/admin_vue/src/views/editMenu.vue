@@ -16,8 +16,11 @@
                     >
                         <ImageUploader
                             :key="`uploader-${key}`"
+                            :jsonkey="key"
+                            :imgUpdir="`/data/detail/${$route.params.id}/img/`"
                             :initialImageUrl="getFullImageUrl(value)"
                             :isDragging="isDragging"
+                            :isval="value"
                             :imgsrc="getFullImageUrl(value)"
                             @updateImageUrl="updateImageUrl(key, $event)"
                             @updateDraggingState="updateDraggingState"
@@ -298,6 +301,24 @@ export default class editMenu extends Vue {
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_UpdateDirContentEndpoint}`,
             "dummy"
         );
+
+        //画像アップロード関連
+        let uploadimgInfo: GenericObject = {}
+        for (let key in store.state.jsondata) {
+            if (this.isImageKey(key)) {
+                uploadimgInfo[key] = store.state.jsondata[key]
+            }
+        }
+        API.post (
+            `${store.state.pageinfo.base_url}${process.env.VUE_APP_uploadfile}`,
+            {
+                fileData: uploadimgInfo,
+                filePath: ""
+            },
+            (response: GenericObject) => {
+                console.log(response.data);
+            }
+        );
     }
     translateJsonData (whichlng: string) {
         //ChatGpt,GoogleAPI
@@ -358,6 +379,7 @@ export default class editMenu extends Vue {
     updateImageUrl(key: string, url: string) {
         store.commit('updateStoreObj', { target: 'inputValues', key: key, value: url });
         store.commit('updateStoreObj', { target: 'jsondata', key: key, value: url });
+        console.log(store.state.jsondata);
     }
     private clickTagButton (e: Event, key: string) {//今クリックしたタグの情報を更新する。状態管理はupdateTargetTagInfoが実行されtargetTagInfoが更新される。
         const target = e.target as HTMLElement

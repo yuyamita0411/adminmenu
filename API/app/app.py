@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from werkzeug.utils import secure_filename
 from flask_cors import CORS
 
 from module.function import Function
@@ -259,6 +260,13 @@ def checkFailTranslateDetail():
                 except UnicodeDecodeError as e:
                     continue
     return {"data": okArr}
+
+# ファイルアップロード関連
+@app.route(os.getenv("VUE_APP_uploadfile"), methods=['POST'])
+def upload_file():
+    info = request.get_json()
+    return {"fileData": ""}
+
 
 if __name__ == '__main__':
     app.run(debug=True)

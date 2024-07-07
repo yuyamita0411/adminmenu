@@ -1,31 +1,40 @@
 <template>
   <div>
-    <img
-      v-if="imgsrc && !internalIsDragging && !loadError"
-      :src="imgsrc"
-      @dragover.prevent="onDragOver" 
-      @dragleave.prevent="onDragLeave" 
-      @drop.prevent="handleDrop"
-      @error="onImageError"
-      alt="Uploaded Image" class="uploaded-image" 
-    />
-    <div 
-      v-else
+    <div
       class="drop-area" 
       @dragover.prevent="onDragOver" 
       @dragleave.prevent="onDragLeave" 
-      @drop.prevent="handleDrop"
-      :class="{ 'dragging': internalIsDragging }"
+      @drop.prevent="handleDrop($event, jsonkey)"
+      :class="{ 'dragging': internalIsDragging}"
     >
-      <p v-if="!file">画像をアップロード</p>
-      <input type="file" @change="handleFileChange" ref="fileInput" style="display:none;" />
-      <img v-if="file" :src="fileUrl" alt="Uploaded Image" class="uploaded-image" />
+        <input type="file" @change="handleFileChange" ref="fileInput" style="display:none;" />
+        <div v-if="!file"><!-- ファイルがない時 -->
+            <img
+            v-if="isval && !loadError"
+            :src="imgsrc"
+            @dragover.prevent="onDragOver" 
+            @dragleave.prevent="onDragLeave" 
+            @drop.prevent="handleDrop($event, jsonkey)"
+            @error="onImageError"
+            alt="Uploaded Image" class="uploaded-image" 
+            />
+            <p v-if="!loadError && !isval">画像をアップロード</p>
+            <p v-if="loadError && isval">画像アップロードに失敗しました {{imgsrc}}</p>
+        </div>
+        <div v-else><!-- ファイルがある時 -->
+            <img v-if="file" :src="fileUrl" alt="Uploaded Image" class="uploaded-image" />
+            <div class="w-100 d-flex">
+                <label>画像に名前をつける</label>
+                <input type="text" @input="setImgName($event, jsonkey)">
+            </div>
+        </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
+import {store} from '../../store/common/index';
 
 export default defineComponent({
   name: 'ImageUploader',
@@ -34,7 +43,19 @@ export default defineComponent({
       type: String,
       default: ''
     },
+    jsonkey: {
+      type: String,
+      default: ''
+    },
     imgsrc: {
+      type: String,
+      default: ''
+    },
+    imgUpdir: {
+      type: String,
+      default: ''
+    },
+    isval: {
       type: String,
       default: ''
     },
@@ -49,13 +70,21 @@ export default defineComponent({
     const internalIsDragging = ref<boolean>(props.isDragging);
     const loadError = ref<boolean>(false);
 
-    const handleDrop = (event: DragEvent) => {
+    const handleDrop = (event: DragEvent, keyname: string) => {
       const droppedFiles = event.dataTransfer?.files;
       if (droppedFiles && droppedFiles.length > 0) {
         handleFile(droppedFiles[0]);
         internalIsDragging.value = false;
         emit('updateDraggingState', false);
+        console.log("ファイルアップ完了！！");
+        console.log(props.jsonkey);
       }
+    };
+
+    const setImgName = (event: Event, keyname: string) => {
+        const input = event.target as HTMLInputElement;
+        store.commit('updateStoreObj', { target: 'jsondata', key: keyname, value: `${props.imgUpdir}${input.value}.png` });
+        console.log(store.state.jsondata);
     };
 
     const handleFileChange = (event: Event) => {
@@ -103,6 +132,7 @@ export default defineComponent({
       internalIsDragging,
       loadError,
       handleDrop,
+      setImgName,
       handleFileChange,
       onDragOver,
       onDragLeave,
@@ -114,16 +144,16 @@ export default defineComponent({
 
 <style scoped>
 .drop-area {
-  border: 2px dashed #ccc;
-  padding: 20px;
-  text-align: center;
-  transition: border-color 0.3s;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    transition: border-color 0.3s;
 }
 .drop-area.dragging {
-  border-color: #000;
+    border-color: #000;
 }
 .uploaded-image {
-  max-width: 100%;
-  margin-top: 20px;
+    max-width: 100%;
+    margin-top: 20px;
 }
 </style>
