@@ -11,24 +11,45 @@
                 <div
                 :class="getPaddingClass(key, index)"
                 >
-                    <span
-                        :index="index"
-                        :data-itemkey="key"
-                        :class="tag.getElementTagLabel(key)"
-                        v-if="!EditingTargetIndex[index]"
-                        @click="clickTagButton($event, key)"
-                        style="min-height:1.5rem;"
-                        v-html="displayArticleHTML(key, value)"
+                    <div
+                    v-if="isImageKey(key)"
                     >
-                    </span>
-                    <textarea
-                        v-else
-                        :class="tag.getElementTagLabel(key)"
-                        :value="inputValues[key]"
-                        :style="textareaStyle"
-                        @input="handleInput($event, key)"
+                        <ImageUploader
+                            :key="`uploader-${key}`"
+                            :jsonkey="key"
+                            :imgUpdir="uploadpath"
+                            :initialImageUrl="getFullImageUrl(value)"
+                            :isDragging="isDragging"
+                            :isval="value"
+                            :imgsrc="getFullImageUrl(value)"
+                            @updateImageUrl="updateImageUrl(key, $event)"
+                            @updateDraggingState="updateDraggingState"
+                            @onFileChange="handleFileChange(key, $event)"
+                            ref="imageUploaders"
+                        />
+                    </div>
+                    <div
+                    v-else
                     >
-                    </textarea>
+                        <span
+                            v-if="!EditingTargetIndex[index]"
+                            :index="index"
+                            :data-itemkey="key"
+                            :class="tag.getElementTagLabel(key)"
+                            @click="clickTagButton($event, key)"
+                            style="min-height:1.5rem;"
+                            v-html="displayArticleHTML(key, value)"
+                        >
+                        </span>
+                        <textarea
+                            v-else
+                            :class="tag.getElementTagLabel(key)"
+                            :value="inputValues[key]"
+                            :style="textareaStyle"
+                            @input="handleInput($event, key)"
+                        >
+                        </textarea>
+                    </div>
                 </div>
                 <div
                     @mouseover="mouseOverButton"
@@ -188,6 +209,12 @@ import { API } from '../module/function';
 import { Menu } from '../module/editMenu/index';
 import { GenericObject } from '../module/type';
 
+import ImageUploader from '../components/editMenu/ImageUploader.vue';
+interface ImageUploaderComponent extends Vue {
+  jsonkey: string;
+  file: File | null;
+}
+
 @Options({
     computed: {
         ...mapState(['modalStatus', 'jsondata', 'HoverTargetIndex', 'EditingTargetIndex', 'isLoading']),
@@ -200,6 +227,9 @@ import { GenericObject } from '../module/type';
         isLoading() {
             return store.state.isLoading;
         }
+    },
+    components: {
+        ImageUploader
     }
 })
 
@@ -223,6 +253,8 @@ export default class HomeView extends Vue {
     fullLinArr: GenericObject = fullLinArr;
     translateLnArr: string[] = [];
     selectedCategoryID = null;
+    isDragging = false;
+    uploadpath = '';
 
     created () {
         //初期のデータを定義
@@ -232,6 +264,7 @@ export default class HomeView extends Vue {
         this.checkTranslateSuccess();
         this.inputValues = store.state.jsondata;
         this.selectedCategoryID = store.state.jsondata["categoryID"];
+        this.uploadpath = `${process.env.VUE_APP_homeDirPath}/img/`
     }
     readData() {
         API.post (
@@ -250,7 +283,7 @@ export default class HomeView extends Vue {
             }
         );
     }
-    updateJsonData () {
+    async updateJsonData () {
         this.ModifyJsonFile (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileEndpoint}`,
             `${process.env.VUE_APP_homeDirPath}${this.$route.path}/index.json`
@@ -259,6 +292,39 @@ export default class HomeView extends Vue {
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_UpdateDirContentEndpoint}`,
             "dummy"
         );
+
+        // 画像アップロード関連
+        const uploadPromises: Promise<any>[] = [];
+        const imageUploaders = this.$refs.imageUploaders as unknown as ImageUploaderComponent[];
+        
+        for (const key in store.state.jsondata) {
+            if (this.isImageKey(key)) {
+                const uploader = imageUploaders.find((uploader) => uploader.jsonkey === key);
+                if (uploader && uploader.file) {
+                    const formData = new FormData();
+                    formData.append('file', uploader.file);
+                    formData.append('jsonkey', key);
+                    formData.append('filePath', store.state.jsondata[key]);
+                    uploadPromises.push(
+                        fetch(`${store.state.pageinfo.base_url}${process.env.VUE_APP_uploadimg}`, {
+                            method: 'POST',
+                            body: formData,
+                        }).then(response => response.json())
+                    );
+                }
+            }
+        }
+
+        const results = await Promise.all(uploadPromises);
+        results.forEach(result => {
+            if (result.success) {
+                store.commit('updateStoreObj', {
+                    target: 'jsondata',
+                    key: result.jsonkey,
+                    value: result.filepath,
+                });
+            }
+        });
     }
     translateJsonData (whichlng: string) {
         //ChatGpt,GoogleAPI
@@ -305,6 +371,19 @@ export default class HomeView extends Vue {
     }
     unCheckall () {
         this.translateLnArr = [];
+    }
+    onDragOver() {
+        this.isDragging = true;
+    }
+    onDragLeave() {
+        this.isDragging = false;
+    }
+    updateDraggingState(isDragging: boolean) {
+        this.isDragging = isDragging;
+    }
+    updateImageUrl(key: string, url: string) {
+        store.commit('updateStoreObj', { target: 'inputValues', key: key, value: url });
+        store.commit('updateStoreObj', { target: 'jsondata', key: key, value: url });
     }
     private clickTagButton (e: Event, key: string) {//今クリックしたタグの情報を更新する。状態管理はupdateTargetTagInfoが実行されtargetTagInfoが更新される。
         const target = e.target as HTMLElement
@@ -411,6 +490,13 @@ export default class HomeView extends Vue {
         let wclass = this.tag.tagjson[tagname] ? this.tag.tagjson[tagname] : '';
         let isimg = this.tag.tagjson[tagname] ? true : false;
         return {"isimg": isimg, "wclass": wclass}
+    }
+    private isImageKey(key: string): boolean {
+        let prop = this.isImgTag(this.tag.getElementTagLabel(key));
+        return prop["isimg"];
+    }
+    private getFullImageUrl(value: string): string {
+        return `${process.env.VUE_APP_website_path}${value}`;
     }
     private displayArticleHTML (key: string, value: string) {
         let prop = this.isImgTag(this.tag.getElementTagLabel(key));

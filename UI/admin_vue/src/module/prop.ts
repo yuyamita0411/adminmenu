@@ -17,8 +17,8 @@ export class PATH {
 }
 export class TAG {
     notDisplayArr: string[] = [
-        'ogImg', 'description', 'pageName', 'categoryID',
-        'created', 'updated', 'thumbnail', 'ogImg',
+        'description', 'pageName', 'categoryID',
+        'created', 'updated', 'thumbnail',
         'description'
     ];
     getElementTag(itemKey: string) {
@@ -70,6 +70,9 @@ export class TAG {
         }
         if (/articleTinyImg\d+/.test(itemKey)) {
             res = 'tiny-img';
+        }
+        if (itemKey == 'ogImg' ) {
+            res = 'ogImg';
         }
         if (/donutMeter\d+/.test(itemKey)) {
             res = 'donut-meter';
@@ -140,6 +143,11 @@ export class TAG {
             "tagfor": "for-tiny-img",
             "matchpattern": "articleTinyImg"
         },
+        "ogimg": {
+            "tagname": "img",
+            "tagfor": "for-ogImg",
+            "matchpattern": "ogImg"
+        },
         "boxmenu": {
             "tagname": "div",
             "tagfor": "for-boxmenu",
@@ -165,7 +173,8 @@ export class TAG {
         "for-full-img": "w-100",
         "for-middle-img": "w-75",
         "for-small-img": "w-50",
-        "for-tiny-img": "w-25"
+        "for-tiny-img": "w-25",
+        "for-ogImg": "w-100",
     }
 }
 
