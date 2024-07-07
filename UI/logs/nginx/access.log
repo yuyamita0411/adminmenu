@@ -14243,3 +14243,6 @@
 192.168.65.1 - - [07/Jul/2024:18:06:58 +0900] "GET /1/language/ja HTTP/1.1" 200 604 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15" "-"
 192.168.65.1 - - [07/Jul/2024:18:06:58 +0900] "GET /js/app.391ff233.js HTTP/1.1" 200 75136 "http://localhost:8098/1/language/ja" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15" "-"
 192.168.65.1 - - [07/Jul/2024:18:06:58 +0900] "GET /css/app.935c91f4.css HTTP/1.1" 200 13446 "http://localhost:8098/1/language/ja" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15" "-"
+192.168.65.1 - - [07/Jul/2024:18:09:18 +0900] "GET /1/language/ja HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15" "-"
+192.168.65.1 - - [07/Jul/2024:18:22:24 +0900] "GET /language/ja HTTP/1.1" 200 604 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15" "-"
+192.168.65.1 - - [07/Jul/2024:18:22:35 +0900] "GET /common/ja HTTP/1.1" 200 604 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15" "-"
