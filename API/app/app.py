@@ -262,10 +262,24 @@ def checkFailTranslateDetail():
     return {"data": okArr}
 
 # ファイルアップロード関連
-@app.route(os.getenv("VUE_APP_uploadfile"), methods=['POST'])
+@app.route(os.getenv("VUE_APP_uploadimg"), methods=['POST'])
 def upload_file():
-    info = request.get_json()
-    return {"fileData": ""}
+    if 'file' not in request.files:
+        return jsonify({"error": "No file part"}), 400
+    file = request.files['file']
+    jsonkey = request.form.get('jsonkey')
+    file_path = request.form.get('filePath')
+    if not file_path:
+        return jsonify({"error": "No file path provided"}), 400
+    if file.filename == '':
+        return jsonify({"error": "No selected file"}), 400
+    if file:
+        filename = secure_filename(file.filename)
+        save_path = os.path.join(file_path)
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        file.save(save_path)
+        return jsonify({"success": True, "filepath": save_path, "jsonkey": jsonkey}), 200
+    return jsonify({"error": "File upload failed"}), 500
 
 
 if __name__ == '__main__':

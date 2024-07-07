@@ -1,40 +1,40 @@
 <template>
   <div>
     <div
-      class="drop-area" 
-      @dragover.prevent="onDragOver" 
-      @dragleave.prevent="onDragLeave" 
+      class="drop-area"
+      @dragover.prevent="onDragOver"
+      @dragleave.prevent="onDragLeave"
       @drop.prevent="handleDrop($event, jsonkey)"
       :class="{ 'dragging': internalIsDragging}"
     >
-        <input type="file" @change="handleFileChange" ref="fileInput" style="display:none;" />
-        <div v-if="!file"><!-- ファイルがない時 -->
-            <img
-            v-if="isval && !loadError"
-            :src="imgsrc"
-            @dragover.prevent="onDragOver" 
-            @dragleave.prevent="onDragLeave" 
-            @drop.prevent="handleDrop($event, jsonkey)"
-            @error="onImageError"
-            alt="Uploaded Image" class="uploaded-image" 
-            />
-            <p v-if="!loadError && !isval">画像をアップロード</p>
-            <p v-if="loadError && isval">画像アップロードに失敗しました {{imgsrc}}</p>
+      <input type="file" @change="handleFileChange" ref="fileInput" style="display:none;" />
+      <div v-if="!file"><!-- ファイルがない時 -->
+        <img
+          v-if="isval && !loadError"
+          :src="imgsrc"
+          @dragover.prevent="onDragOver"
+          @dragleave.prevent="onDragLeave"
+          @drop.prevent="handleDrop($event, jsonkey)"
+          @error="onImageError"
+          alt="Uploaded Image" class="uploaded-image"
+        />
+        <p v-if="!loadError && !isval">画像をアップロード</p>
+        <p v-if="loadError && isval">画像アップロードに失敗しました {{imgsrc}}</p>
+      </div>
+      <div v-else><!-- ファイルがある時 -->
+        <img v-if="file" :src="fileUrl" alt="Uploaded Image" class="uploaded-image" />
+        <div class="w-100 d-flex">
+          <label>画像に名前をつける</label>
+          <input type="text" @input="setImgName($event, jsonkey)">
         </div>
-        <div v-else><!-- ファイルがある時 -->
-            <img v-if="file" :src="fileUrl" alt="Uploaded Image" class="uploaded-image" />
-            <div class="w-100 d-flex">
-                <label>画像に名前をつける</label>
-                <input type="text" @input="setImgName($event, jsonkey)">
-            </div>
-        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
-import {store} from '../../store/common/index';
+import { store } from '../../store/common/index';
 
 export default defineComponent({
   name: 'ImageUploader',
@@ -76,15 +76,12 @@ export default defineComponent({
         handleFile(droppedFiles[0]);
         internalIsDragging.value = false;
         emit('updateDraggingState', false);
-        console.log("ファイルアップ完了！！");
-        console.log(props.jsonkey);
       }
     };
 
     const setImgName = (event: Event, keyname: string) => {
-        const input = event.target as HTMLInputElement;
-        store.commit('updateStoreObj', { target: 'jsondata', key: keyname, value: `${props.imgUpdir}${input.value}.png` });
-        console.log(store.state.jsondata);
+      const input = event.target as HTMLInputElement;
+      store.commit('updateStoreObj', { target: 'jsondata', key: keyname, value: `${props.imgUpdir}${input.value}.png` });
     };
 
     const handleFileChange = (event: Event) => {

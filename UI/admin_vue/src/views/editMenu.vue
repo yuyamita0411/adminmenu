@@ -17,13 +17,15 @@
                         <ImageUploader
                             :key="`uploader-${key}`"
                             :jsonkey="key"
-                            :imgUpdir="`/data/detail/${$route.params.id}/img/`"
+                            :imgUpdir="uploadpath"
                             :initialImageUrl="getFullImageUrl(value)"
                             :isDragging="isDragging"
                             :isval="value"
                             :imgsrc="getFullImageUrl(value)"
                             @updateImageUrl="updateImageUrl(key, $event)"
                             @updateDraggingState="updateDraggingState"
+                            @onFileChange="handleFileChange(key, $event)"
+                            ref="imageUploaders"
                         />
                     </div>
                     <div
@@ -226,6 +228,10 @@ import { Menu } from '../module/editMenu/index';
 import { GenericObject } from '../module/type';
 
 import ImageUploader from '../components/editMenu/ImageUploader.vue';
+interface ImageUploaderComponent extends Vue {
+  jsonkey: string;
+  file: File | null;
+}
 
 @Options({
     computed: {
@@ -265,6 +271,7 @@ export default class editMenu extends Vue {
     translateLnArr: string[] = [];
     selectedCategoryID = null;
     isDragging = false;
+    uploadpath = '';
 
     created () {
         //初期のデータを定義
@@ -274,6 +281,7 @@ export default class editMenu extends Vue {
         this.checkTranslateSuccess();
         this.inputValues = store.state.jsondata;
         this.selectedCategoryID = store.state.jsondata["categoryID"];
+        this.uploadpath = `${process.env.VUE_APP_articleDirPath}/${this.$route.params.id}/img/`
     }
     readData() {
         API.post (
@@ -292,7 +300,7 @@ export default class editMenu extends Vue {
             }
         );
     }
-    updateJsonData () {
+    async updateJsonData () {
         this.ModifyJsonFile (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileEndpoint}`,
             `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
@@ -302,23 +310,39 @@ export default class editMenu extends Vue {
             "dummy"
         );
 
-        //画像アップロード関連
-        let uploadimgInfo: GenericObject = {}
-        for (let key in store.state.jsondata) {
+        // 画像アップロード関連
+        const uploadPromises: Promise<any>[] = [];
+        const imageUploaders = this.$refs.imageUploaders as unknown as ImageUploaderComponent[];
+        
+        for (const key in store.state.jsondata) {
             if (this.isImageKey(key)) {
-                uploadimgInfo[key] = store.state.jsondata[key]
+                const uploader = imageUploaders.find((uploader) => uploader.jsonkey === key);
+                if (uploader && uploader.file) {
+                    const formData = new FormData();
+                    formData.append('file', uploader.file);
+                    formData.append('jsonkey', key);
+                    formData.append('filePath', store.state.jsondata[key]);
+                    uploadPromises.push(
+                        fetch(`${store.state.pageinfo.base_url}${process.env.VUE_APP_uploadimg}`, {
+                            method: 'POST',
+                            body: formData,
+                        }).then(response => response.json())
+                    );
+                }
             }
         }
-        API.post (
-            `${store.state.pageinfo.base_url}${process.env.VUE_APP_uploadfile}`,
-            {
-                fileData: uploadimgInfo,
-                filePath: ""
-            },
-            (response: GenericObject) => {
-                console.log(response.data);
+
+        const results = await Promise.all(uploadPromises);
+        results.forEach(result => {
+            if (result.success) {
+                store.commit('updateStoreObj', {
+                    target: 'jsondata',
+                    key: result.jsonkey,
+                    value: result.filepath,
+                });
             }
-        );
+        });
+
     }
     translateJsonData (whichlng: string) {
         //ChatGpt,GoogleAPI
@@ -379,7 +403,6 @@ export default class editMenu extends Vue {
     updateImageUrl(key: string, url: string) {
         store.commit('updateStoreObj', { target: 'inputValues', key: key, value: url });
         store.commit('updateStoreObj', { target: 'jsondata', key: key, value: url });
-        console.log(store.state.jsondata);
     }
     private clickTagButton (e: Event, key: string) {//今クリックしたタグの情報を更新する。状態管理はupdateTargetTagInfoが実行されtargetTagInfoが更新される。
         const target = e.target as HTMLElement
