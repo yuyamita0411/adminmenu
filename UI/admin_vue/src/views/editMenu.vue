@@ -281,7 +281,7 @@ export default class editMenu extends Vue {
         this.checkTranslateSuccess();
         this.inputValues = store.state.jsondata;
         this.selectedCategoryID = store.state.jsondata["categoryID"];
-        this.uploadpath = `${process.env.VUE_APP_articleDirPath}/${this.$route.params.id}/img/`
+        this.uploadpath = `/data/detail/${this.$route.params.id}/img/`
     }
     readData() {
         API.post (
@@ -289,6 +289,7 @@ export default class editMenu extends Vue {
             {filePath: `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`},
             (response: GenericObject) => {
                 store.commit('setJsonData', response.data);
+                console.log(response.data);
                 this.selectedCategoryID = store.state.jsondata["categoryID"];
             }
         );
@@ -301,6 +302,8 @@ export default class editMenu extends Vue {
         );
     }
     async updateJsonData () {
+        console.log("jsondata");
+        console.log(store.state.jsondata);
         this.ModifyJsonFile (
             `${store.state.pageinfo.base_url}${process.env.VUE_APP_fileEndpoint}`,
             `${process.env.VUE_APP_articleDirPath}${this.$route.path}/index.json`
@@ -401,6 +404,8 @@ export default class editMenu extends Vue {
         this.isDragging = isDragging;
     }
     updateImageUrl(key: string, url: string) {
+        console.log("urlurlurlurl");
+        console.log(url);
         store.commit('updateStoreObj', { target: 'inputValues', key: key, value: url });
         store.commit('updateStoreObj', { target: 'jsondata', key: key, value: url });
     }

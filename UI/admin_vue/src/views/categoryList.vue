@@ -42,6 +42,7 @@
                 <div class="submitButtonInner">
                     <button
                     class="submitButton button_blue"
+                    @click="addCategory"
                     >カテゴリを追加する</button>
                 </div>
             </div>
